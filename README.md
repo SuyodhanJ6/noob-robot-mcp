@@ -1,5 +1,11 @@
 # NoobRobot - Robot Framework MCP Server
 
+[![Version](https://img.shields.io/badge/Version-v0.1.0-brightgreen)](https://github.com/SuyodhanJ6/noob-robot-mcp/releases/tag/v0.1.0)
+![MCP Server](https://img.shields.io/badge/MCP-Server-blue)
+![Python](https://img.shields.io/badge/Python-3.11-yellow)
+![Robot Framework](https://img.shields.io/badge/Robot%20Framework-6.1-red)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 A Machine Control Protocol (MCP) server implementation for Robot Framework automation, providing 20 tools to enhance testing with Robot Framework.
 
 ## Overview
@@ -35,33 +41,17 @@ This MCP server implements 20 tools for working with Robot Framework:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/noobrobot.git
-cd noobrobot
+git clone https://github.com/SuyodhanJ6/noob-robot-mcp.git
+cd noob-robot-mcp
 
-# Create a virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+# Create a virtual environment with uv and Python 3.11
+uv venv --python 3.11
 
-# Install dependencies
-pip install -e .
-```
+# Activate the virtual environment
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
-## Configuration
-
-NoobRobot can be configured through environment variables or a `.env` file:
-
-```
-# Server settings
-MCP_HOST=localhost
-MCP_PORT=3007
-
-# Robot Framework settings
-ROBOT_OUTPUT_DIR=./output
-ROBOT_REPORT_DIR=./reports
-
-# Default settings
-DEFAULT_TIMEOUT=30
-MAX_RESULTS=100
+# Install dependencies using uv
+uv sync
 ```
 
 ## Usage
@@ -70,7 +60,7 @@ MAX_RESULTS=100
 
 ```bash
 # Start the MCP server
-python -m main
+uv run main.py
 ```
 
 This will start the MCP server at `http://localhost:3007/sse` (by default).
@@ -98,26 +88,28 @@ console.log(result.files);
 ### Project Structure
 
 ```
-noobRobot/
+noob-robot-mcp/
 │
 ├── main.py                      # Main entry point
 ├── pyproject.toml               # Project configuration
+├── uv.lock                      # uv dependency lock file
+├── .python-version              # Python version (3.11)
 │
-└── src/
-    ├── mcp_server_sse/          # MCP Server implementation
-    │   └── server.py
-    │
-    ├── utils/                   # Utility functions
-    │   └── helpers.py
-    │
-    ├── config/                  # Configuration
-    │   └── config.py
-    │
-    └── mcp_tools/               # MCP Tools implementations
-        ├── robot_test_reader/
-        ├── robot_keyword_inspector/
-        ├── robot_runner/
-        └── ...
+├── src/                         # Source code
+│   ├── mcp_server_sse/          # MCP Server implementation
+│   │   └── server.py
+│   │
+│   └── mcp_tools/               # MCP Tools implementations
+│       ├── robot_test_reader/
+│       ├── robot_keyword_inspector/
+│       ├── robot_runner/
+│       └── ...
+│
+├── tests/                       # Test directory
+├── robot_registration_test/     # Robot framework test registrations
+├── logs/                        # Log files
+├── output/                      # Output files
+└── reports/                     # Report files
 ```
 
 ### Adding a New Tool
