@@ -9,4 +9,12 @@ wheels/
 # Virtual environments
 .venv
 
+# Project-specific files
 .backup/
+docs/
+logs/
+output/
+*.report
+*.robot
+.cursorignore
+.cursor/
