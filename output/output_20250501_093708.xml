@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.11 on linux)" generated="2025-05-01T09:37:08.923393" rpa="false" schemaversion="5">
+<suite id="s1" name="Register Form Test" source="/home/prashant_alge/Desktop/noobRobot/register_form_test.robot">
+<test id="s1-t1" name="Register User Form Automation" line="19">
+<kw name="Open Browser And Navigate To Form Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-01T09:37:09.315773" level="INFO">Opening browser 'Chrome' to base url 'https://qa-practice.netlify.app/register'.</msg>
+<msg time="2025-05-01T09:37:11.718236" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-05-01T09:37:11.718464" level="FAIL">SessionNotCreatedException: Message: session not created
+from unknown error: no chrome binary at /usr/bin/google-chrome
+Stacktrace:
+#0 0x561c3fd277ea &lt;unknown&gt;
+#1 0x561c3f7f70f0 &lt;unknown&gt;
+#2 0x561c3f82db57 &lt;unknown&gt;
+#3 0x561c3f82bf68 &lt;unknown&gt;
+#4 0x561c3f87b569 &lt;unknown&gt;
+#5 0x561c3f87ab06 &lt;unknown&gt;
+#6 0x561c3f86cc63 &lt;unknown&gt;
+#7 0x561c3f8398b5 &lt;unknown&gt;
+#8 0x561c3f83a511 &lt;unknown&gt;
+#9 0x561c3fced8ff &lt;unknown&gt;
+#10 0x561c3fcf19c2 &lt;unknown&gt;
+#11 0x561c3fcd5a32 &lt;unknown&gt;
+#12 0x561c3fcf216e &lt;unknown&gt;
+#13 0x561c3fcbc39e &lt;unknown&gt;
+#14 0x561c3fd15198 &lt;unknown&gt;
+#15 0x561c3fd153a4 &lt;unknown&gt;
+#16 0x561c3fd2640c &lt;unknown&gt;
+#17 0x7f9b8b67fac3 &lt;unknown&gt;
+</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-05-01T09:37:09.315204" elapsed="2.411581">SessionNotCreatedException: Message: session not created
+from unknown error: no chrome binary at /usr/bin/google-chrome
+Stacktrace:
+#0 0x561c3fd277ea &lt;unknown&gt;
+#1 0x561c3f7f70f0 &lt;unknown&gt;
+#2 0x561c3f82db57 &lt;unknown&gt;
+#3 0x561c3f82bf68 &lt;unknown&gt;
+#4 0x561c3f87b569 &lt;unknown&gt;
+#5 0x561c3f87ab06 &lt;unknown&gt;
+#6 0x561c3f86cc63 &lt;unknown&gt;
+#7 0x561c3f8398b5 &lt;unknown&gt;
+#8 0x561c3f83a511 &lt;unknown&gt;
+#9 0x561c3fced8ff &lt;unknown&gt;
+#10 0x561c3fcf19c2 &lt;unknown&gt;
+#11 0x561c3fcd5a32 &lt;unknown&gt;
+#12 0x561c3fcf216e &lt;unknown&gt;
+#13 0x561c3fcbc39e &lt;unknown&gt;
+#14 0x561c3fd15198 &lt;unknown&gt;
+#15 0x561c3fd153a4 &lt;unknown&gt;
+#16 0x561c3fd2640c &lt;unknown&gt;
+#17 0x7f9b8b67fac3 &lt;unknown&gt;
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-05-01T09:37:11.727049" elapsed="0.000041"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=firstName</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-05-01T09:37:11.727194" elapsed="0.000029"/>
+</kw>
+<status status="FAIL" start="2025-05-01T09:37:09.314108" elapsed="2.413301">SessionNotCreatedException: Message: session not created
+from unknown error: no chrome binary at /usr/bin/google-chrome
+Stacktrace:
+#0 0x561c3fd277ea &lt;unknown&gt;
+#1 0x561c3f7f70f0 &lt;unknown&gt;
+#2 0x561c3f82db57 &lt;unknown&gt;
+#3 0x561c3f82bf68 &lt;unknown&gt;
+#4 0x561c3f87b569 &lt;unknown&gt;
+#5 0x561c3f87ab06 &lt;unknown&gt;
+#6 0x561c3f86cc63 &lt;unknown&gt;
+#7 0x561c3f8398b5 &lt;unknown&gt;
+#8 0x561c3f83a511 &lt;unknown&gt;
+#9 0x561c3fced8ff &lt;unknown&gt;
+#10 0x561c3fcf19c2 &lt;unknown&gt;
+#11 0x561c3fcd5a32 &lt;unknown&gt;
+#12 0x561c3fcf216e &lt;unknown&gt;
+#13 0x561c3fcbc39e &lt;unknown&gt;
+#14 0x561c3fd15198 &lt;unknown&gt;
+#15 0x561c3fd153a4 &lt;unknown&gt;
+#16 0x561c3fd2640c &lt;unknown&gt;
+#17 0x7f9b8b67fac3 &lt;unknown&gt;
+</status>
+</kw>
+<kw name="Fill Form Fields">
+<status status="NOT RUN" start="2025-05-01T09:37:11.727573" elapsed="0.000027"/>
+</kw>
+<kw name="Submit Form">
+<status status="NOT RUN" start="2025-05-01T09:37:11.727668" elapsed="0.000019"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-05-01T09:37:11.727877" elapsed="0.000143"/>
+</kw>
+<doc>Automate form submission at https://qa-practice.netlify.app/register</doc>
+<tag>automation</tag>
+<tag>form</tag>
+<status status="FAIL" start="2025-05-01T09:37:09.312925" elapsed="2.415134">SessionNotCreatedException: Message: session not created
+from unknown error: no chrome binary at /usr/bin/google-chrome
+Stacktrace:
+#0 0x561c3fd277ea &lt;unknown&gt;
+#1 0x561c3f7f70f0 &lt;unknown&gt;
+#2 0x561c3f82db57 &lt;unknown&gt;
+#3 0x561c3f82bf68 &lt;unknown&gt;
+#4 0x561c3f87b569 &lt;unknown&gt;
+#5 0x561c3f87ab06 &lt;unknown&gt;
+#6 0x561c3f86cc63 &lt;unknown&gt;
+#7 0x561c3f8398b5 &lt;unknown&gt;
+#8 0x561c3f83a511 &lt;unknown&gt;
+#9 0x561c3fced8ff &lt;unknown&gt;
+#10 0x561c3fcf19c2 &lt;unknown&gt;
+#11 0x561c3fcd5a32 &lt;unknown&gt;
+#12 0x561c3fcf216e &lt;unknown&gt;
+#13 0x561c3fcbc39e &lt;unknown&gt;
+#14 0x561c3fd15198 &lt;unknown&gt;
+#15 0x561c3fd153a4 &lt;unknown&gt;
+#16 0x561c3fd2640c &lt;unknown&gt;
+#17 0x7f9b8b67fac3 &lt;unknown&gt;
+</status>
+</test>
+<doc>Robot Framework test for automating form at https://qa-practice.netlify.app/register</doc>
+<status status="FAIL" start="2025-05-01T09:37:08.924171" elapsed="2.804241"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">automation</stat>
+<stat pass="0" fail="1" skip="0">form</stat>
+</tag>
+<suite>
+<stat name="Register Form Test" id="s1" pass="0" fail="1" skip="0">Register Form Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

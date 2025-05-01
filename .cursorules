@@ -1,0 +1,82 @@
+noobRobot/
+│
+├── main.py                      # Main entry point of the application
+├── pyproject.toml               # Python project configuration
+├── README.md                    # Project documentation
+├── .python-version              # Python version specification
+├── .gitignore                   # Git ignore file
+│
+└── src/
+    ├── __init__.py
+    │
+    ├── mcp_server_sse/          # MCP Server with SSE implementation
+    │   └── __init__.py
+    │
+    ├── utils/                   # Utility functions and helpers
+    │   └── __init__.py
+    │
+    ├── config/                  # Configuration settings
+    │   └── config.py
+    │
+    └── mcp_tools/               # MCP Tools implementations
+        ├── __init__.py
+        │
+        ├── robot_test_reader/
+        │   └── __init__.py
+        │
+        ├── robot_keyword_inspector/
+        │   └── __init__.py
+        │
+        ├── robot_runner/
+        │   └── __init__.py
+        │
+        ├── robot_log_parser/
+        │   └── __init__.py
+        │
+        ├── robot_test_creator/
+        │   └── __init__.py
+        │
+        ├── robot_variable_resolver/
+        │   └── __init__.py
+        │
+        ├── robot_library_explorer/
+        │   └── __init__.py
+        │
+        ├── robot_test_linter/
+        │   └── __init__.py
+        │
+        ├── robot_test_mapper/
+        │   └── __init__.py
+        │
+        ├── robot_test_coverage_analyzer/
+        │   └── __init__.py
+        │
+        ├── robot_test_refactorer/
+        │   └── __init__.py
+        │
+        ├── robot_test_data_generator/
+        │   └── __init__.py
+        │
+        ├── robot_step_debugger/
+        │   └── __init__.py
+        │
+        ├── robot_report_generator/
+        │   └── __init__.py
+        │
+        ├── robot_test_scheduler/
+        │   └── __init__.py
+        │
+        ├── robot_result_aggregator/
+        │   └── __init__.py
+        │
+        ├── robot_test_dependency_checker/
+        │   └── __init__.py
+        │
+        ├── robot_automated_feedback/
+        │   └── __init__.py
+        │
+        ├── robot_visualization/
+        │   └── __init__.py
+        │
+        └── robot_external_api_interaction/
+            └── __init__.py

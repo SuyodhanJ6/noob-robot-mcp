@@ -1,0 +1,1629 @@
+2025-04-30 19:40:04,753 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 19:40:04,760 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 19:40:04,771 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 19:40:04,773 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 19:40:04,775 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 19:40:04,777 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 19:40:04,779 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 19:40:04,781 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 19:40:04,785 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 19:40:04,787 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 19:40:04,788 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 19:40:04,789 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 19:40:04,790 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 19:40:04,792 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 19:40:04,794 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 19:40:04,795 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 19:40:04,796 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 19:40:04,798 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 19:40:04,804 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 19:40:04,805 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 19:40:04,806 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 19:40:04,806 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 19:40:04,812 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 19:40:04,815 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 19:40:04,820 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 19:40:04,820 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 19:40:04,821 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 19:40:04,821 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 19:40:04,821 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 19:40:04,821 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 19:40:04,821 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 19:40:04,822 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 19:40:04,822 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 19:40:04,822 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 19:40:04,822 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 19:40:04,822 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 19:40:04,823 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 19:40:04,823 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 19:40:04,823 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 19:40:04,823 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 19:40:04,823 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 19:40:04,823 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 19:44:44,459 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 19:44:44,463 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 19:44:44,469 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 19:44:44,469 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 19:44:44,470 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 19:44:44,470 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 19:44:44,471 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 19:44:44,471 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 19:44:44,473 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 19:44:44,475 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 19:44:44,475 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 19:44:44,476 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 19:44:44,476 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 19:44:44,477 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 19:44:44,477 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 19:44:44,478 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 19:44:44,478 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 19:44:44,478 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 19:44:44,479 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 19:44:44,479 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 19:44:44,479 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 19:44:44,480 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 19:44:44,482 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 19:44:44,483 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 19:44:44,485 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 19:44:44,486 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 19:44:44,486 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 19:44:44,486 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 19:44:44,486 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 19:44:44,486 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 19:44:44,486 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 19:44:44,486 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 19:44:44,486 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 19:44:44,486 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 19:44:44,487 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 19:44:44,487 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 19:44:44,487 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 19:44:44,487 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 19:44:44,487 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 19:44:44,487 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 19:44:44,488 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 19:44:44,489 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 19:45:03,127 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 19:45:03,130 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 19:45:03,136 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 19:45:03,139 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 19:45:03,141 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 19:45:03,142 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 19:45:03,144 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 19:45:03,145 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 19:45:03,146 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 19:45:03,147 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 19:45:03,148 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 19:45:03,149 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 19:45:03,149 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 19:45:03,150 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 19:45:03,151 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 19:45:03,152 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 19:45:03,153 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 19:45:03,154 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 19:45:03,155 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 19:45:03,156 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 19:45:03,156 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 19:45:03,157 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 19:45:03,164 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 19:45:03,167 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 19:45:03,175 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 19:45:03,177 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 19:45:03,177 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 19:45:03,178 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 19:45:03,178 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 19:45:03,178 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 19:45:03,178 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 19:45:03,179 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 19:45:03,179 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 19:45:03,179 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 19:45:03,179 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 19:45:03,179 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 19:45:03,179 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 19:45:03,180 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 19:45:03,180 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 19:45:03,180 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 19:45:03,180 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 19:45:03,180 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 19:47:35,061 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 19:47:35,064 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 19:47:35,068 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 19:47:35,069 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 19:47:35,070 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 19:47:35,071 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 19:47:35,072 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 19:47:35,073 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 19:47:35,073 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 19:47:35,073 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 19:47:35,074 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 19:47:35,074 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 19:47:35,075 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 19:47:35,075 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 19:47:35,075 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 19:47:35,075 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 19:47:35,076 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 19:47:35,076 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 19:47:35,076 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 19:47:35,076 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 19:47:35,076 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 19:47:35,077 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 19:47:35,079 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 19:47:35,080 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 19:47:35,084 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 19:47:35,084 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 19:47:35,084 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 19:47:35,085 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 19:47:35,085 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 19:47:35,085 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 19:47:35,085 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 19:47:35,085 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 19:47:35,086 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 19:47:35,086 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 19:47:35,086 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 19:47:35,087 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 19:47:35,087 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 19:47:35,087 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 19:47:35,087 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 19:47:35,088 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 19:47:35,088 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 19:47:35,088 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 19:47:35,089 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-04-30 19:47:59,815 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 19:47:59,819 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 19:47:59,823 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 19:47:59,824 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 19:47:59,825 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 19:47:59,826 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 19:47:59,827 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 19:47:59,828 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 19:47:59,829 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 19:47:59,831 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 19:47:59,832 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 19:47:59,832 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 19:47:59,833 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 19:47:59,833 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 19:47:59,834 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 19:47:59,834 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 19:47:59,834 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 19:47:59,835 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 19:47:59,836 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 19:47:59,836 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 19:47:59,836 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 19:47:59,837 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 19:47:59,840 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 19:47:59,842 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 19:47:59,844 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 19:47:59,845 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 19:47:59,846 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 19:47:59,846 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 19:47:59,846 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 19:47:59,847 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 19:47:59,847 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 19:47:59,847 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 19:47:59,848 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 19:47:59,848 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 19:47:59,848 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 19:47:59,848 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 19:47:59,848 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 19:47:59,849 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 19:47:59,849 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 19:47:59,849 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 19:47:59,849 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 19:47:59,850 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 19:47:59,850 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-04-30 19:50:15,474 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 19:50:15,476 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 19:50:15,486 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 19:50:15,487 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 19:50:15,487 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 19:50:15,488 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 19:50:15,488 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 19:50:15,489 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 19:50:15,489 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 19:50:15,489 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 19:50:15,490 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 19:50:15,490 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 19:50:15,490 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 19:50:15,490 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 19:50:15,491 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 19:50:15,491 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 19:50:15,491 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 19:50:15,492 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 19:50:15,492 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 19:50:15,492 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 19:50:15,492 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 19:50:15,493 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 19:50:15,495 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 19:50:15,498 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 19:50:15,503 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 19:50:15,504 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 19:50:15,504 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 19:50:15,504 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 19:50:15,504 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 19:50:15,504 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 19:50:15,505 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 19:50:15,505 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 19:50:15,505 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 19:50:15,505 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 19:50:15,505 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 19:50:15,505 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 19:50:15,505 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 19:50:15,505 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 19:50:15,505 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 19:50:15,505 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 19:50:15,506 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 19:50:15,506 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 19:50:15,506 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-04-30 19:52:07,658 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 19:52:07,662 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 19:52:07,667 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 19:52:07,668 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 19:52:07,669 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 19:52:07,670 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 19:52:07,671 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 19:52:07,672 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 19:52:07,673 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 19:52:07,674 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 19:52:07,675 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 19:52:07,675 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 19:52:07,676 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 19:52:07,676 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 19:52:07,677 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 19:52:07,678 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 19:52:07,678 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 19:52:07,679 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 19:52:07,679 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 19:52:07,680 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 19:52:07,680 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 19:52:07,680 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 19:52:07,684 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 19:52:07,687 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 19:52:07,692 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 19:52:07,692 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 19:52:07,692 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 19:52:07,693 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 19:52:07,693 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 19:52:07,693 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 19:52:07,694 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 19:52:07,694 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 19:52:07,694 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 19:52:07,694 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 19:52:07,694 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 19:52:07,695 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 19:52:07,695 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 19:52:07,695 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 19:52:07,695 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 19:52:07,695 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 19:52:07,696 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 19:52:07,696 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 19:52:07,696 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-04-30 19:53:47,622 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 19:53:47,626 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 19:53:47,630 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 19:53:47,632 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 19:53:47,634 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 19:53:47,635 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 19:53:47,635 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 19:53:47,637 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 19:53:47,637 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 19:53:47,638 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 19:53:47,638 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 19:53:47,639 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 19:53:47,639 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 19:53:47,640 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 19:53:47,640 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 19:53:47,641 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 19:53:47,641 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 19:53:47,642 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 19:53:47,642 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 19:53:47,643 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 19:53:47,643 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 19:53:47,643 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 19:53:47,645 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 19:53:47,647 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 19:53:47,651 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 19:53:47,651 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 19:53:47,651 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 19:53:47,651 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 19:53:47,651 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 19:53:47,651 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 19:53:47,651 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 19:53:47,651 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 19:53:47,651 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 19:53:47,651 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 19:53:47,652 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 19:53:47,652 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 19:53:47,652 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 19:53:47,652 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 19:53:47,652 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 19:53:47,652 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 19:53:47,652 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 19:53:47,652 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 19:53:47,652 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-04-30 19:54:03,684 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 19:54:03,689 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 19:54:03,695 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 19:54:03,696 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 19:54:03,697 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 19:54:03,698 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 19:54:03,698 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 19:54:03,699 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 19:54:03,699 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 19:54:03,700 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 19:54:03,700 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 19:54:03,701 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 19:54:03,701 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 19:54:03,702 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 19:54:03,704 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 19:54:03,704 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 19:54:03,705 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 19:54:03,706 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 19:54:03,706 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 19:54:03,707 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 19:54:03,708 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 19:54:03,708 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 19:54:03,711 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 19:54:03,712 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 19:54:03,715 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 19:54:03,715 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 19:54:03,716 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 19:54:03,716 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 19:54:03,716 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 19:54:03,716 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 19:54:03,716 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 19:54:03,716 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 19:54:03,716 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 19:54:03,716 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 19:54:03,716 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 19:54:03,717 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 19:54:03,717 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 19:54:03,717 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 19:54:03,717 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 19:54:03,717 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 19:54:03,717 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 19:54:03,717 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 19:54:03,718 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-04-30 19:55:24,508 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 19:55:24,511 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 19:55:24,516 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 19:55:24,518 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 19:55:24,518 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 19:55:24,519 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 19:55:24,520 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 19:55:24,520 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 19:55:24,521 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 19:55:24,521 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 19:55:24,523 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 19:55:24,524 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 19:55:24,524 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 19:55:24,525 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 19:55:24,525 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 19:55:24,525 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 19:55:24,526 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 19:55:24,526 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 19:55:24,527 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 19:55:24,527 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 19:55:24,527 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 19:55:24,527 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 19:55:24,532 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 19:55:24,535 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 19:55:24,547 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 19:55:24,547 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 19:55:24,548 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 19:55:24,548 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 19:55:24,548 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 19:55:24,548 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 19:55:24,548 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 19:55:24,548 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 19:55:24,549 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 19:55:24,549 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 19:55:24,549 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 19:55:24,549 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 19:55:24,549 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 19:55:24,549 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 19:55:24,549 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 19:55:24,550 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 19:55:24,550 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 19:55:24,550 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 19:55:24,550 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-04-30 19:56:27,753 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 19:56:27,758 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 19:56:27,764 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 19:56:27,765 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 19:56:27,766 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 19:56:27,767 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 19:56:27,767 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 19:56:27,768 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 19:56:27,769 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 19:56:27,769 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 19:56:27,769 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 19:56:27,770 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 19:56:27,770 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 19:56:27,771 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 19:56:27,771 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 19:56:27,772 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 19:56:27,772 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 19:56:27,772 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 19:56:27,773 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 19:56:27,773 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 19:56:27,773 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 19:56:27,773 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 19:56:27,776 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 19:56:27,779 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 19:56:27,782 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 19:56:27,782 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 19:56:27,782 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 19:56:27,782 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 19:56:27,783 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 19:56:27,783 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 19:56:27,784 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 19:56:27,784 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 19:56:27,784 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 19:56:27,784 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 19:56:27,785 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 19:56:27,785 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 19:56:27,785 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 19:56:27,785 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 19:56:27,786 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 19:56:27,786 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 19:56:27,786 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 19:56:27,786 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 19:56:27,787 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-04-30 19:58:38,635 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 19:58:38,638 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 19:58:38,642 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 19:58:38,643 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 19:58:38,646 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 19:58:38,647 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 19:58:38,647 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 19:58:38,648 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 19:58:38,648 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 19:58:38,649 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 19:58:38,649 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 19:58:38,649 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 19:58:38,650 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 19:58:38,650 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 19:58:38,650 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 19:58:38,651 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 19:58:38,651 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 19:58:38,652 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 19:58:38,652 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 19:58:38,653 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 19:58:38,653 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 19:58:38,653 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 19:58:38,657 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 19:58:38,660 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 19:58:38,666 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 19:58:38,667 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 19:58:38,667 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 19:58:38,667 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 19:58:38,667 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 19:58:38,667 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 19:58:38,668 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 19:58:38,668 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 19:58:38,668 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 19:58:38,668 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 19:58:38,668 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 19:58:38,668 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 19:58:38,668 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 19:58:38,668 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 19:58:38,669 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 19:58:38,669 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 19:58:38,669 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 19:58:38,669 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 19:58:38,669 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-04-30 19:58:51,001 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 19:58:51,004 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 19:58:51,008 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 19:58:51,009 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 19:58:51,010 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 19:58:51,010 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 19:58:51,010 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 19:58:51,011 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 19:58:51,011 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 19:58:51,012 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 19:58:51,012 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 19:58:51,012 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 19:58:51,013 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 19:58:51,013 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 19:58:51,013 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 19:58:51,013 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 19:58:51,014 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 19:58:51,014 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 19:58:51,014 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 19:58:51,014 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 19:58:51,015 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 19:58:51,015 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 19:58:51,020 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 19:58:51,024 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 19:58:51,028 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 19:58:51,030 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 19:58:51,031 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 19:58:51,031 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 19:58:51,031 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 19:58:51,032 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 19:58:51,032 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 19:58:51,032 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 19:58:51,032 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 19:58:51,033 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 19:58:51,033 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 19:58:51,034 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 19:58:51,036 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 19:58:51,036 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 19:58:51,036 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 19:58:51,036 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 19:58:51,037 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 19:58:51,037 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 19:58:51,037 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-04-30 20:01:57,682 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 20:01:57,685 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 20:01:57,696 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 20:01:57,698 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 20:01:57,698 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 20:01:57,699 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 20:01:57,699 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 20:01:57,700 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 20:01:57,701 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 20:01:57,701 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 20:01:57,702 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 20:01:57,703 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 20:01:57,704 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 20:01:57,705 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 20:01:57,706 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 20:01:57,706 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 20:01:57,707 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 20:01:57,708 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 20:01:57,709 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 20:01:57,709 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 20:01:57,709 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 20:01:57,710 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 20:01:57,714 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 20:01:57,716 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 20:01:57,720 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 20:01:57,721 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 20:01:57,721 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 20:01:57,721 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 20:01:57,722 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 20:01:57,722 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 20:01:57,722 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 20:01:57,722 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 20:01:57,722 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 20:01:57,722 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 20:01:57,722 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 20:01:57,722 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 20:01:57,723 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 20:01:57,723 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 20:01:57,723 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 20:01:57,723 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 20:01:57,723 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 20:01:57,723 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 20:01:57,724 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-04-30 20:03:12,816 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 20:03:12,819 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 20:03:12,826 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 20:03:12,826 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 20:03:12,827 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 20:03:12,827 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 20:03:12,828 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 20:03:12,829 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 20:03:12,829 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 20:03:12,830 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 20:03:12,830 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 20:03:12,831 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 20:03:12,832 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 20:03:12,832 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 20:03:12,833 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 20:03:12,833 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 20:03:12,835 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 20:03:12,836 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 20:03:12,837 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 20:03:12,837 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 20:03:12,837 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 20:03:12,837 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 20:03:12,840 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 20:03:12,842 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 20:03:12,845 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 20:03:12,845 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 20:03:12,845 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 20:03:12,846 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 20:03:12,846 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 20:03:12,846 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 20:03:12,846 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 20:03:12,846 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 20:03:12,846 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 20:03:12,846 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 20:03:12,846 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 20:03:12,846 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 20:03:12,846 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 20:03:12,847 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 20:03:12,847 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 20:03:12,847 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 20:03:12,847 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 20:03:12,847 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 20:03:12,847 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-04-30 20:11:07,739 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 20:11:07,750 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 20:11:07,753 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 20:11:07,754 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 20:11:07,755 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 20:11:07,756 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 20:11:07,756 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 20:11:07,757 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 20:11:07,758 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 20:11:07,760 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 20:11:07,761 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 20:11:07,761 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 20:11:07,762 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 20:11:07,762 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 20:11:07,763 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 20:11:07,763 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 20:11:07,764 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 20:11:07,765 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 20:11:07,765 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 20:11:07,766 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 20:11:07,766 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 20:11:07,766 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 20:11:07,770 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 20:11:07,771 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 20:11:07,773 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 20:11:07,773 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 20:11:07,773 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 20:11:07,773 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 20:11:07,773 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 20:11:07,774 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 20:11:07,774 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 20:11:07,774 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 20:11:07,774 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 20:11:07,774 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 20:11:07,774 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 20:11:07,775 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 20:11:07,775 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 20:11:07,775 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 20:11:07,775 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 20:11:07,775 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 20:11:07,775 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 20:11:07,775 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 20:11:07,776 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-04-30 20:11:34,172 - robot_tool.keyword_inspector - INFO - Received request to inspect keywords
+2025-04-30 20:11:34,173 - robot_tool - DEBUG - Running command: /home/prashant_alge/Desktop/noobRobot/.venv/bin/python3 -m robot.libdoc --list
+2025-04-30 20:11:34,936 - robot_tool - ERROR - Command failed with code 252: 
+2025-04-30 20:11:34,936 - robot_tool - ERROR - Error getting available libraries: 
+2025-04-30 20:11:34,936 - robot_tool.keyword_inspector - INFO - Found 0 Robot Framework libraries
+2025-04-30 20:13:52,510 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 20:13:52,514 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 20:13:52,519 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 20:13:52,520 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 20:13:52,520 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 20:13:52,521 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 20:13:52,521 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 20:13:52,522 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 20:13:52,522 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 20:13:52,522 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 20:13:52,523 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 20:13:52,523 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 20:13:52,523 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 20:13:52,524 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 20:13:52,524 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 20:13:52,525 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 20:13:52,525 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 20:13:52,525 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 20:13:52,526 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 20:13:52,526 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 20:13:52,526 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 20:13:52,526 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 20:13:52,528 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 20:13:52,530 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 20:13:52,534 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 20:13:52,534 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 20:13:52,534 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 20:13:52,534 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 20:13:52,534 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 20:13:52,534 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 20:13:52,535 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 20:13:52,535 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 20:13:52,535 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 20:13:52,535 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 20:13:52,535 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 20:13:52,535 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 20:13:52,535 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 20:13:52,536 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 20:13:52,536 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 20:13:52,536 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 20:13:52,536 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 20:13:52,536 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 20:13:52,536 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-04-30 20:14:14,893 - robot_tool.keyword_inspector - INFO - Received request to inspect keywords
+2025-04-30 20:14:14,966 - robot_tool - INFO - Discovered potential libraries: ['Telnet', 'BuiltIn', 'robotframework', 'String', 'XML', 'Collections', 'Screenshot', 'OperatingSystem', 'DateTime', 'robot', 'Process', 'Dialogs']
+2025-04-30 20:14:14,966 - robot_tool.keyword_inspector - INFO - Found 12 Robot Framework libraries
+2025-04-30 20:18:22,094 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-04-30 20:18:22,100 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-04-30 20:18:22,105 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-04-30 20:18:22,106 - robot_mcp_server - WARNING - Tool not yet implemented: robot_log_parser
+2025-04-30 20:18:22,107 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_creator
+2025-04-30 20:18:22,108 - robot_mcp_server - WARNING - Tool not yet implemented: robot_variable_resolver
+2025-04-30 20:18:22,109 - robot_mcp_server - WARNING - Tool not yet implemented: robot_library_explorer
+2025-04-30 20:18:22,109 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_linter
+2025-04-30 20:18:22,110 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_mapper
+2025-04-30 20:18:22,111 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_coverage_analyzer
+2025-04-30 20:18:22,112 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_refactorer
+2025-04-30 20:18:22,113 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_data_generator
+2025-04-30 20:18:22,114 - robot_mcp_server - WARNING - Tool not yet implemented: robot_step_debugger
+2025-04-30 20:18:22,115 - robot_mcp_server - WARNING - Tool not yet implemented: robot_report_generator
+2025-04-30 20:18:22,115 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-04-30 20:18:22,116 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-04-30 20:18:22,117 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_dependency_checker
+2025-04-30 20:18:22,119 - robot_mcp_server - WARNING - Tool not yet implemented: robot_automated_feedback
+2025-04-30 20:18:22,120 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-04-30 20:18:22,121 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-04-30 20:18:22,121 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-04-30 20:18:22,121 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-04-30 20:18:22,127 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-04-30 20:18:22,131 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-04-30 20:18:22,134 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_log_parser
+2025-04-30 20:18:22,135 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_creator
+2025-04-30 20:18:22,135 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_variable_resolver
+2025-04-30 20:18:22,135 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_library_explorer
+2025-04-30 20:18:22,135 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_linter
+2025-04-30 20:18:22,135 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_mapper
+2025-04-30 20:18:22,135 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_coverage_analyzer
+2025-04-30 20:18:22,135 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_refactorer
+2025-04-30 20:18:22,136 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_data_generator
+2025-04-30 20:18:22,136 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_step_debugger
+2025-04-30 20:18:22,136 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_report_generator
+2025-04-30 20:18:22,136 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-04-30 20:18:22,136 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-04-30 20:18:22,136 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_dependency_checker
+2025-04-30 20:18:22,136 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_automated_feedback
+2025-04-30 20:18:22,137 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-04-30 20:18:22,137 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-04-30 20:18:22,137 - robot_mcp_server - INFO - Tool registration complete
+2025-04-30 20:18:22,138 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-04-30 20:18:47,104 - robot_tool.keyword_inspector - INFO - Received request to inspect keywords
+2025-04-30 20:18:47,136 - robot_tool - INFO - Discovered potential libraries via package scan: ['robotframework', 'robot']
+2025-04-30 20:18:47,137 - robot_tool.keyword_inspector - INFO - Found 2 Robot Framework libraries
+2025-05-01 04:53:10,063 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 04:53:10,069 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 04:53:10,073 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-05-01 04:53:10,094 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 04:53:10,104 - robot_mcp_server - INFO - Successfully imported tool: robot_test_creator
+2025-05-01 04:53:10,110 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 04:53:10,119 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 04:53:10,145 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 04:53:10,161 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 04:53:10,171 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 04:53:10,180 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 04:53:10,188 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 04:53:10,196 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 04:53:10,204 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 04:53:10,205 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 04:53:10,205 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 04:53:10,216 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 04:53:10,226 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 04:53:10,231 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 04:53:10,237 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-05-01 04:53:10,237 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 04:53:10,238 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 04:53:10,240 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 04:53:10,241 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-05-01 04:53:10,243 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 04:53:10,245 - robot_mcp_server - INFO - Registering tool: robot_test_creator
+2025-05-01 04:53:10,249 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 04:53:10,252 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 04:53:10,254 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 04:53:10,256 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 04:53:10,258 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 04:53:10,259 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 04:53:10,261 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 04:53:10,263 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 04:53:10,265 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 04:53:10,267 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 04:53:10,267 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 04:53:10,268 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 04:53:10,270 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 04:53:10,272 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 04:53:10,272 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-05-01 04:53:10,272 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 04:53:10,273 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 05:00:29,128 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 05:00:29,133 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 05:00:29,138 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-05-01 05:00:29,143 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 05:00:29,152 - robot_mcp_server - INFO - Successfully imported tool: robot_test_creator
+2025-05-01 05:00:29,155 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 05:00:29,162 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 05:00:29,179 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 05:00:29,184 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 05:00:29,188 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 05:00:29,192 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 05:00:29,196 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 05:00:29,201 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 05:00:29,204 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 05:00:29,204 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 05:00:29,205 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 05:00:29,209 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 05:00:29,215 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 05:00:29,218 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 05:00:29,219 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-05-01 05:00:29,219 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 05:00:29,219 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 05:00:29,222 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 05:00:29,223 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-05-01 05:00:29,225 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 05:00:29,228 - robot_mcp_server - INFO - Registering tool: robot_test_creator
+2025-05-01 05:00:29,236 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 05:00:29,239 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 05:00:29,241 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 05:00:29,243 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 05:00:29,245 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 05:00:29,248 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 05:00:29,251 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 05:00:29,253 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 05:00:29,255 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 05:00:29,257 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 05:00:29,257 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 05:00:29,257 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 05:00:29,259 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 05:00:29,260 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 05:00:29,261 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-05-01 05:00:29,261 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 05:00:29,261 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 05:06:06,281 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 05:06:06,284 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 05:06:06,297 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-05-01 05:06:06,303 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 05:06:06,311 - robot_mcp_server - INFO - Successfully imported tool: robot_test_creator
+2025-05-01 05:06:06,314 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 05:06:06,323 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 05:06:06,340 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 05:06:06,345 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 05:06:06,350 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 05:06:06,353 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 05:06:06,356 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 05:06:06,361 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 05:06:06,365 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 05:06:06,366 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 05:06:06,366 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 05:06:06,371 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 05:06:06,377 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 05:06:06,379 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 05:06:06,379 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-05-01 05:06:06,379 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 05:06:06,380 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 05:06:06,383 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 05:06:06,385 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-05-01 05:06:06,388 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 05:06:06,390 - robot_mcp_server - INFO - Registering tool: robot_test_creator
+2025-05-01 05:06:06,395 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 05:06:06,397 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 05:06:06,398 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 05:06:06,400 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 05:06:06,402 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 05:06:06,404 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 05:06:06,406 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 05:06:06,409 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 05:06:06,411 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 05:06:06,413 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 05:06:06,413 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 05:06:06,414 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 05:06:06,416 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 05:06:06,417 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 05:06:06,418 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-05-01 05:06:06,418 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 05:06:06,418 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 05:34:09,940 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 05:34:09,948 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 05:34:09,955 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-05-01 05:34:09,970 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 05:34:09,983 - robot_mcp_server - INFO - Successfully imported tool: robot_test_creator
+2025-05-01 05:34:09,990 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 05:34:10,001 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 05:34:10,011 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 05:34:10,036 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 05:34:10,040 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 05:34:10,046 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 05:34:10,050 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 05:34:10,053 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 05:34:10,059 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 05:34:10,061 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 05:34:10,062 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 05:34:10,066 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 05:34:10,069 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 05:34:10,072 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 05:34:10,074 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-05-01 05:34:10,074 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 05:34:10,074 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 05:34:10,079 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 05:34:10,081 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-05-01 05:34:10,083 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 05:34:10,085 - robot_mcp_server - INFO - Registering tool: robot_test_creator
+2025-05-01 05:34:10,087 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 05:34:10,088 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 05:34:10,089 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 05:34:10,091 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 05:34:10,092 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 05:34:10,094 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 05:34:10,097 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 05:34:10,099 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 05:34:10,101 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 05:34:10,103 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 05:34:10,103 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 05:34:10,103 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 05:34:10,105 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 05:34:10,107 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 05:34:10,107 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-05-01 05:34:10,107 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 05:34:10,108 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 05:36:03,504 - robot_tool.library_explorer - INFO - Received request to explore Robot Framework libraries: library_name=None
+2025-05-01 05:36:03,504 - robot_tool.library_explorer - INFO - Parameters: library_name=None, keyword_pattern=None, include_standard_libraries=True, include_installed_libraries=True
+2025-05-01 05:36:03,556 - robot_tool - INFO - Discovered potential libraries via package scan: ['robotframework', 'robot']
+2025-05-01 05:36:03,556 - robot_tool.library_explorer - ERROR - Error exploring Robot Framework libraries: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/prashant_alge/Desktop/noobRobot/src/mcp_tools/robot_library_explorer/tool.py", line 114, in explore_libraries
+    lib_type = lib.get("type", "").lower()
+               ^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-01 05:36:25,219 - robot_tool.runner - INFO - Received request to run Robot Framework tests for file: register_form_test.robot
+2025-05-01 05:36:25,219 - robot_tool.runner - DEBUG - Parameters: file_path=register_form_test.robot, test_names=None, include_tags=None, exclude_tags=None, variables=None, output_dir=None, timeout=30
+2025-05-01 05:36:25,221 - robot_tool.runner - INFO - Running Robot Framework tests: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_053625.xml --log log_20250501_053625.html --report report_20250501_053625.html register_form_test.robot
+2025-05-01 05:36:25,221 - robot_tool - DEBUG - Running command: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_053625.xml --log log_20250501_053625.html --report report_20250501_053625.html register_form_test.robot
+2025-05-01 05:36:25,982 - robot_tool - ERROR - Command failed with code 1: [ ERROR ] Error in file '/home/prashant_alge/Desktop/noobRobot/register_form_test.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/prashant_alge/Desktop/noobRobot/.venv/bin
+  /home/prashant_alge/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python311.zip
+  /home/prashant_alge/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11
+  /home/prashant_alge/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/lib-dynload
+  /home/prashant_alge/Desktop/noobRobot/.venv/lib/python3.11/site-packages
+  /home/prashant_alge/Desktop/noobRobot/src
+
+2025-05-01 05:36:25,984 - robot_tool.runner - INFO - Test execution completed with success=False
+2025-05-01 05:39:12,058 - robot_tool.library_explorer - INFO - Received request to explore Robot Framework libraries: library_name=None
+2025-05-01 05:39:12,059 - robot_tool.library_explorer - INFO - Parameters: library_name=None, keyword_pattern=None, include_standard_libraries=True, include_installed_libraries=True
+2025-05-01 05:39:12,109 - robot_tool - INFO - Discovered potential libraries via package scan: ['robotframework', 'robot']
+2025-05-01 05:39:12,109 - robot_tool.library_explorer - ERROR - Error exploring Robot Framework libraries: 'str' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/prashant_alge/Desktop/noobRobot/src/mcp_tools/robot_library_explorer/tool.py", line 114, in explore_libraries
+    lib_type = lib.get("type", "").lower()
+               ^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-01 05:39:22,030 - robot_tool.test_creator - INFO - Received request to create Robot Framework test file: registration_test.robot
+2025-05-01 05:39:22,030 - robot_tool.test_creator - DEBUG - Parameters: output_file=registration_test.robot, description=None, settings=None, variables=None, test_cases=None, keywords=None, libraries=None, resource_files=None, overwrite=True
+2025-05-01 05:39:22,033 - robot_tool.test_creator - INFO - Created Robot Framework test file: registration_test.robot
+2025-05-01 05:39:41,891 - robot_tool.runner - INFO - Received request to run Robot Framework tests for file: registration_test.robot
+2025-05-01 05:39:41,891 - robot_tool.runner - DEBUG - Parameters: file_path=registration_test.robot, test_names=None, include_tags=None, exclude_tags=None, variables=None, output_dir=None, timeout=30
+2025-05-01 05:48:00,147 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 05:48:00,151 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 05:48:00,156 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-05-01 05:48:00,162 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 05:48:00,168 - robot_mcp_server - INFO - Successfully imported tool: robot_test_creator
+2025-05-01 05:48:00,170 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 05:48:00,176 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 05:48:00,197 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 05:48:00,204 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 05:48:00,210 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 05:48:00,216 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 05:48:00,219 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 05:48:00,225 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 05:48:00,229 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 05:48:00,230 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 05:48:00,231 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 05:48:00,236 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 05:48:00,240 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 05:48:00,243 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 05:48:00,244 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-05-01 05:48:00,244 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 05:48:00,244 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 05:48:00,249 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 05:48:00,252 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-05-01 05:48:00,255 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 05:48:00,257 - robot_mcp_server - INFO - Registering tool: robot_test_creator
+2025-05-01 05:48:00,261 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 05:48:00,263 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 05:48:00,264 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 05:48:00,266 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 05:48:00,268 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 05:48:00,270 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 05:48:00,272 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 05:48:00,275 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 05:48:00,277 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 05:48:00,279 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 05:48:00,279 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 05:48:00,279 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 05:48:00,281 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 05:48:00,283 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 05:48:00,283 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-05-01 05:48:00,283 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 05:48:00,283 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 05:48:22,903 - robot_tool.library_explorer - INFO - Received request to explore Robot Framework libraries: library_name=None
+2025-05-01 05:48:22,904 - robot_tool.library_explorer - INFO - Parameters: library_name=None, keyword_pattern=None, include_standard_libraries=True, include_installed_libraries=True
+2025-05-01 05:48:22,920 - robot_tool - INFO - Discovered potential libraries: 12
+2025-05-01 05:48:22,920 - robot_tool.library_explorer - INFO - Found 12 libraries and 0 keywords
+2025-05-01 05:52:07,771 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 05:52:07,775 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 05:52:07,780 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-05-01 05:52:07,790 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 05:52:07,804 - robot_mcp_server - INFO - Successfully imported tool: robot_test_creator
+2025-05-01 05:52:07,808 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 05:52:07,814 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 05:52:07,834 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 05:52:07,839 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 05:52:07,844 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 05:52:07,847 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 05:52:07,851 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 05:52:07,855 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 05:52:07,860 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 05:52:07,861 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 05:52:07,862 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 05:52:07,869 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 05:52:07,874 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 05:52:07,877 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 05:52:07,879 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-05-01 05:52:07,879 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 05:52:07,879 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 05:52:07,882 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 05:52:07,885 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-05-01 05:52:07,889 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 05:52:07,891 - robot_mcp_server - INFO - Registering tool: robot_test_creator
+2025-05-01 05:52:07,895 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 05:52:07,901 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 05:52:07,904 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 05:52:07,909 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 05:52:07,913 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 05:52:07,917 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 05:52:07,920 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 05:52:07,927 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 05:52:07,932 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 05:52:07,940 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 05:52:07,941 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 05:52:07,942 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 05:52:07,947 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 05:52:07,953 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 05:52:07,954 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-05-01 05:52:07,955 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 05:52:07,956 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 05:52:52,304 - robot_tool.test_creator - INFO - Received request to create Robot Framework test file: register_form_test.robot
+2025-05-01 05:52:52,306 - robot_tool.test_creator - DEBUG - Parameters: output_file=register_form_test.robot, description=None, settings=None, variables=None, test_cases=None, keywords=None, libraries=None, resource_files=None, overwrite=False
+2025-05-01 05:52:52,309 - robot_tool.test_creator - INFO - Created Robot Framework test file: register_form_test.robot
+2025-05-01 05:53:12,486 - robot_tool.runner - INFO - Received request to run Robot Framework tests: register_form_test.robot
+2025-05-01 06:01:59,154 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 06:01:59,160 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 06:01:59,171 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-05-01 06:01:59,181 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 06:01:59,195 - robot_mcp_server - INFO - Successfully imported tool: robot_test_creator
+2025-05-01 06:01:59,199 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 06:01:59,213 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 06:01:59,244 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 06:01:59,250 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 06:01:59,267 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 06:01:59,272 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 06:01:59,278 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 06:01:59,285 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 06:01:59,290 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 06:01:59,291 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 06:01:59,292 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 06:01:59,298 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 06:01:59,304 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 06:01:59,306 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 06:01:59,307 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-05-01 06:01:59,312 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-01 06:01:59,312 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 06:01:59,312 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 06:01:59,315 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 06:01:59,316 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-05-01 06:01:59,322 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 06:01:59,325 - robot_mcp_server - INFO - Registering tool: robot_test_creator
+2025-05-01 06:01:59,329 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 06:01:59,331 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 06:01:59,333 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 06:01:59,335 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 06:01:59,340 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 06:01:59,343 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 06:01:59,345 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 06:01:59,349 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 06:01:59,351 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 06:01:59,355 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 06:01:59,355 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 06:01:59,355 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 06:01:59,358 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 06:01:59,361 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 06:01:59,361 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-05-01 06:01:59,361 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-01 06:01:59,367 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 06:01:59,368 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 06:02:24,955 - robot_tool.form_automator - INFO - Detecting form structure at URL: https://qa-practice.netlify.app/register
+2025-05-01 06:03:09,114 - robot_tool.form_automator - INFO - Creating form automation test for URL: https://qa-practice.netlify.app/register
+2025-05-01 06:03:20,532 - robot_tool.form_automator - INFO - Creating form automation test for URL: https://qa-practice.netlify.app/register
+2025-05-01 06:03:20,534 - robot_tool.form_automator - INFO - Created form automation test at register_form_test.robot
+2025-05-01 06:03:29,934 - robot_tool.runner - INFO - Running Robot tests for file: register_form_test.robot
+2025-05-01 06:03:29,935 - robot_tool.runner - INFO - Running Robot Framework tests: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_060329.xml --log log_20250501_060329.html --report report_20250501_060329.html register_form_test.robot
+2025-05-01 06:03:29,935 - robot_tool - DEBUG - Running command: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_060329.xml --log log_20250501_060329.html --report report_20250501_060329.html register_form_test.robot
+2025-05-01 06:03:30,422 - robot_tool - ERROR - Command failed with code 1: [ ERROR ] Error in file '/home/prashant_alge/Desktop/noobRobot/register_form_test.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/prashant_alge/Desktop/noobRobot/.venv/bin
+  /home/prashant_alge/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python311.zip
+  /home/prashant_alge/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11
+  /home/prashant_alge/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/lib-dynload
+  /home/prashant_alge/Desktop/noobRobot/.venv/lib/python3.11/site-packages
+  /home/prashant_alge/Desktop/noobRobot/src
+
+2025-05-01 06:03:30,422 - robot_tool.runner - INFO - Test execution completed with success=False
+2025-05-01 07:44:15,145 - robot_tool.form_automator - INFO - Detecting form structure at URL: https://qa-practice.netlify.app/register
+2025-05-01 07:47:36,217 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 07:47:36,223 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 07:47:36,229 - robot_mcp_server - INFO - Successfully imported tool: robot_runner
+2025-05-01 07:47:36,240 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 07:47:36,253 - robot_mcp_server - INFO - Successfully imported tool: robot_test_creator
+2025-05-01 07:47:36,259 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 07:47:36,273 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 07:47:36,314 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 07:47:36,325 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 07:47:36,335 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 07:47:36,341 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 07:47:36,347 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 07:47:36,354 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 07:47:36,359 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 07:47:36,360 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 07:47:36,361 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 07:47:36,367 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 07:47:36,374 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 07:47:36,376 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 07:47:36,378 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-05-01 07:47:36,381 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-01 07:47:36,381 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 07:47:36,381 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 07:47:36,384 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 07:47:36,386 - robot_mcp_server - INFO - Registering tool: robot_runner
+2025-05-01 07:47:36,389 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 07:47:36,392 - robot_mcp_server - INFO - Registering tool: robot_test_creator
+2025-05-01 07:47:36,398 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 07:47:36,401 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 07:47:36,403 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 07:47:36,405 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 07:47:36,407 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 07:47:36,409 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 07:47:36,410 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 07:47:36,413 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 07:47:36,416 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 07:47:36,418 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 07:47:36,418 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 07:47:36,418 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 07:47:36,420 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 07:47:36,422 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 07:47:36,422 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-05-01 07:47:36,422 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-01 07:47:36,429 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 07:47:36,430 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 07:48:18,293 - robot_tool.form_automator - INFO - Detecting form structure at URL: https://qa-practice.netlify.app/register
+2025-05-01 07:48:32,129 - robot_tool.form_automator - INFO - Creating form automation test for URL: https://qa-practice.netlify.app/register
+2025-05-01 07:48:32,130 - robot_tool.form_automator - INFO - Created form automation test at registration_form_test.robot
+2025-05-01 07:48:39,088 - robot_tool.runner - INFO - Running Robot tests for file: registration_form_test.robot
+2025-05-01 07:48:39,089 - robot_tool.runner - INFO - Running Robot Framework tests: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_074839.xml --log log_20250501_074839.html --report report_20250501_074839.html registration_form_test.robot
+2025-05-01 07:48:39,089 - robot_tool - DEBUG - Running command: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_074839.xml --log log_20250501_074839.html --report report_20250501_074839.html registration_form_test.robot
+2025-05-01 07:48:39,481 - robot_tool - ERROR - Command failed with code 1: [ ERROR ] Error in file '/home/prashant_alge/Desktop/noobRobot/registration_form_test.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/prashant_alge/Desktop/noobRobot/.venv/bin
+  /home/prashant_alge/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python311.zip
+  /home/prashant_alge/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11
+  /home/prashant_alge/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/lib-dynload
+  /home/prashant_alge/Desktop/noobRobot/.venv/lib/python3.11/site-packages
+  /home/prashant_alge/Desktop/noobRobot/src
+
+2025-05-01 07:48:39,482 - robot_tool.runner - INFO - Test execution completed with success=False
+2025-05-01 07:53:08,523 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 07:53:08,525 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 07:53:08,532 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 07:53:08,534 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 07:53:08,537 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 07:53:08,540 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 07:53:08,544 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 07:53:08,564 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 07:53:08,566 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 07:53:08,568 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 07:53:08,570 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 07:53:08,572 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 07:53:08,572 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 07:53:08,573 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 07:53:08,575 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 07:53:08,577 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 07:53:08,578 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 07:53:08,578 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-05-01 07:53:08,580 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-01 07:53:08,580 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 07:53:08,580 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 07:53:08,582 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 07:53:08,582 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 07:53:08,584 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 07:53:08,585 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 07:53:08,586 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 07:53:08,588 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 07:53:08,590 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 07:53:08,592 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 07:53:08,594 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 07:53:08,597 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 07:53:08,599 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 07:53:08,600 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 07:53:08,600 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 07:53:08,600 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 07:53:08,602 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 07:53:08,604 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 07:53:08,604 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-05-01 07:53:08,604 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-01 07:53:08,607 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 07:53:08,607 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 07:53:32,050 - robot_tool.form_automator - INFO - Detecting form structure at URL: https://qa-practice.netlify.app/register
+2025-05-01 07:53:53,979 - robot_tool.form_automator - INFO - Creating form automation test for URL: https://qa-practice.netlify.app/register
+2025-05-01 07:54:05,266 - robot_tool.form_automator - INFO - Creating form automation test for URL: https://qa-practice.netlify.app/register
+2025-05-01 07:54:05,270 - robot_tool.form_automator - INFO - Created form automation test at registration_form_test.robot
+2025-05-01 07:54:10,847 - robot_tool.form_automator - INFO - Running form automation test: registration_form_test.robot
+2025-05-01 07:54:10,848 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_075410.xml --log log_20250501_075410.html --report report_20250501_075410.html registration_form_test.robot
+2025-05-01 07:54:10,848 - robot_tool - DEBUG - Running command: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_075410.xml --log log_20250501_075410.html --report report_20250501_075410.html registration_form_test.robot
+2025-05-01 07:54:11,090 - robot_tool - ERROR - Command failed with code 1: [ ERROR ] Error in file '/home/prashant_alge/Desktop/noobRobot/registration_form_test.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/prashant_alge/Desktop/noobRobot/.venv/bin
+  /home/prashant_alge/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python311.zip
+  /home/prashant_alge/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11
+  /home/prashant_alge/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/lib-dynload
+  /home/prashant_alge/Desktop/noobRobot/.venv/lib/python3.11/site-packages
+  /home/prashant_alge/Desktop/noobRobot/src
+
+2025-05-01 07:54:11,091 - robot_tool.form_automator - INFO - Test execution completed with success=False
+2025-05-01 08:56:57,904 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 08:56:57,911 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 08:56:57,918 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 08:56:57,924 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 08:56:57,932 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 08:56:57,936 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 08:56:57,945 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 08:56:57,964 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 08:56:57,968 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 08:56:57,972 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 08:56:57,977 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 08:56:57,980 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 08:56:57,981 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 08:56:57,982 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 08:56:57,988 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 08:56:57,995 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 08:56:57,997 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 08:56:57,999 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-05-01 08:56:58,001 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-01 08:56:58,002 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 08:56:58,002 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 08:56:58,005 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 08:56:58,007 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 08:56:58,010 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 08:56:58,011 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 08:56:58,013 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 08:56:58,016 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 08:56:58,019 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 08:56:58,022 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 08:56:58,024 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 08:56:58,027 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 08:56:58,028 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 08:56:58,030 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 08:56:58,030 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 08:56:58,030 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 08:56:58,032 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 08:56:58,034 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 08:56:58,034 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-05-01 08:56:58,034 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-01 08:56:58,039 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 08:56:58,040 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 08:57:22,614 - robot_tool.library_explorer - INFO - Exploring Robot Framework libraries: library_name=None
+2025-05-01 08:57:22,655 - robot_tool - INFO - Discovered potential libraries: 12
+2025-05-01 08:57:22,656 - robot_tool.library_explorer - INFO - Found 12 libraries and 0 keywords
+2025-05-01 08:59:21,935 - robot_tool.form_automator - INFO - Detecting form structure at URL: https://qa-practice.netlify.app/register
+2025-05-01 08:59:34,690 - robot_tool.form_automator - INFO - Creating form automation test for URL: https://qa-practice.netlify.app/register
+2025-05-01 08:59:34,692 - robot_tool.form_automator - INFO - Created form automation test at forms.robot
+2025-05-01 09:15:53,269 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 09:15:53,274 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 09:15:53,285 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 09:15:53,290 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 09:15:53,299 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 09:15:53,306 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 09:15:53,316 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 09:15:53,323 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 09:15:53,328 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 09:15:53,347 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 09:15:53,351 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 09:15:53,355 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 09:15:53,356 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 09:15:53,357 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 09:15:53,362 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 09:15:53,366 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 09:15:53,368 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 09:15:53,370 - robot_mcp_server - WARNING - Tool not yet implemented: robot_external_api_interaction
+2025-05-01 09:15:53,486 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-01 09:15:53,497 - robot_mcp_server - INFO - Successfully imported tool: robot_form_locator
+2025-05-01 09:15:53,497 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 09:15:53,497 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 09:15:53,501 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 09:15:53,504 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 09:15:53,507 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 09:15:53,510 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 09:15:53,512 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 09:15:53,515 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 09:15:53,517 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 09:15:53,520 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 09:15:53,524 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 09:15:53,527 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 09:15:53,529 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 09:15:53,532 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 09:15:53,533 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 09:15:53,533 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 09:15:53,534 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 09:15:53,536 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 09:15:53,536 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_external_api_interaction
+2025-05-01 09:15:53,536 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-01 09:15:53,549 - robot_mcp_server - INFO - Registering tool: robot_form_locator
+2025-05-01 09:15:53,551 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 09:15:53,552 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 09:16:28,393 - robot_tool.form_automator - INFO - Extracting form structure and creating test for URL: https://qa-practice.netlify.app/register
+2025-05-01 09:16:28,394 - robot_tool.form_automator - INFO - Visiting URL to extract form structure: https://qa-practice.netlify.app/register
+2025-05-01 09:16:47,695 - robot_tool.form_automator - INFO - Created form automation test at RegisterFormTest.robot
+2025-05-01 09:17:08,005 - robot_tool.form_automator - INFO - Running form automation test: RegisterFormTest.robot
+2025-05-01 09:17:08,006 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_091708.xml --log log_20250501_091708.html --report report_20250501_091708.html RegisterFormTest.robot
+2025-05-01 09:17:08,006 - robot_tool - DEBUG - Running command: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_091708.xml --log log_20250501_091708.html --report report_20250501_091708.html RegisterFormTest.robot
+2025-05-01 09:17:12,060 - robot_tool - ERROR - Command failed with code 1: 
+2025-05-01 09:17:12,060 - robot_tool.form_automator - INFO - Test execution completed with success=False
+2025-05-01 09:17:30,438 - robot_tool.form_automator - INFO - Running form automation test: RegisterFormTest.robot
+2025-05-01 09:17:30,439 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_091730.xml --log log_20250501_091730.html --report report_20250501_091730.html RegisterFormTest.robot
+2025-05-01 09:17:30,439 - robot_tool - DEBUG - Running command: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_091730.xml --log log_20250501_091730.html --report report_20250501_091730.html RegisterFormTest.robot
+2025-05-01 09:17:34,059 - robot_tool - ERROR - Command failed with code 1: 
+2025-05-01 09:17:34,060 - robot_tool.form_automator - INFO - Test execution completed with success=False
+2025-05-01 09:17:41,575 - robot_tool.log_parser - INFO - Received request to parse Robot Framework log file: /home/prashant_alge/Desktop/noobRobot/output/output_20250501_091730.xml
+2025-05-01 09:17:41,576 - robot_tool.log_parser - DEBUG - Parameters: log_file_path=/home/prashant_alge/Desktop/noobRobot/output/output_20250501_091730.xml, include_keywords=True, include_messages=True, filter_test_status=None, filter_test_names=None, filter_tags=None
+2025-05-01 09:17:41,578 - robot_tool.log_parser - INFO - Successfully parsed Robot Framework log file: /home/prashant_alge/Desktop/noobRobot/output/output_20250501_091730.xml
+2025-05-01 09:18:02,114 - robot_tool.form_automator - INFO - Running form automation test: SimpleRegisterTest.robot
+2025-05-01 09:27:22,307 - robot_tool.form_automator - INFO - Extracting form structure and creating test for URL: https://qa-practice.netlify.app/register
+2025-05-01 09:27:22,318 - robot_tool.form_automator - INFO - Visiting URL to extract form structure: https://qa-practice.netlify.app/register
+2025-05-01 09:27:23,163 - robot_tool.form_automator - ERROR - Error detecting form structure: Message: session not created
+from unknown error: no chrome binary at /usr/bin/google-chrome
+Stacktrace:
+#0 0x55dcd375a7ea <unknown>
+#1 0x55dcd322a0f0 <unknown>
+#2 0x55dcd3260b57 <unknown>
+#3 0x55dcd325ef68 <unknown>
+#4 0x55dcd32ae569 <unknown>
+#5 0x55dcd32adb06 <unknown>
+#6 0x55dcd329fc63 <unknown>
+#7 0x55dcd326c8b5 <unknown>
+#8 0x55dcd326d511 <unknown>
+#9 0x55dcd37208ff <unknown>
+#10 0x55dcd37249c2 <unknown>
+#11 0x55dcd3708a32 <unknown>
+#12 0x55dcd372516e <unknown>
+#13 0x55dcd36ef39e <unknown>
+#14 0x55dcd3748198 <unknown>
+#15 0x55dcd37483a4 <unknown>
+#16 0x55dcd375940c <unknown>
+#17 0x7ff76c7c2ac3 <unknown>
+Traceback (most recent call last):
+  File "/home/prashant_alge/Desktop/noobRobot/src/mcp_tools/robot_form_automator/tool.py", line 259, in detect_form_structure
+    driver = webdriver.Chrome(options=chrome_options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prashant_alge/Desktop/noobRobot/.venv/lib/python3.11/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/home/prashant_alge/Desktop/noobRobot/.venv/lib/python3.11/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/home/prashant_alge/Desktop/noobRobot/.venv/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 250, in __init__
+    self.start_session(capabilities)
+  File "/home/prashant_alge/Desktop/noobRobot/.venv/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 342, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/prashant_alge/Desktop/noobRobot/.venv/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/home/prashant_alge/Desktop/noobRobot/.venv/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created
+from unknown error: no chrome binary at /usr/bin/google-chrome
+Stacktrace:
+#0 0x55dcd375a7ea <unknown>
+#1 0x55dcd322a0f0 <unknown>
+#2 0x55dcd3260b57 <unknown>
+#3 0x55dcd325ef68 <unknown>
+#4 0x55dcd32ae569 <unknown>
+#5 0x55dcd32adb06 <unknown>
+#6 0x55dcd329fc63 <unknown>
+#7 0x55dcd326c8b5 <unknown>
+#8 0x55dcd326d511 <unknown>
+#9 0x55dcd37208ff <unknown>
+#10 0x55dcd37249c2 <unknown>
+#11 0x55dcd3708a32 <unknown>
+#12 0x55dcd372516e <unknown>
+#13 0x55dcd36ef39e <unknown>
+#14 0x55dcd3748198 <unknown>
+#15 0x55dcd37483a4 <unknown>
+#16 0x55dcd375940c <unknown>
+#17 0x7ff76c7c2ac3 <unknown>
+
+2025-05-01 09:35:11,380 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 09:35:11,388 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 09:35:11,394 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 09:35:11,401 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 09:35:11,409 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 09:35:11,415 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 09:35:11,423 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 09:35:11,431 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 09:35:11,440 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 09:35:11,466 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 09:35:11,476 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 09:35:11,481 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 09:35:11,482 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 09:35:11,483 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 09:35:11,491 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 09:35:11,503 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 09:35:11,506 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 09:35:11,750 - robot_mcp_server - INFO - Successfully imported tool: robot_external_api_interaction
+2025-05-01 09:35:11,964 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-01 09:35:11,969 - robot_mcp_server - INFO - Successfully imported tool: robot_form_locator
+2025-05-01 09:35:11,969 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 09:35:11,969 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 09:35:11,971 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 09:35:11,972 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 09:35:11,974 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 09:35:11,978 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 09:35:11,980 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 09:35:11,983 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 09:35:11,985 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 09:35:11,986 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 09:35:11,987 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 09:35:11,989 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 09:35:11,990 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 09:35:11,991 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 09:35:11,992 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 09:35:11,993 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 09:35:11,997 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 09:35:12,000 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 09:35:12,001 - robot_mcp_server - INFO - Registering tool: robot_external_api_interaction
+2025-05-01 09:35:12,009 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-01 09:35:12,028 - robot_mcp_server - INFO - Registering tool: robot_form_locator
+2025-05-01 09:35:12,030 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 09:35:12,031 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 09:35:38,894 - robot_tool.form_automator - INFO - Extracting form structure and creating test for URL: https://qa-practice.netlify.app/register
+2025-05-01 09:35:38,895 - robot_tool.form_automator - INFO - Visiting URL to extract form structure: https://qa-practice.netlify.app/register
+2025-05-01 09:35:38,900 - robot_tool.form_automator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 09:35:38,900 - robot_tool.form_automator - INFO - Trying direct WebDriver initialization
+2025-05-01 09:35:45,109 - robot_tool.form_automator - WARNING - Method direct failed: Message: session not created
+from unknown error: no chrome binary at /usr/bin/google-chrome
+Stacktrace:
+#0 0x55abaece47ea <unknown>
+#1 0x55abae7b40f0 <unknown>
+#2 0x55abae7eab57 <unknown>
+#3 0x55abae7e8f68 <unknown>
+#4 0x55abae838569 <unknown>
+#5 0x55abae837b06 <unknown>
+#6 0x55abae829c63 <unknown>
+#7 0x55abae7f68b5 <unknown>
+#8 0x55abae7f7511 <unknown>
+#9 0x55abaecaa8ff <unknown>
+#10 0x55abaecae9c2 <unknown>
+#11 0x55abaec92a32 <unknown>
+#12 0x55abaecaf16e <unknown>
+#13 0x55abaec7939e <unknown>
+#14 0x55abaecd2198 <unknown>
+#15 0x55abaecd23a4 <unknown>
+#16 0x55abaece340c <unknown>
+#17 0x7f4b45c07ac3 <unknown>
+
+2025-05-01 09:35:45,112 - robot_tool.form_automator - INFO - Trying WebDriver Manager initialization
+2025-05-01 09:35:52,453 - robot_tool.form_automator - INFO - WebDriver initialized successfully
+2025-05-01 09:35:57,385 - robot_tool.form_automator - INFO - Waiting 20 seconds for page to load
+2025-05-01 09:36:19,318 - robot_tool.form_automator - INFO - Created form automation test at register_form_test.robot
+2025-05-01 09:36:43,794 - robot_tool.form_automator - INFO - Running form automation test: register_form_test.robot
+2025-05-01 09:36:43,796 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_093643.xml --log log_20250501_093643.html --report report_20250501_093643.html register_form_test.robot
+2025-05-01 09:36:43,797 - robot_tool - DEBUG - Running command: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_093643.xml --log log_20250501_093643.html --report report_20250501_093643.html register_form_test.robot
+2025-05-01 09:36:49,998 - robot_tool - ERROR - Command failed with code 1: 
+2025-05-01 09:36:49,998 - robot_tool.form_automator - INFO - Test execution completed with success=False
+2025-05-01 09:37:08,372 - robot_tool.form_automator - INFO - Running form automation test: register_form_test.robot
+2025-05-01 09:37:08,374 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_093708.xml --log log_20250501_093708.html --report report_20250501_093708.html register_form_test.robot
+2025-05-01 09:37:08,375 - robot_tool - DEBUG - Running command: robot --outputdir /home/prashant_alge/Desktop/noobRobot/output --output output_20250501_093708.xml --log log_20250501_093708.html --report report_20250501_093708.html register_form_test.robot
+2025-05-01 09:37:11,808 - robot_tool - ERROR - Command failed with code 1: 
+2025-05-01 09:37:11,809 - robot_tool.form_automator - INFO - Test execution completed with success=False
+2025-05-01 09:47:49,437 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 09:47:49,443 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 09:47:49,451 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 09:47:49,458 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 09:47:49,467 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 09:47:49,475 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 09:47:49,481 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 09:47:49,491 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 09:47:49,498 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 09:47:49,523 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 09:47:49,531 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 09:47:49,538 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 09:47:49,540 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 09:47:49,541 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 09:47:49,548 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 09:47:49,554 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 09:47:49,558 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 09:47:49,695 - robot_mcp_server - INFO - Successfully imported tool: robot_external_api_interaction
+2025-05-01 09:47:50,069 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-01 09:47:50,072 - robot_mcp_server - INFO - Successfully imported tool: robot_form_locator
+2025-05-01 09:47:50,073 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 09:47:50,073 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 09:47:50,076 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 09:47:50,077 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 09:47:50,079 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 09:47:50,081 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 09:47:50,082 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 09:47:50,083 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 09:47:50,085 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 09:47:50,090 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 09:47:50,093 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 09:47:50,095 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 09:47:50,097 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 09:47:50,099 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 09:47:50,099 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 09:47:50,099 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 09:47:50,101 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 09:47:50,102 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 09:47:50,102 - robot_mcp_server - INFO - Registering tool: robot_external_api_interaction
+2025-05-01 09:47:50,106 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-01 09:47:50,115 - robot_mcp_server - INFO - Registering tool: robot_form_locator
+2025-05-01 09:47:50,118 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 09:47:50,118 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 09:48:39,285 - robot_tool.form_automator - INFO - Extracting form structure and creating test for URL: https://qa-practice.netlify.app/register
+2025-05-01 09:48:39,286 - robot_tool.form_automator - INFO - Visiting URL to extract form structure: https://qa-practice.netlify.app/register
+2025-05-01 09:48:39,289 - robot_tool.form_automator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 09:48:39,289 - robot_tool.form_automator - INFO - Trying direct WebDriver initialization
+2025-05-01 09:48:46,183 - robot_tool.form_automator - WARNING - Method direct failed: Message: session not created
+from unknown error: no chrome binary at /usr/bin/google-chrome
+Stacktrace:
+#0 0x562c826557ea <unknown>
+#1 0x562c821250f0 <unknown>
+#2 0x562c8215bb57 <unknown>
+#3 0x562c82159f68 <unknown>
+#4 0x562c821a9569 <unknown>
+#5 0x562c821a8b06 <unknown>
+#6 0x562c8219ac63 <unknown>
+#7 0x562c821678b5 <unknown>
+#8 0x562c82168511 <unknown>
+#9 0x562c8261b8ff <unknown>
+#10 0x562c8261f9c2 <unknown>
+#11 0x562c82603a32 <unknown>
+#12 0x562c8262016e <unknown>
+#13 0x562c825ea39e <unknown>
+#14 0x562c82643198 <unknown>
+#15 0x562c826433a4 <unknown>
+#16 0x562c8265440c <unknown>
+#17 0x7ff41e8d5ac3 <unknown>
+
+2025-05-01 09:48:46,184 - robot_tool.form_automator - INFO - Trying WebDriver Manager initialization
+2025-05-01 09:48:48,551 - robot_tool.form_automator - INFO - WebDriver initialized successfully
+2025-05-01 09:48:50,654 - robot_tool.form_automator - INFO - Waiting 20 seconds for page to load
+2025-05-01 09:49:12,195 - robot_tool.form_automator - INFO - Created form automation test at /home/prashant_alge/pocccc/test/register_form_test.robot
+2025-05-01 09:59:47,465 - robot_tool.form_locator - INFO - Extracting locators from URL: https://qa-practice.netlify.app/register
+2025-05-01 09:59:47,467 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 09:59:47,473 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 09:59:47,473 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 09:59:51,951 - robot_tool.form_locator - WARNING - Method direct failed: Message: session not created
+from unknown error: no chrome binary at /usr/bin/google-chrome
+Stacktrace:
+#0 0x55e4764497ea <unknown>
+#1 0x55e475f190f0 <unknown>
+#2 0x55e475f4fb57 <unknown>
+#3 0x55e475f4df68 <unknown>
+#4 0x55e475f9d569 <unknown>
+#5 0x55e475f9cb06 <unknown>
+#6 0x55e475f8ec63 <unknown>
+#7 0x55e475f5b8b5 <unknown>
+#8 0x55e475f5c511 <unknown>
+#9 0x55e47640f8ff <unknown>
+#10 0x55e4764139c2 <unknown>
+#11 0x55e4763f7a32 <unknown>
+#12 0x55e47641416e <unknown>
+#13 0x55e4763de39e <unknown>
+#14 0x55e476437198 <unknown>
+#15 0x55e4764373a4 <unknown>
+#16 0x55e47644840c <unknown>
+#17 0x7fd2f0d96ac3 <unknown>
+
+2025-05-01 09:59:51,953 - robot_tool.form_locator - INFO - Trying WebDriver Manager initialization
+2025-05-01 09:59:54,453 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 09:59:57,081 - robot_tool.form_locator - INFO - Waiting 20 seconds for page to load

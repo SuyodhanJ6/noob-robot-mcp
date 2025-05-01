@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.11 on linux)" generated="2025-05-01T05:51:43.238003" rpa="false" schemaversion="5">
+<suite id="s1" name="Simple Test" source="/home/prashant_alge/Desktop/noobRobot/simple_test.robot">
+<test id="s1-t1" name="Simple Test" line="9">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-01T05:51:43.272542" level="INFO">Hello, Robot Framework!</msg>
+<arg>${MESSAGE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-01T05:51:43.272382" elapsed="0.000211"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${MESSAGE}</arg>
+<arg>Hello, Robot Framework!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-05-01T05:51:43.272792" elapsed="0.000140"/>
+</kw>
+<status status="PASS" start="2025-05-01T05:51:43.271840" elapsed="0.001172"/>
+</test>
+<doc>A simple test file</doc>
+<status status="PASS" start="2025-05-01T05:51:43.239750" elapsed="0.033530"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Simple Test" id="s1" pass="1" fail="0" skip="0">Simple Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.11 on linux)" generated="2025-05-01T06:03:30.244233" rpa="false" schemaversion="5">
+<suite id="s1" name="Register Form Test" source="/home/prashant_alge/Desktop/noobRobot/register_form_test.robot">
+<test id="s1-t1" name="Register New User" line="19">
+<kw name="Open Browser And Navigate To Form Page">
+<kw name="Open Browser">
+<msg time="2025-05-01T06:03:30.325574" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="FAIL" start="2025-05-01T06:03:30.325520" elapsed="0.000116">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" start="2025-05-01T06:03:30.325932" elapsed="0.000028"/>
+</kw>
+<kw name="Wait Until Page Contains Element">
+<arg>id=firstName</arg>
+<arg>timeout=10s</arg>
+<status status="NOT RUN" start="2025-05-01T06:03:30.326111" elapsed="0.000020"/>
+</kw>
+<status status="FAIL" start="2025-05-01T06:03:30.323785" elapsed="0.002472">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Fill Form Fields">
+<status status="NOT RUN" start="2025-05-01T06:03:30.326459" elapsed="0.000027"/>
+</kw>
+<kw name="Submit Form">
+<status status="NOT RUN" start="2025-05-01T06:03:30.326592" elapsed="0.000021"/>
+</kw>
+<kw name="Close All Browsers" type="TEARDOWN">
+<msg time="2025-05-01T06:03:30.327607" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" start="2025-05-01T06:03:30.327579" elapsed="0.000067">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc>Automate form submission at https://qa-practice.netlify.app/register</doc>
+<tag>automation</tag>
+<tag>form</tag>
+<status status="FAIL" start="2025-05-01T06:03:30.322813" elapsed="0.004884">No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<doc>Robot Framework test for automating form at https://qa-practice.netlify.app/register</doc>
+<status status="FAIL" start="2025-05-01T06:03:30.246490" elapsed="0.081628"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">automation</stat>
+<stat pass="0" fail="1" skip="0">form</stat>
+</tag>
+<suite>
+<stat name="Register Form Test" id="s1" pass="0" fail="1" skip="0">Register Form Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-01T06:03:30.321651" level="ERROR">Error in file '/home/prashant_alge/Desktop/noobRobot/register_form_test.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/prashant_alge/Desktop/noobRobot/.venv/bin
+  /home/prashant_alge/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python311.zip
+  /home/prashant_alge/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11
+  /home/prashant_alge/.local/share/uv/python/cpython-3.11.11-linux-x86_64-gnu/lib/python3.11/lib-dynload
+  /home/prashant_alge/Desktop/noobRobot/.venv/lib/python3.11/site-packages
+  /home/prashant_alge/Desktop/noobRobot/src</msg>
+</errors>
+</robot>
