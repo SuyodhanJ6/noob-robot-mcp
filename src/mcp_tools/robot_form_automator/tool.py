@@ -787,11 +787,10 @@ def register_tool(mcp: FastMCP):
         overwrite: bool = False
     ) -> Dict[str, Any]:
         """
-        Extract form structure from a URL and immediately create a Robot Framework test.
-        This is a convenience function that combines robot_form_detect and robot_form_create.
+        Extract form structure and create a Robot Framework test script.
         
         Args:
-            url: URL containing the form to analyze and automate
+            url: URL of the web page to analyze
             output_file: Path to save the Robot test file
             test_name: Name for the test case
             browser: Browser to use for automation
@@ -799,45 +798,259 @@ def register_tool(mcp: FastMCP):
             overwrite: Whether to overwrite an existing file
             
         Returns:
-            Dictionary with file path, content, extracted fields, and any error
+            Dictionary with file path, content, and form field details
         """
-        logger.info(f"Extracting form structure and creating test for URL: {url}")
+        from src.mcp_tools.robot_form_locator.tool import extract_all_locators
         
-        result = {
-            "file_path": None,
-            "content": None,
-            "form_fields": {},
-            "error": None
-        }
+        logger.info(f"Detecting form structure at URL: {url}")
+        form_data = detect_form_structure(url, wait_time)
         
-        # Step 1: Extract form structure
-        extract_result = detect_form_structure(url, wait_time)
-        
-        if not extract_result["form_detected"]:
+        if form_data.get("error"):
             return {
                 "file_path": None,
                 "content": None,
                 "form_fields": {},
-                "error": extract_result.get("error") or "Failed to detect form structure"
+                "error": form_data["error"]
             }
             
-        form_fields = extract_result["form_fields"]
-        result["form_fields"] = form_fields
+        logger.info(f"Creating Robot Framework test at: {output_file}")
         
-        # Step 2: Create test file
-        create_result = create_form_automation_test(
+        result = create_form_automation_test(
             url=url,
-            form_fields=form_fields,
+            form_fields=form_data["form_fields"],
             output_file=output_file,
             test_name=test_name,
+            wait_success_element=form_data.get("success_element", None),
+            success_message=form_data.get("success_message", None),
             browser=browser,
             overwrite=overwrite
         )
         
-        result["file_path"] = create_result.get("file_path")
-        result["content"] = create_result.get("content")
+        result["form_fields"] = form_data["form_fields"]
+        return result
+    
+    @mcp.tool()
+    async def robot_smart_form_extract_and_create(
+        url: str,
+        output_file: str,
+        test_name: str = "Register New User",
+        browser: str = "Chrome",
+        wait_time: int = 10,
+        overwrite: bool = True
+    ) -> Dict[str, Any]:
+        """
+        Enhanced extraction of form structure and creation of a more accurate Robot Framework test script.
         
-        if create_result.get("error"):
-            result["error"] = create_result["error"]
+        This tool provides improved form field detection with:
+        - Intelligent label association with form fields
+        - Smart default values based on field types and names
+        - Automatic detection of success indicators
+        - Better form metadata extraction
+        - More resilient test structure
+        
+        Args:
+            url: URL of the web page to analyze
+            output_file: Path to save the Robot test file
+            test_name: Name for the test case
+            browser: Browser to use for automation
+            wait_time: Time to wait for page to load in seconds
+            overwrite: Whether to overwrite an existing file
             
-        return result 
+        Returns:
+            Dictionary with file path, content, and form field details
+        """
+        from src.mcp_tools.robot_form_locator.tool import enhanced_extract_form_structure
+        
+        logger.info(f"Using enhanced extraction for form at URL: {url}")
+        form_data = enhanced_extract_form_structure(url, wait_time)
+        
+        if form_data.get("error"):
+            return {
+                "file_path": None,
+                "content": None,
+                "form_fields": {},
+                "error": form_data["error"]
+            }
+        
+        # Prepare output path
+        output_path = Path(output_file)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        
+        # Check if file exists and overwrite is not enabled
+        if output_path.exists() and not overwrite:
+            return {
+                "file_path": None,
+                "content": None,
+                "form_fields": form_data.get("form_fields", {}),
+                "error": f"File already exists: {output_file}. Set overwrite=True to overwrite."
+            }
+        
+        # Build variables section
+        variables = [
+            f"${{URL}}                     {url}",
+            f"${{BROWSER}}                 {browser}"
+        ]
+        
+        # Add form field variables
+        for field_name, field_data in form_data.get("form_fields", {}).items():
+            var_name = field_name.upper().replace(" ", "_").replace("-", "_")
+            locator = field_data.get("locator", "")
+            variables.append(f"${{{var_name}_FIELD}}         {locator}")
+        
+        # Add success indicator if any
+        success_indicators = form_data.get("success_indicators", [])
+        success_message = None
+        success_element = None
+        
+        if success_indicators:
+            # Use the first success indicator
+            indicator = success_indicators[0]
+            success_element = indicator.get("locator", "")
+            success_message = indicator.get("text", "")
+            
+            if success_element:
+                variables.append(f"${{SUCCESS_ELEMENT}}     {success_element}")
+            if success_message:
+                variables.append(f"${{SUCCESS_MESSAGE}}     {success_message}")
+        
+        # Build test cases section
+        test_steps = [
+            "Open Browser And Navigate To Form Page",
+            "Fill Form Fields"
+        ]
+        
+        if "submit" in form_data.get("form_fields", {}):
+            test_steps.append("Submit Form")
+            
+            # Add verification if we have success indicators
+            if success_element or success_message:
+                test_steps.append("Verify Form Submission")
+        
+        # Build keywords section
+        keywords = []
+        
+        # Open browser keyword
+        first_field = next(iter(form_data.get("form_fields", {}).items()), (None, None))[0]
+        if first_field:
+            first_field_var = f"${{{first_field.upper().replace(' ', '_').replace('-', '_')}_FIELD}}"
+            
+            keywords.append({
+                "name": "Open Browser And Navigate To Form Page",
+                "steps": [
+                    "Open Browser    ${URL}    ${BROWSER}",
+                    "Maximize Browser Window",
+                    f"Wait Until Page Contains Element    {first_field_var}    timeout=10s"
+                ]
+            })
+        
+        # Fill form fields keyword
+        fill_steps = []
+        for field_name, field_data in form_data.get("form_fields", {}).items():
+            if field_name == "submit":
+                continue
+                
+            var_name = field_name.upper().replace(" ", "_").replace("-", "_")
+            field_type = field_data.get("type", "text")
+            value = field_data.get("value", "")
+            
+            if field_type in ["text", "email", "tel"]:
+                fill_steps.append(f"Input Text    ${{{var_name}_FIELD}}    {value}")
+            elif field_type == "password":
+                fill_steps.append(f"Input Password    ${{{var_name}_FIELD}}    {value}")
+            elif field_type == "checkbox" and value.lower() in ["true", "yes", "on", "1"]:
+                fill_steps.append(f"Select Checkbox    ${{{var_name}_FIELD}}")
+            elif field_type == "radio":
+                fill_steps.append(f"Select Radio Button    {field_name}    {value}")
+            elif field_type == "select":
+                # Determine the best way to select an option
+                if value:
+                    # Try to pick a strategy
+                    if value.isdigit():
+                        fill_steps.append(f"Select From List By Index    ${{{var_name}_FIELD}}    {value}")
+                    else:
+                        # Prefer by value, unless it looks like a display text
+                        if " " in value or value.istitle():
+                            fill_steps.append(f"Select From List By Label    ${{{var_name}_FIELD}}    {value}")
+                        else:
+                            fill_steps.append(f"Select From List By Value    ${{{var_name}_FIELD}}    {value}")
+                else:
+                    # Default to selecting the first non-empty option by index
+                    fill_steps.append(f"Select From List By Index    ${{{var_name}_FIELD}}    1")
+            elif field_type == "textarea":
+                fill_steps.append(f"Input Text    ${{{var_name}_FIELD}}    {value}")
+        
+        if fill_steps:
+            keywords.append({
+                "name": "Fill Form Fields",
+                "steps": fill_steps
+            })
+        
+        # Submit form keyword
+        if "submit" in form_data.get("form_fields", {}):
+            submit_var = "SUBMIT_FIELD"
+            keywords.append({
+                "name": "Submit Form",
+                "steps": [
+                    f"Click Button    ${{{submit_var}}}"
+                ]
+            })
+            
+            # Add verification keyword if we have success indicators
+            if success_element or success_message:
+                verify_steps = []
+                
+                if success_element:
+                    verify_steps.append(f"Wait Until Page Contains Element    ${{SUCCESS_ELEMENT}}    timeout=10s")
+                if success_message:
+                    verify_steps.append(f"Page Should Contain    ${{SUCCESS_MESSAGE}}")
+                
+                if not verify_steps:
+                    verify_steps.append("Sleep    2s    # Wait for form submission to complete")
+                
+                keywords.append({
+                    "name": "Verify Form Submission",
+                    "steps": verify_steps
+                })
+        
+        # Build the complete test file content
+        content = []
+        
+        # Settings section
+        content.append("*** Settings ***")
+        content.append(f"Documentation     Robot Framework test for automating form at {url}")
+        content.append("Library           SeleniumLibrary")
+        content.append("Test Teardown     Close All Browsers")
+        content.append("")
+        
+        # Variables section
+        content.append("*** Variables ***")
+        for variable in variables:
+            content.append(variable)
+        content.append("")
+        
+        # Test Cases section
+        content.append("*** Test Cases ***")
+        content.append(test_name)
+        content.append(f"    [Documentation]    Automate form submission at {url}")
+        content.append("    [Tags]    form    automation    regression")
+        for step in test_steps:
+            content.append(f"    {step}")
+        content.append("")
+        
+        # Keywords section
+        content.append("*** Keywords ***")
+        for keyword in keywords:
+            content.append(keyword["name"])
+            for step in keyword["steps"]:
+                content.append(f"    {step}")
+            content.append("")
+        
+        # Write to file
+        with open(output_file, "w") as f:
+            f.write("\n".join(content))
+        
+        return {
+            "file_path": output_file,
+            "content": "\n".join(content),
+            "form_fields": form_data.get("form_fields", {})
+        } 

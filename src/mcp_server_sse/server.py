@@ -54,8 +54,10 @@ TOOLS = [
     "robot_automated_feedback",
     "robot_visualization",
     "robot_external_api_interaction",
-    "robot_form_automator",  # Form automation tool
-    "robot_form_locator"     # New form locator tool
+    "robot_form_automator",        # Form automation tool
+    "robot_form_locator",          # Form locator tool
+    "robot_dropdown_handler",      # Dropdown handler tool
+    "robot_form_success_detector"  # Form success detector tool
 ]
 
 # Import existing tools

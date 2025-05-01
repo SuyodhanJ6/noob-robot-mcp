@@ -16,6 +16,10 @@ dependencies = [
     "selenium>=4.10.0", # Web automation
     "robotframework-seleniumlibrary>=6.1.0", # Robot Framework Selenium integration
     "webdriver-manager>=3.8.6", # For automatic ChromeDriver management
+    "robotframework-faker>=5.0.0",
+    "webdrivermanager>=0.10.0",
+    "pytest>=8.3.5",
+    "pytest-selenium>=4.1.0",
 ]
 
 [project.optional-dependencies]
