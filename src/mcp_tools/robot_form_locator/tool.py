@@ -203,31 +203,87 @@ def extract_all_locators(url: str, wait_time: int = 20) -> Dict[str, Any]:
                 if elem_name:
                     locators["name"] = f"name={elem_name}"
                 if elem_class:
-                    locators["class"] = f"css=.{elem_class.replace(' ', '.')}"
+                    locators["class"] = f"class={elem_class}"
                 
-                # Generate XPath
-                locators["xpath"] = generate_xpath(elem)
+                # Generate XPath locator
+                xpath = generate_xpath(elem)
+                if xpath:
+                    locators["xpath"] = xpath
+                    
+                # Get the recommended locator format
+                recommended_locator = get_recommended_locator(locators)
                 
-                # Add to elements
+                # Store element details
                 elements[key] = {
-                    "tag_name": "input",
                     "type": elem_type,
+                    "locators": locators,
+                    "recommended_locator": recommended_locator,
                     "value": elem_value,
                     "placeholder": elem_placeholder,
-                    "locators": locators,
-                    "recommended_locator": get_recommended_locator(locators)
+                    "required": elem.get_attribute("required") == "true"
                 }
             except Exception as e:
                 logger.warning(f"Error processing input element: {e}")
-        
+                
+        # Get all select elements
+        selects = driver.find_elements(By.TAG_NAME, "select")
+        for i, elem in enumerate(selects):
+            try:
+                elem_id = elem.get_attribute("id")
+                elem_name = elem.get_attribute("name")
+                elem_class = elem.get_attribute("class") or ""
+                
+                # Generate a key name
+                key = elem_name or elem_id or f"select_{i+1}"
+                
+                # Create locators in various formats
+                locators = {}
+                if elem_id:
+                    locators["id"] = f"id={elem_id}"
+                if elem_name:
+                    locators["name"] = f"name={elem_name}"
+                if elem_class:
+                    locators["class"] = f"class={elem_class}"
+                
+                # Generate XPath locator
+                xpath = generate_xpath(elem)
+                if xpath:
+                    locators["xpath"] = xpath
+                    
+                # Get the recommended locator format
+                recommended_locator = get_recommended_locator(locators)
+                
+                # Get all options
+                options = elem.find_elements(By.TAG_NAME, "option")
+                option_values = [opt.get_attribute("value") for opt in options]
+                option_texts = [opt.text for opt in options]
+                
+                # Store element details
+                elements[key] = {
+                    "type": "select",
+                    "locators": locators,
+                    "recommended_locator": recommended_locator,
+                    "options": {
+                        "values": option_values,
+                        "texts": option_texts
+                    },
+                    "required": elem.get_attribute("required") == "true"
+                }
+            except Exception as e:
+                logger.warning(f"Error processing select element: {e}")
+                
         # Get all button elements
         buttons = driver.find_elements(By.TAG_NAME, "button")
+        buttons.extend(driver.find_elements(By.XPATH, "//input[@type='submit']"))
+        buttons.extend(driver.find_elements(By.XPATH, "//input[@type='button']"))
+        
         for i, elem in enumerate(buttons):
             try:
                 elem_id = elem.get_attribute("id")
                 elem_name = elem.get_attribute("name")
-                elem_type = elem.get_attribute("type") or ""
-                elem_text = elem.text
+                elem_type = elem.get_attribute("type") or "button"
+                elem_text = elem.text.strip() if hasattr(elem, 'text') else ""
+                elem_value = elem.get_attribute("value") or ""
                 elem_class = elem.get_attribute("class") or ""
                 
                 # Generate a key name
@@ -240,71 +296,43 @@ def extract_all_locators(url: str, wait_time: int = 20) -> Dict[str, Any]:
                 if elem_name:
                     locators["name"] = f"name={elem_name}"
                 if elem_class:
-                    locators["class"] = f"css=.{elem_class.replace(' ', '.')}"
+                    locators["class"] = f"class={elem_class}"
                 if elem_text:
-                    locators["text"] = f"//button[text()='{elem_text}']"
+                    locators["text"] = f"text={elem_text}"
                 
-                # Generate XPath
-                locators["xpath"] = generate_xpath(elem)
+                # Generate XPath locator
+                xpath = generate_xpath(elem)
+                if xpath:
+                    locators["xpath"] = xpath
+                    
+                # Get the recommended locator format
+                recommended_locator = get_recommended_locator(locators)
                 
-                # Add to elements
+                # Determine if this is a submit button
+                is_submit = (elem_type == "submit" or 
+                             "submit" in elem_text.lower() or 
+                             "submit" in elem_value.lower() or
+                             "submit" in elem_class.lower() or
+                             "submit" in key.lower())
+                
+                # Store element details
                 elements[key] = {
-                    "tag_name": "button",
-                    "type": elem_type,
-                    "text": elem_text,
+                    "type": "submit" if is_submit else "button",
                     "locators": locators,
-                    "recommended_locator": get_recommended_locator(locators)
+                    "recommended_locator": recommended_locator,
+                    "text": elem_text,
+                    "value": elem_value
                 }
             except Exception as e:
                 logger.warning(f"Error processing button element: {e}")
-        
-        # Get all select elements
-        selects = driver.find_elements(By.TAG_NAME, "select")
-        for i, elem in enumerate(selects):
-            try:
-                elem_id = elem.get_attribute("id")
-                elem_name = elem.get_attribute("name")
-                elem_class = elem.get_attribute("class") or ""
                 
-                # Get options
-                options = []
-                option_elements = elem.find_elements(By.TAG_NAME, "option")
-                for opt in option_elements:
-                    opt_value = opt.get_attribute("value")
-                    opt_text = opt.text
-                    options.append({"value": opt_value, "text": opt_text})
-                
-                # Generate a key name
-                key = elem_name or elem_id or f"select_{i+1}"
-                
-                # Create locators in various formats
-                locators = {}
-                if elem_id:
-                    locators["id"] = f"id={elem_id}"
-                if elem_name:
-                    locators["name"] = f"name={elem_name}"
-                if elem_class:
-                    locators["class"] = f"css=.{elem_class.replace(' ', '.')}"
-                
-                # Generate XPath
-                locators["xpath"] = generate_xpath(elem)
-                
-                # Add to elements
-                elements[key] = {
-                    "tag_name": "select",
-                    "options": options,
-                    "locators": locators,
-                    "recommended_locator": get_recommended_locator(locators)
-                }
-            except Exception as e:
-                logger.warning(f"Error processing select element: {e}")
-        
         # Get all textarea elements
         textareas = driver.find_elements(By.TAG_NAME, "textarea")
         for i, elem in enumerate(textareas):
             try:
                 elem_id = elem.get_attribute("id")
                 elem_name = elem.get_attribute("name")
+                elem_value = elem.get_attribute("value") or ""
                 elem_placeholder = elem.get_attribute("placeholder") or ""
                 elem_class = elem.get_attribute("class") or ""
                 
@@ -318,192 +346,301 @@ def extract_all_locators(url: str, wait_time: int = 20) -> Dict[str, Any]:
                 if elem_name:
                     locators["name"] = f"name={elem_name}"
                 if elem_class:
-                    locators["class"] = f"css=.{elem_class.replace(' ', '.')}"
+                    locators["class"] = f"class={elem_class}"
                 
-                # Generate XPath
-                locators["xpath"] = generate_xpath(elem)
+                # Generate XPath locator
+                xpath = generate_xpath(elem)
+                if xpath:
+                    locators["xpath"] = xpath
+                    
+                # Get the recommended locator format
+                recommended_locator = get_recommended_locator(locators)
                 
-                # Add to elements
+                # Store element details
                 elements[key] = {
-                    "tag_name": "textarea",
-                    "placeholder": elem_placeholder,
+                    "type": "textarea",
                     "locators": locators,
-                    "recommended_locator": get_recommended_locator(locators)
+                    "recommended_locator": recommended_locator,
+                    "value": elem_value,
+                    "placeholder": elem_placeholder,
+                    "required": elem.get_attribute("required") == "true"
                 }
             except Exception as e:
                 logger.warning(f"Error processing textarea element: {e}")
-        
-        # Get all anchor elements
-        anchors = driver.find_elements(By.TAG_NAME, "a")
-        for i, elem in enumerate(anchors):
-            try:
-                elem_id = elem.get_attribute("id")
-                elem_href = elem.get_attribute("href")
-                elem_text = elem.text
-                elem_class = elem.get_attribute("class") or ""
                 
-                # Skip if no text or href (probably not useful)
-                if not elem_text and not elem_href:
-                    continue
-                    
-                # Generate a key name
-                key = elem_id or f"link_{i+1}"
-                
-                # Create locators in various formats
-                locators = {}
-                if elem_id:
-                    locators["id"] = f"id={elem_id}"
-                if elem_text:
-                    locators["link"] = f"link={elem_text}"
-                if elem_href:
-                    locators["href"] = f"xpath=//a[@href='{elem_href}']"
-                if elem_class:
-                    locators["class"] = f"css=.{elem_class.replace(' ', '.')}"
-                
-                # Generate XPath
-                locators["xpath"] = generate_xpath(elem)
-                
-                # Add to elements
-                elements[key] = {
-                    "tag_name": "a",
-                    "text": elem_text,
-                    "href": elem_href,
-                    "locators": locators,
-                    "recommended_locator": get_recommended_locator(locators)
-                }
-            except Exception as e:
-                logger.warning(f"Error processing anchor element: {e}")
-        
-        # Get other common elements by class
-        labels = driver.find_elements(By.TAG_NAME, "label")
-        for i, elem in enumerate(labels):
-            try:
-                elem_id = elem.get_attribute("id")
-                elem_for = elem.get_attribute("for")
-                elem_text = elem.text
-                elem_class = elem.get_attribute("class") or ""
-                
-                # Skip if no text (probably not useful)
-                if not elem_text:
-                    continue
-                    
-                # Generate a key name
-                key = f"label_for_{elem_for}" if elem_for else (elem_id or f"label_{i+1}")
-                
-                # Create locators in various formats
-                locators = {}
-                if elem_id:
-                    locators["id"] = f"id={elem_id}"
-                if elem_for:
-                    locators["for"] = f"xpath=//label[@for='{elem_for}']"
-                if elem_text:
-                    locators["text"] = f"xpath=//label[text()='{elem_text}']"
-                if elem_class:
-                    locators["class"] = f"css=.{elem_class.replace(' ', '.')}"
-                
-                # Generate XPath
-                locators["xpath"] = generate_xpath(elem)
-                
-                # Add to elements
-                elements[key] = {
-                    "tag_name": "label",
-                    "for": elem_for,
-                    "text": elem_text,
-                    "locators": locators,
-                    "recommended_locator": get_recommended_locator(locators)
-                }
-            except Exception as e:
-                logger.warning(f"Error processing label element: {e}")
-        
         result["elements"] = elements
-        return result
+        result["title"] = driver.title
+        result["page_source_length"] = len(driver.page_source)
         
+        # Extract form metadata
+        result["forms"] = []
+        forms = driver.find_elements(By.TAG_NAME, "form")
+        for form in forms:
+            try:
+                form_id = form.get_attribute("id")
+                form_name = form.get_attribute("name")
+                form_action = form.get_attribute("action")
+                form_method = form.get_attribute("method")
+                form_class = form.get_attribute("class")
+                
+                form_info = {
+                    "id": form_id,
+                    "name": form_name,
+                    "action": form_action,
+                    "method": form_method,
+                    "class": form_class
+                }
+                result["forms"].append(form_info)
+            except Exception as e:
+                logger.warning(f"Error processing form metadata: {e}")
+                
+        # Add any form-related elements not directly inside a form tag
+        result["form_related_labels"] = []
+        labels = driver.find_elements(By.TAG_NAME, "label")
+        for label in labels:
+            try:
+                label_for = label.get_attribute("for")
+                label_text = label.text.strip()
+                
+                if label_for and label_text:
+                    result["form_related_labels"].append({
+                        "for": label_for,
+                        "text": label_text
+                    })
+            except Exception as e:
+                logger.warning(f"Error processing label: {e}")
+                
+        # Detect success messages or confirmation elements
+        result["potential_success_elements"] = []
+        success_candidates = driver.find_elements(By.XPATH, 
+            "//*[contains(@id, 'success') or contains(@class, 'success') or contains(text(), 'success') or contains(text(), 'Success')]")
+        
+        for elem in success_candidates:
+            try:
+                elem_id = elem.get_attribute("id")
+                elem_class = elem.get_attribute("class")
+                elem_text = elem.text.strip()
+                
+                if elem_id or elem_class or elem_text:
+                    result["potential_success_elements"].append({
+                        "id": elem_id,
+                        "class": elem_class,
+                        "text": elem_text,
+                        "xpath": generate_xpath(elem)
+                    })
+            except Exception as e:
+                logger.warning(f"Error processing success element candidate: {e}")
+                
     except Exception as e:
-        error_msg = f"Error extracting locators: {str(e)}"
-        logger.error(error_msg, exc_info=True)
-        return {
-            "url": url,
-            "elements": {},
-            "error": error_msg
-        }
+        logger.error(f"Error extracting form locators: {e}")
+        result["error"] = str(e)
+    
     finally:
         if driver:
-            driver.quit()
+            try:
+                driver.quit()
+                logger.info("Browser closed")
+            except Exception as e:
+                logger.warning(f"Error closing browser: {e}")
+    
+    return result
+
+def enhanced_extract_form_structure(url: str, wait_time: int = 20) -> Dict[str, Any]:
+    """
+    Enhanced extraction of form structure with intelligent field detection.
+    
+    This function uses a combination of techniques to better identify form fields:
+    1. Label associations with form fields
+    2. Placeholder text analysis
+    3. Required field detection
+    4. Field proximity analysis for labels without explicit 'for' attribute
+    5. Common validation patterns detection
+    
+    Args:
+        url: URL of the web page to analyze
+        wait_time: Time to wait for page to load in seconds
+        
+    Returns:
+        Dictionary with form structure details optimized for test generation
+    """
+    # First get all the basic element data
+    basic_data = extract_all_locators(url, wait_time)
+    
+    if basic_data.get("error"):
+        return basic_data
+        
+    result = {
+        "url": url,
+        "form_fields": {},
+        "form_metadata": {},
+        "success_indicators": [],
+        "error": None
+    }
+    
+    # Extract basic form metadata
+    if basic_data.get("forms"):
+        result["form_metadata"] = basic_data["forms"][0]  # Use the first form as primary
+    
+    # Process labels to associate them with fields
+    label_map = {}
+    for label in basic_data.get("form_related_labels", []):
+        if label.get("for") and label.get("text"):
+            label_map[label["for"]] = label["text"]
+    
+    # Process each form element to enhance with labels and smart defaults
+    for key, element_data in basic_data.get("elements", {}).items():
+        field_type = element_data.get("type", "text")
+        
+        # Skip non-interactive elements
+        if field_type in ["hidden"]:
+            continue
+            
+        # Get element ID from the locator
+        element_id = None
+        if "id" in element_data.get("locators", {}):
+            element_id = element_data["locators"]["id"].replace("id=", "")
+            
+        # Find associated label
+        label = None
+        if element_id and element_id in label_map:
+            label = label_map[element_id]
+            
+        # Generate smart field name
+        field_name = key.lower()
+        if label:
+            # Convert label to field name (remove spaces, special chars)
+            clean_label = ''.join(c for c in label if c.isalnum() or c == ' ')
+            field_name = clean_label.replace(' ', '_').lower()
+            
+        # Generate smart default value based on field type and name
+        default_value = ""
+        if field_type == "text":
+            if any(name_part in field_name for name_part in ["name", "first", "fname"]):
+                default_value = "John"
+            elif any(name_part in field_name for name_part in ["last", "lname", "surname"]):
+                default_value = "Doe"
+        elif field_type == "email":
+            default_value = "test@example.com"
+        elif field_type == "tel" or "phone" in field_name:
+            default_value = "1234567890"
+        elif field_type == "password":
+            default_value = "TestPassword123!"
+        elif field_type == "checkbox":
+            default_value = "true"
+        elif field_type == "select":
+            # Try to select a non-empty option if available
+            if element_data.get("options", {}).get("values", []):
+                values = element_data["options"]["values"]
+                # Skip the first option if it looks like a placeholder
+                if len(values) > 1 and (not values[0] or "select" in values[0].lower()):
+                    default_value = values[1]
+                else:
+                    default_value = values[0]
+        
+        # Add to form fields
+        result["form_fields"][field_name] = {
+            "locator": element_data.get("recommended_locator", ""),
+            "type": field_type,
+            "value": default_value,
+            "required": element_data.get("required", False),
+            "label": label
+        }
+    
+    # Add submit button
+    for key, element_data in basic_data.get("elements", {}).items():
+        if element_data.get("type") == "submit":
+            result["form_fields"]["submit"] = {
+                "locator": element_data.get("recommended_locator", ""),
+                "type": "submit",
+                "value": ""
+            }
+            break
+    
+    # Extract potential success indicators
+    for element in basic_data.get("potential_success_elements", []):
+        if element.get("id") or element.get("xpath"):
+            result["success_indicators"].append({
+                "locator": f"id={element['id']}" if element.get("id") else element.get("xpath", ""),
+                "text": element.get("text", "")
+            })
+    
+    return result
 
 def generate_xpath(element) -> str:
     """
-    Generate XPath for an element based on its attributes or position.
+    Generate an XPath locator for an element.
     
     Args:
-        element: Selenium WebElement
+        element: WebElement object
         
     Returns:
         XPath locator string
     """
     try:
+        # Try to get the tag name
         tag_name = element.tag_name
         
-        # Try to create an xpath with an ID
-        element_id = element.get_attribute("id")
-        if element_id:
-            return f"xpath=//{tag_name}[@id='{element_id}']"
+        # Try strategies in order of preference
+        strategies = [
+            # ID strategy
+            lambda e: e.get_attribute("id") and f"xpath=//{tag_name}[@id='{e.get_attribute('id')}']",
+            
+            # Name strategy
+            lambda e: e.get_attribute("name") and f"xpath=//{tag_name}[@name='{e.get_attribute('name')}']",
+            
+            # Class strategy (if unique enough)
+            lambda e: e.get_attribute("class") and f"xpath=//{tag_name}[@class='{e.get_attribute('class')}']",
+            
+            # Text content strategy (for buttons, links, etc.)
+            lambda e: e.text and f"xpath=//{tag_name}[text()='{e.text}']",
+            
+            # Button value strategy
+            lambda e: (tag_name == "input" and e.get_attribute("type") in ["button", "submit"]) and 
+                      e.get_attribute("value") and 
+                      f"xpath=//{tag_name}[@value='{e.get_attribute('value')}']",
+            
+            # Placeholder strategy
+            lambda e: e.get_attribute("placeholder") and f"xpath=//{tag_name}[@placeholder='{e.get_attribute('placeholder')}']",
+        ]
         
-        # Try with name attribute
-        element_name = element.get_attribute("name")
-        if element_name:
-            return f"xpath=//{tag_name}[@name='{element_name}']"
+        for strategy in strategies:
+            result = strategy(element)
+            if result:
+                return result
+                
+        # Fallback to a more complex path
+        return None
         
-        # Try with class attribute
-        element_class = element.get_attribute("class")
-        if element_class:
-            return f"xpath=//{tag_name}[@class='{element_class}']"
-        
-        # Try with text for elements that typically have text
-        if tag_name in ["a", "button", "label", "h1", "h2", "h3", "h4", "h5", "h6", "p"]:
-            element_text = element.text
-            if element_text:
-                return f"xpath=//{tag_name}[text()='{element_text}']"
-        
-        # Last resort - use position in the DOM
-        return f"xpath=(//{tag_name})[1]"
     except Exception as e:
-        logger.error(f"Error generating XPath: {e}")
-        return "xpath=//body"
+        logger.warning(f"Error generating XPath: {e}")
+        return None
 
 def get_recommended_locator(locators: Dict[str, str]) -> str:
     """
-    Get the recommended locator from a set of locators.
+    Get the recommended locator from a dictionary of locators.
     
     Args:
         locators: Dictionary of locator types and values
         
     Returns:
-        Recommended locator string
+        The recommended locator string
     """
-    # Priority order: id > name > link > text > class > xpath
-    if "id" in locators:
-        return locators["id"]
-    elif "name" in locators:
-        return locators["name"]
-    elif "link" in locators:
-        return locators["link"]
-    elif "text" in locators:
-        return locators["text"]
-    elif "for" in locators:
-        return locators["for"]
-    elif "class" in locators:
-        return locators["class"]
-    elif "xpath" in locators:
-        return locators["xpath"]
-    else:
-        return ""
+    # Order of preference
+    preference = ["id", "name", "text", "xpath", "class"]
+    
+    for locator_type in preference:
+        if locator_type in locators:
+            return locators[locator_type]
+    
+    # Default to the first available locator
+    return next(iter(locators.values())) if locators else ""
 
 # -----------------------------------------------------------------------------
 # MCP Tool Registration
 # -----------------------------------------------------------------------------
 
 def register_tool(mcp: FastMCP):
-    """Register the robot_form_locator tool with the MCP server."""
+    """Register MCP tool."""
     
     @mcp.tool()
     async def robot_extract_locators(
@@ -511,7 +648,7 @@ def register_tool(mcp: FastMCP):
         wait_time: int = 20
     ) -> Dict[str, Any]:
         """
-        Extract all web elements and their locators from a given URL.
+        Extract all form elements and their locators from a web page.
         
         Args:
             url: URL of the web page to analyze
@@ -520,7 +657,25 @@ def register_tool(mcp: FastMCP):
         Returns:
             Dictionary with all detected elements and their locators
         """
-        logger.info(f"Extracting locators from URL: {url}")
+        return extract_all_locators(url, wait_time)
         
-        result = extract_all_locators(url, wait_time)
-        return result 
+    @mcp.tool()
+    async def robot_extract_form_enhanced(
+        url: str,
+        wait_time: int = 20
+    ) -> Dict[str, Any]:
+        """
+        Extract form structure with enhanced detection capabilities.
+        
+        This tool provides more accurate form field detection, automatic field labeling,
+        smart default values, and better success indicator detection. It's optimized
+        for generating more accurate Robot Framework test scripts.
+        
+        Args:
+            url: URL of the web page to analyze
+            wait_time: Time to wait for page to load in seconds
+            
+        Returns:
+            Dictionary with enhanced form structure details
+        """
+        return enhanced_extract_form_structure(url, wait_time) 

@@ -1627,3 +1627,409 @@ Stacktrace:
 2025-05-01 09:59:51,953 - robot_tool.form_locator - INFO - Trying WebDriver Manager initialization
 2025-05-01 09:59:54,453 - robot_tool.form_locator - INFO - WebDriver initialized successfully
 2025-05-01 09:59:57,081 - robot_tool.form_locator - INFO - Waiting 20 seconds for page to load
+2025-05-01 16:23:52,242 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 16:23:52,244 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 16:23:52,251 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 16:23:52,255 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 16:23:52,259 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 16:23:52,263 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 16:23:52,268 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 16:23:52,274 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 16:23:52,279 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 16:23:52,282 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 16:23:52,286 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 16:23:52,289 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 16:23:52,289 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 16:23:52,289 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 16:23:52,295 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 16:23:52,299 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 16:23:52,302 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 16:23:52,406 - robot_mcp_server - INFO - Successfully imported tool: robot_external_api_interaction
+2025-05-01 16:23:52,499 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-01 16:23:52,501 - robot_mcp_server - INFO - Successfully imported tool: robot_form_locator
+2025-05-01 16:23:52,501 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 16:23:52,501 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 16:23:52,503 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 16:23:52,504 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 16:23:52,506 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 16:23:52,507 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 16:23:52,508 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 16:23:52,509 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 16:23:52,511 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 16:23:52,513 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 16:23:52,514 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 16:23:52,516 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 16:23:52,517 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 16:23:52,518 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 16:23:52,519 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 16:23:52,519 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 16:23:52,520 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 16:23:52,522 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 16:23:52,522 - robot_mcp_server - INFO - Registering tool: robot_external_api_interaction
+2025-05-01 16:23:52,523 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-01 16:23:52,526 - robot_mcp_server - INFO - Registering tool: robot_form_locator
+2025-05-01 16:23:52,527 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 16:23:52,528 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 16:30:41,516 - robot_tool.form_automator - INFO - Extracting form structure and creating test for URL: https://qa-practice.netlify.app/register
+2025-05-01 16:30:41,517 - robot_tool.form_automator - INFO - Visiting URL to extract form structure: https://qa-practice.netlify.app/register
+2025-05-01 16:30:41,517 - robot_tool.form_automator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 16:30:41,518 - robot_tool.form_automator - INFO - Trying direct WebDriver initialization
+2025-05-01 16:30:50,948 - robot_tool.form_automator - INFO - WebDriver initialized successfully
+2025-05-01 16:30:52,342 - robot_tool.form_automator - INFO - Waiting 30 seconds for page to load
+2025-05-01 16:31:22,526 - robot_tool.form_automator - INFO - Created form automation test at test/register_test.robot
+2025-05-01 16:42:33,392 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 16:42:33,395 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 16:42:33,402 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 16:42:33,405 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 16:42:33,411 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 16:42:33,414 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 16:42:33,418 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 16:42:33,434 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 16:42:33,436 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 16:42:33,438 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 16:42:33,440 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 16:42:33,442 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 16:42:33,442 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 16:42:33,443 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 16:42:33,445 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 16:42:33,447 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 16:42:33,448 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 16:42:33,489 - robot_mcp_server - INFO - Successfully imported tool: robot_external_api_interaction
+2025-05-01 16:42:33,517 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-01 16:42:33,520 - robot_mcp_server - INFO - Successfully imported tool: robot_form_locator
+2025-05-01 16:42:33,520 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 16:42:33,520 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 16:42:33,522 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 16:42:33,523 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 16:42:33,524 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 16:42:33,526 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 16:42:33,527 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 16:42:33,528 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 16:42:33,530 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 16:42:33,531 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 16:42:33,532 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 16:42:33,533 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 16:42:33,534 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 16:42:33,535 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 16:42:33,535 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 16:42:33,535 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 16:42:33,537 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 16:42:33,538 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 16:42:33,538 - robot_mcp_server - INFO - Registering tool: robot_external_api_interaction
+2025-05-01 16:42:33,539 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-01 16:42:33,543 - robot_mcp_server - INFO - Registering tool: robot_form_locator
+2025-05-01 16:42:33,544 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 16:42:33,545 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 16:43:36,453 - robot_tool.form_automator - INFO - Using enhanced extraction for form at URL: https://qa-practice.netlify.app/register
+2025-05-01 16:43:36,453 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 16:43:36,453 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 16:43:36,453 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 16:43:36,680 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 16:43:39,003 - robot_tool.form_locator - INFO - Waiting 30 seconds for page to load
+2025-05-01 16:44:10,743 - robot_tool.form_locator - INFO - Browser closed
+2025-05-01 16:46:57,005 - robot_tool.form_automator - INFO - Using enhanced extraction for form at URL: https://qa-practice.netlify.app/register
+2025-05-01 16:46:57,005 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 16:46:57,005 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 16:46:57,005 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 16:46:57,239 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 16:46:58,680 - robot_tool.form_locator - INFO - Waiting 30 seconds for page to load
+2025-05-01 16:47:30,303 - robot_tool.form_locator - INFO - Browser closed
+2025-05-01 16:48:07,903 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 16:48:07,904 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 16:48:07,904 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 16:48:08,150 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 16:48:10,828 - robot_tool.form_locator - INFO - Waiting 20 seconds for page to load
+2025-05-01 16:48:32,484 - robot_tool.form_locator - INFO - Browser closed
+2025-05-01 16:49:34,784 - robot_tool.log_parser - INFO - Received request to parse Robot Framework log file: output.xml
+2025-05-01 16:49:34,785 - robot_tool.log_parser - DEBUG - Parameters: log_file_path=output.xml, include_keywords=True, include_messages=True, filter_test_status=None, filter_test_names=None, filter_tags=None
+2025-05-01 16:49:34,785 - robot_tool.log_parser - INFO - Successfully parsed Robot Framework log file: output.xml
+2025-05-01 16:51:00,471 - robot_tool.log_parser - INFO - Received request to parse Robot Framework log file: output.xml
+2025-05-01 16:51:00,472 - robot_tool.log_parser - DEBUG - Parameters: log_file_path=output.xml, include_keywords=True, include_messages=True, filter_test_status=None, filter_test_names=None, filter_tags=None
+2025-05-01 16:51:00,473 - robot_tool.log_parser - INFO - Successfully parsed Robot Framework log file: output.xml
+2025-05-01 17:30:52,202 - robot_tool.form_automator - INFO - Using enhanced extraction for form at URL: https://qa-practice.netlify.app/register
+2025-05-01 17:30:52,202 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 17:30:52,202 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 17:30:52,202 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 17:30:53,298 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 17:30:55,095 - robot_tool.form_locator - INFO - Waiting 30 seconds for page to load
+2025-05-01 17:31:24,216 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 17:31:24,217 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 17:31:24,221 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 17:31:24,223 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 17:31:24,227 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 17:31:24,229 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 17:31:24,233 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 17:31:24,249 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 17:31:24,251 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 17:31:24,252 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 17:31:24,254 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 17:31:24,256 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 17:31:24,256 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 17:31:24,256 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 17:31:24,258 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 17:31:24,260 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 17:31:24,260 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 17:31:24,297 - robot_mcp_server - INFO - Successfully imported tool: robot_external_api_interaction
+2025-05-01 17:31:24,323 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-01 17:31:24,324 - robot_mcp_server - INFO - Successfully imported tool: robot_form_locator
+2025-05-01 17:31:24,324 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 17:31:24,324 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 17:31:24,326 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 17:31:24,326 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 17:31:24,328 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 17:31:24,329 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 17:31:24,331 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 17:31:24,332 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 17:31:24,333 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 17:31:24,335 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 17:31:24,336 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 17:31:24,337 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 17:31:24,339 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 17:31:24,340 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 17:31:24,340 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 17:31:24,340 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 17:31:24,341 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 17:31:24,342 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 17:31:24,342 - robot_mcp_server - INFO - Registering tool: robot_external_api_interaction
+2025-05-01 17:31:24,344 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-01 17:31:24,348 - robot_mcp_server - INFO - Registering tool: robot_form_locator
+2025-05-01 17:31:24,349 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 17:31:24,349 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 17:32:34,246 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 17:32:34,248 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 17:32:34,254 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 17:32:34,257 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 17:32:34,261 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 17:32:34,264 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 17:32:34,269 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 17:32:34,285 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 17:32:34,287 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 17:32:34,289 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 17:32:34,291 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 17:32:34,293 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 17:32:34,293 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 17:32:34,294 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 17:32:34,296 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 17:32:34,298 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 17:32:34,298 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 17:32:34,339 - robot_mcp_server - INFO - Successfully imported tool: robot_external_api_interaction
+2025-05-01 17:32:34,366 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-01 17:32:34,367 - robot_mcp_server - INFO - Successfully imported tool: robot_form_locator
+2025-05-01 17:32:34,367 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 17:32:34,367 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 17:32:34,369 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 17:32:34,369 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 17:32:34,371 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 17:32:34,373 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 17:32:34,375 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 17:32:34,377 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 17:32:34,379 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 17:32:34,380 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 17:32:34,381 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 17:32:34,383 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 17:32:34,384 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 17:32:34,385 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 17:32:34,385 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 17:32:34,385 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 17:32:34,387 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 17:32:34,388 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 17:32:34,388 - robot_mcp_server - INFO - Registering tool: robot_external_api_interaction
+2025-05-01 17:32:34,390 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-01 17:32:34,395 - robot_mcp_server - INFO - Registering tool: robot_form_locator
+2025-05-01 17:32:34,397 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 17:32:34,397 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 17:34:21,823 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 17:34:21,823 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 17:34:21,823 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 17:34:22,207 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 17:34:23,950 - robot_tool.form_locator - INFO - Waiting 20 seconds for page to load
+2025-05-01 17:34:45,652 - robot_tool.form_locator - INFO - Browser closed
+2025-05-01 17:34:59,041 - robot_tool.form_automator - INFO - Using enhanced extraction for form at URL: https://qa-practice.netlify.app/register
+2025-05-01 17:34:59,041 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 17:34:59,042 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 17:34:59,042 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 17:34:59,311 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 17:35:01,389 - robot_tool.form_locator - INFO - Waiting 10 seconds for page to load
+2025-05-01 17:35:13,126 - robot_tool.form_locator - INFO - Browser closed
+2025-05-01 17:37:15,647 - robot_tool.form_automator - INFO - Using enhanced extraction for form at URL: https://qa-practice.netlify.app/register
+2025-05-01 17:37:15,647 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 17:37:15,647 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 17:37:15,647 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 17:37:15,885 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 17:37:17,241 - robot_tool.form_locator - INFO - Waiting 10 seconds for page to load
+2025-05-01 17:37:28,884 - robot_tool.form_locator - INFO - Browser closed
+2025-05-01 17:40:15,266 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 17:40:15,266 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 17:40:15,266 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 17:40:15,511 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 17:40:17,352 - robot_tool.form_locator - INFO - Waiting 20 seconds for page to load
+2025-05-01 17:40:38,989 - robot_tool.form_locator - INFO - Browser closed
+2025-05-01 17:52:49,679 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 17:52:49,681 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 17:52:49,685 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 17:52:49,688 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 17:52:49,692 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 17:52:49,696 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 17:52:49,702 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 17:52:49,718 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 17:52:49,720 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 17:52:49,722 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 17:52:49,724 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 17:52:49,726 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 17:52:49,726 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 17:52:49,726 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 17:52:49,729 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 17:52:49,731 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 17:52:49,732 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 17:52:49,773 - robot_mcp_server - INFO - Successfully imported tool: robot_external_api_interaction
+2025-05-01 17:52:49,800 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-01 17:52:49,801 - robot_mcp_server - INFO - Successfully imported tool: robot_form_locator
+2025-05-01 17:52:49,803 - robot_mcp_server - INFO - Successfully imported tool: robot_dropdown_handler
+2025-05-01 17:52:49,803 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 17:52:49,803 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 17:52:49,805 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 17:52:49,806 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 17:52:49,807 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 17:52:49,808 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 17:52:49,809 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 17:52:49,810 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 17:52:49,812 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 17:52:49,813 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 17:52:49,814 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 17:52:49,815 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 17:52:49,816 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 17:52:49,818 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 17:52:49,818 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 17:52:49,818 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 17:52:49,819 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 17:52:49,820 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 17:52:49,820 - robot_mcp_server - INFO - Registering tool: robot_external_api_interaction
+2025-05-01 17:52:49,821 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-01 17:52:49,825 - robot_mcp_server - INFO - Registering tool: robot_form_locator
+2025-05-01 17:52:49,827 - robot_mcp_server - INFO - Registering tool: robot_dropdown_handler
+2025-05-01 17:52:49,829 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 17:52:49,829 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 17:54:16,494 - robot_tool.form_automator - INFO - Using enhanced extraction for form at URL: https://qa-practice.netlify.app/register
+2025-05-01 17:54:16,494 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 17:54:16,494 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 17:54:16,494 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 17:54:16,752 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 17:54:18,102 - robot_tool.form_locator - INFO - Waiting 10 seconds for page to load
+2025-05-01 17:54:29,802 - robot_tool.form_locator - INFO - Browser closed
+2025-05-01 17:54:48,198 - robot_tool.dropdown_handler - INFO - Trying direct WebDriver initialization
+2025-05-01 17:54:48,440 - robot_tool.dropdown_handler - INFO - WebDriver initialized successfully
+2025-05-01 17:54:48,441 - robot_tool.dropdown_handler - INFO - Visiting URL to extract dropdown options: https://qa-practice.netlify.app/register
+2025-05-01 17:54:50,344 - robot_tool.dropdown_handler - INFO - Waiting for page to load...
+2025-05-01 17:54:55,344 - robot_tool.dropdown_handler - INFO - Looking for dropdown with locator: countries_dropdown_menu (by id)
+2025-05-01 17:59:24,728 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 17:59:24,728 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 17:59:24,728 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 17:59:24,976 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 17:59:27,129 - robot_tool.form_locator - INFO - Waiting 5 seconds for page to load
+2025-05-01 17:59:33,799 - robot_tool.form_locator - INFO - Browser closed
+2025-05-01 19:49:11,011 - robot_tool.form_automator - INFO - Using enhanced extraction for form at URL: https://qa-practice.netlify.app/register
+2025-05-01 19:49:11,014 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 19:49:11,014 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 19:49:11,014 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 19:49:20,446 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 19:49:23,506 - robot_tool.form_locator - INFO - Waiting 10 seconds for page to load
+2025-05-01 19:49:36,233 - robot_tool.form_locator - INFO - Browser closed
+2025-05-01 20:03:04,653 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-01 20:03:04,655 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-01 20:03:04,661 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-01 20:03:04,665 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-01 20:03:04,670 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-01 20:03:04,675 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-01 20:03:04,681 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-01 20:03:04,706 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-01 20:03:04,710 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-01 20:03:04,714 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-01 20:03:04,719 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-01 20:03:04,723 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-01 20:03:04,725 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-01 20:03:04,726 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-01 20:03:04,731 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-01 20:03:04,735 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-01 20:03:04,737 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-01 20:03:04,806 - robot_mcp_server - INFO - Successfully imported tool: robot_external_api_interaction
+2025-05-01 20:03:04,864 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-01 20:03:04,866 - robot_mcp_server - INFO - Successfully imported tool: robot_form_locator
+2025-05-01 20:03:04,867 - robot_mcp_server - INFO - Successfully imported tool: robot_dropdown_handler
+2025-05-01 20:03:04,872 - robot_mcp_server - INFO - Successfully imported tool: robot_form_success_detector
+2025-05-01 20:03:04,873 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-01 20:03:04,873 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-01 20:03:04,875 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-01 20:03:04,876 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-01 20:03:04,879 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-01 20:03:04,881 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-01 20:03:04,883 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-01 20:03:04,885 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-01 20:03:04,888 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-01 20:03:04,890 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-01 20:03:04,892 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-01 20:03:04,895 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-01 20:03:04,897 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-01 20:03:04,899 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-01 20:03:04,899 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-01 20:03:04,899 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-01 20:03:04,901 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-01 20:03:04,903 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-01 20:03:04,903 - robot_mcp_server - INFO - Registering tool: robot_external_api_interaction
+2025-05-01 20:03:04,905 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-01 20:03:04,913 - robot_mcp_server - INFO - Registering tool: robot_form_locator
+2025-05-01 20:03:04,915 - robot_mcp_server - INFO - Registering tool: robot_dropdown_handler
+2025-05-01 20:03:04,918 - robot_mcp_server - INFO - Registering tool: robot_form_success_detector
+2025-05-01 20:03:04,922 - robot_mcp_server - INFO - Tool registration complete
+2025-05-01 20:03:04,922 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-01 20:04:00,838 - robot_tool.form_automator - INFO - Using enhanced extraction for form at URL: https://qa-practice.netlify.app/register
+2025-05-01 20:04:00,838 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 20:04:00,840 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 20:04:00,840 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 20:04:01,426 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 20:04:04,014 - robot_tool.form_locator - INFO - Waiting 10 seconds for page to load
+2025-05-01 20:04:16,765 - robot_tool.form_locator - INFO - Browser closed
+2025-05-01 20:06:30,204 - robot_tool.dropdown_handler - INFO - Trying direct WebDriver initialization
+2025-05-01 20:06:30,645 - robot_tool.dropdown_handler - INFO - WebDriver initialized successfully
+2025-05-01 20:06:30,646 - robot_tool.dropdown_handler - INFO - Visiting URL to extract dropdown options: https://qa-practice.netlify.app/register
+2025-05-01 20:06:33,194 - robot_tool.dropdown_handler - INFO - Waiting for page to load...
+2025-05-01 20:06:43,194 - robot_tool.dropdown_handler - INFO - Looking for dropdown with locator: countries_dropdown_menu (by id)
+2025-05-01 20:07:42,517 - robot_tool.form_success_detector - INFO - Trying direct WebDriver initialization
+2025-05-01 20:07:42,933 - robot_tool.form_success_detector - INFO - WebDriver initialized successfully
+2025-05-01 20:07:42,934 - robot_tool.form_success_detector - INFO - Visiting form URL: https://qa-practice.netlify.app/register
+2025-05-01 20:07:45,509 - robot_tool.form_success_detector - INFO - Waiting for page to load...
+2025-05-01 20:07:50,510 - robot_tool.form_success_detector - INFO - Capturing initial page state
+2025-05-01 20:07:51,115 - robot_tool.form_success_detector - INFO - Executing step 1: input on id=firstName
+2025-05-01 20:07:51,126 - robot_tool.form_success_detector - ERROR - Error executing step 1: Unknown action: input
+2025-05-01 20:07:51,127 - robot_tool.form_success_detector - INFO - Executing step 2: input on id=lastName
+2025-05-01 20:07:51,135 - robot_tool.form_success_detector - ERROR - Error executing step 2: Unknown action: input
+2025-05-01 20:07:51,135 - robot_tool.form_success_detector - INFO - Executing step 3: input on id=phone
+2025-05-01 20:07:51,145 - robot_tool.form_success_detector - ERROR - Error executing step 3: Unknown action: input
+2025-05-01 20:07:51,145 - robot_tool.form_success_detector - INFO - Executing step 4: input on id=emailAddress
+2025-05-01 20:07:51,155 - robot_tool.form_success_detector - ERROR - Error executing step 4: Unknown action: input
+2025-05-01 20:07:51,156 - robot_tool.form_success_detector - INFO - Executing step 5: input on id=password
+2025-05-01 20:07:51,165 - robot_tool.form_success_detector - ERROR - Error executing step 5: Unknown action: input
+2025-05-01 20:07:51,165 - robot_tool.form_success_detector - INFO - Executing step 6: checkbox on id=exampleCheck1
+2025-05-01 20:07:51,176 - robot_tool.form_success_detector - ERROR - Error executing step 6: Unknown action: checkbox
+2025-05-01 20:07:51,176 - robot_tool.form_success_detector - INFO - Executing step 7: select on id=countries_dropdown_menu
+2025-05-01 20:07:52,241 - robot_tool.form_success_detector - INFO - Executing step 8: click on id=registerBtn
+2025-05-01 20:07:53,363 - robot_tool.form_success_detector - INFO - Waiting 20 seconds for form processing
+2025-05-01 20:08:13,364 - robot_tool.form_success_detector - INFO - Capturing final page state
+2025-05-01 23:05:43,411 - robot_tool.form_automator - INFO - Using enhanced extraction for form at URL: https://qa-practice.netlify.app/register
+2025-05-01 23:05:43,411 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 23:05:43,411 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 23:05:43,411 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 23:05:45,037 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 23:05:46,399 - robot_tool.form_locator - INFO - Waiting 10 seconds for page to load
+2025-05-01 23:05:58,057 - robot_tool.form_locator - INFO - Browser closed
+2025-05-01 23:08:53,451 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 23:08:53,451 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 23:08:53,451 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 23:08:53,694 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 23:08:55,502 - robot_tool.form_locator - INFO - Waiting 10 seconds for page to load
+2025-05-01 23:09:07,227 - robot_tool.form_locator - INFO - Browser closed
+2025-05-01 23:09:56,322 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-01 23:09:56,322 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-01 23:09:56,322 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-01 23:09:56,565 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-01 23:09:58,373 - robot_tool.form_locator - INFO - Waiting 20 seconds for page to load
+2025-05-01 23:10:20,004 - robot_tool.form_locator - INFO - Browser closed
