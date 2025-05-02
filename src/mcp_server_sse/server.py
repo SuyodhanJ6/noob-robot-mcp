@@ -33,32 +33,45 @@ logger = logging.getLogger('robot_mcp_server')
 mcp = FastMCP("RobotFrameworkTools")
 
 # Define tool modules to import
+# Only including essential tools for advanced Robot script generation with agent workflow
 TOOLS = [
-    "robot_test_reader",
-    "robot_keyword_inspector",
-    # "robot_runner",  # Commented out due to parameter type issues
-    "robot_log_parser",
-    # "robot_test_creator",  # Commented out due to parameter type issues
-    "robot_variable_resolver",
-    "robot_library_explorer",
-    "robot_test_linter",
-    "robot_test_mapper",
-    "robot_test_coverage_analyzer",
-    "robot_test_refactorer",
-    "robot_test_data_generator",
-    "robot_step_debugger",
-    "robot_report_generator",
-    "robot_test_scheduler",
-    "robot_result_aggregator",
-    "robot_test_dependency_checker",
-    "robot_automated_feedback",
-    "robot_visualization",
-    "robot_external_api_interaction",
+    # Agent orchestration tool
+    "robot_agent_prompt",         # Main orchestration tool for agent workflows
+    
+    # Core automation tools
     "robot_form_automator",        # Form automation tool
     "robot_form_locator",          # Form locator tool
+    "robot_xpath_locator",         # XPath locator tool
+    "robot_smart_locator",         # Advanced smart locator with fallback strategies
+    "robot_page_snapshot",         # Screenshot tool for element identification
     "robot_dropdown_handler",      # Dropdown handler tool
     "robot_form_success_detector", # Form success detector tool
-    "robot_xpath_locator"          # XPath locator tool
+    "robot_runner",                # Tool for running Robot Framework tests
+    
+    # Agent workflow tools
+    "robot_test_reader",           # For reading existing test files
+    "robot_library_explorer",      # For exploring available Robot Framework libraries
+    "robot_visualization",         # For visualizing test execution
+    
+    # Optional tools that might be useful
+    "robot_log_parser",            # For parsing execution logs
+    "robot_test_data_generator",   # For generating test data
+    
+    # Commented out tools that aren't essential for the agent workflow
+    # "robot_keyword_inspector",
+    # "robot_variable_resolver",
+    # "robot_test_linter",
+    # "robot_test_mapper",
+    # "robot_test_coverage_analyzer",
+    # "robot_test_refactorer",
+    # "robot_step_debugger",
+    # "robot_report_generator",
+    # "robot_test_scheduler",
+    # "robot_result_aggregator",
+    # "robot_test_dependency_checker",
+    # "robot_automated_feedback",
+    # "robot_external_api_interaction",
+    # "robot_test_creator",
 ]
 
 # Import existing tools

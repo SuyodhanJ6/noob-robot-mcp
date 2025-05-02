@@ -13,8 +13,9 @@ wheels/
 .backup/
 docs/
 logs/
-output/
+output/*
 *.report
 *.robot
 .cursorignore
 .cursor/
+

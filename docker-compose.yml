@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  robot-mcp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3007:3007"
+    environment:
+      - MCP_HOST=0.0.0.0
+      - MCP_PORT=3007
+      - ALLOWED_ORIGINS=*
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3007/sse"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s 

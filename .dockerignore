@@ -1,0 +1,51 @@
+# Git
+.git
+.gitignore
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+.cursor/
+
+# Build and distribution
+dist/
+build/
+*.egg-info/
+
+# Local development
+.coverage
+htmlcov/
+.tox/
+
+# Project specific
+logs/
+output/
+reports/
+.python-version
+
+# Docker specific
+Dockerfile
+.dockerignore
+
+# Large/binary files that don't need to be in the image
+*.gz
+*.tar
+*.zip
+*.deb 
