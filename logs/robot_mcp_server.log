@@ -2033,3 +2033,378 @@ Stacktrace:
 2025-05-01 23:09:56,565 - robot_tool.form_locator - INFO - WebDriver initialized successfully
 2025-05-01 23:09:58,373 - robot_tool.form_locator - INFO - Waiting 20 seconds for page to load
 2025-05-01 23:10:20,004 - robot_tool.form_locator - INFO - Browser closed
+2025-05-02 11:26:40,046 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-02 11:26:40,050 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-02 11:26:40,063 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-02 11:26:40,067 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-02 11:26:40,074 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-02 11:26:40,080 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-02 11:26:40,087 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-02 11:26:40,117 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-02 11:26:40,126 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-02 11:26:40,130 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-02 11:26:40,138 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-02 11:26:40,142 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-02 11:26:40,143 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-02 11:26:40,144 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-02 11:26:40,148 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-02 11:26:40,153 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-02 11:26:40,155 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-02 11:26:40,279 - robot_mcp_server - INFO - Successfully imported tool: robot_external_api_interaction
+2025-05-02 11:26:40,383 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-02 11:26:40,393 - robot_mcp_server - INFO - Successfully imported tool: robot_form_locator
+2025-05-02 11:26:40,403 - robot_mcp_server - INFO - Successfully imported tool: robot_dropdown_handler
+2025-05-02 11:26:40,414 - robot_mcp_server - INFO - Successfully imported tool: robot_form_success_detector
+2025-05-02 11:26:40,414 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-02 11:26:40,414 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-02 11:26:40,418 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-02 11:26:40,421 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-02 11:26:40,425 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-02 11:26:40,428 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-02 11:26:40,431 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-02 11:26:40,434 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-02 11:26:40,437 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-02 11:26:40,441 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-02 11:26:40,443 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-02 11:26:40,446 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-02 11:26:40,448 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-02 11:26:40,450 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-02 11:26:40,451 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-02 11:26:40,451 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-02 11:26:40,453 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-02 11:26:40,455 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-02 11:26:40,455 - robot_mcp_server - INFO - Registering tool: robot_external_api_interaction
+2025-05-02 11:26:40,457 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-02 11:26:40,465 - robot_mcp_server - INFO - Registering tool: robot_form_locator
+2025-05-02 11:26:40,467 - robot_mcp_server - INFO - Registering tool: robot_dropdown_handler
+2025-05-02 11:26:40,471 - robot_mcp_server - INFO - Registering tool: robot_form_success_detector
+2025-05-02 11:26:40,474 - robot_mcp_server - INFO - Tool registration complete
+2025-05-02 11:26:40,474 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-02 11:30:03,079 - robot_tool.library_explorer - INFO - Exploring Robot Framework libraries: library_name=None
+2025-05-02 11:30:03,144 - robot_tool - INFO - Discovered potential libraries: 18
+2025-05-02 11:30:03,144 - robot_tool.library_explorer - INFO - Found 18 libraries and 0 keywords
+2025-05-02 11:30:10,196 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-02 11:30:10,197 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 11:30:10,197 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-02 11:30:16,077 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-02 11:30:24,824 - robot_tool.form_locator - INFO - Waiting 20 seconds for page to load
+2025-05-02 11:30:47,691 - robot_tool.form_locator - INFO - Browser closed
+2025-05-02 11:32:01,285 - robot_tool.form_automator - INFO - Detecting form structure at URL: https://qa-practice.netlify.app/register
+2025-05-02 11:32:01,285 - robot_tool.form_automator - INFO - Visiting URL to extract form structure: https://qa-practice.netlify.app/register
+2025-05-02 11:32:01,285 - robot_tool.form_automator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 11:32:01,285 - robot_tool.form_automator - INFO - Trying direct WebDriver initialization
+2025-05-02 11:32:01,703 - robot_tool.form_automator - INFO - WebDriver initialized successfully
+2025-05-02 11:32:05,394 - robot_tool.form_automator - INFO - Waiting 20 seconds for page to load
+2025-05-02 11:32:25,703 - robot_tool.form_automator - INFO - Creating Robot Framework test at: registration_automation/tests/auto_created_test.robot
+2025-05-02 11:32:25,704 - robot_tool.form_automator - INFO - Created form automation test at registration_automation/tests/auto_created_test.robot
+2025-05-02 11:32:52,796 - robot_tool.form_automator - INFO - Running form automation test: registration_automation/tests/auto_created_test.robot
+2025-05-02 11:32:52,797 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_113252.xml --log log_20250502_113252.html --report report_20250502_113252.html registration_automation/tests/auto_created_test.robot
+2025-05-02 11:32:52,797 - robot_tool - DEBUG - Running command: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_113252.xml --log log_20250502_113252.html --report report_20250502_113252.html registration_automation/tests/auto_created_test.robot
+2025-05-02 11:32:59,490 - robot_tool - ERROR - Command failed with code 1: 
+2025-05-02 11:32:59,490 - robot_tool.form_automator - INFO - Test execution completed with success=False
+2025-05-02 11:33:09,595 - robot_tool.form_automator - INFO - Using enhanced extraction for form at URL: https://qa-practice.netlify.app/register
+2025-05-02 11:33:09,596 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://qa-practice.netlify.app/register
+2025-05-02 11:33:09,596 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 11:33:09,596 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-02 11:33:10,028 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-02 11:33:13,076 - robot_tool.form_locator - INFO - Waiting 15 seconds for page to load
+2025-05-02 11:33:31,123 - robot_tool.form_locator - INFO - Browser closed
+2025-05-02 11:35:45,170 - robot_tool.form_success_detector - INFO - Trying direct WebDriver initialization
+2025-05-02 11:35:45,578 - robot_tool.form_success_detector - INFO - WebDriver initialized successfully
+2025-05-02 11:35:45,580 - robot_tool.form_success_detector - INFO - Visiting form URL: https://qa-practice.netlify.app/register
+2025-05-02 11:35:50,397 - robot_tool.form_success_detector - INFO - Waiting for page to load...
+2025-05-02 11:35:53,397 - robot_tool.form_success_detector - INFO - Capturing initial page state
+2025-05-02 11:35:53,848 - robot_tool.form_success_detector - INFO - Executing step 1:  on id=firstName
+2025-05-02 11:35:53,859 - robot_tool.form_success_detector - ERROR - Error executing step 1: Unknown action: 
+2025-05-02 11:35:53,859 - robot_tool.form_success_detector - INFO - Executing step 2:  on id=lastName
+2025-05-02 11:35:53,867 - robot_tool.form_success_detector - ERROR - Error executing step 2: Unknown action: 
+2025-05-02 11:35:53,868 - robot_tool.form_success_detector - INFO - Executing step 3:  on id=phone
+2025-05-02 11:35:53,876 - robot_tool.form_success_detector - ERROR - Error executing step 3: Unknown action: 
+2025-05-02 11:35:53,876 - robot_tool.form_success_detector - INFO - Executing step 4:  on id=emailAddress
+2025-05-02 11:35:53,887 - robot_tool.form_success_detector - ERROR - Error executing step 4: Unknown action: 
+2025-05-02 11:35:53,887 - robot_tool.form_success_detector - INFO - Executing step 5:  on id=password
+2025-05-02 11:35:53,896 - robot_tool.form_success_detector - ERROR - Error executing step 5: Unknown action: 
+2025-05-02 11:35:53,896 - robot_tool.form_success_detector - INFO - Executing step 6:  on id=exampleCheck1
+2025-05-02 11:35:53,906 - robot_tool.form_success_detector - ERROR - Error executing step 6: Unknown action: 
+2025-05-02 11:35:53,907 - robot_tool.form_success_detector - INFO - Executing step 7:  on id=countries_dropdown_menu
+2025-05-02 11:35:53,919 - robot_tool.form_success_detector - ERROR - Error executing step 7: Unknown action: 
+2025-05-02 11:35:53,919 - robot_tool.form_success_detector - INFO - Executing step 8:  on id=registerBtn
+2025-05-02 11:35:53,929 - robot_tool.form_success_detector - ERROR - Error executing step 8: Unknown action: 
+2025-05-02 11:35:53,929 - robot_tool.form_success_detector - INFO - Waiting 15 seconds for form processing
+2025-05-02 11:36:08,929 - robot_tool.form_success_detector - INFO - Capturing final page state
+2025-05-02 11:36:47,886 - robot_tool.log_parser - INFO - Received request to parse Robot Framework log file: /home/suyodhan/Desktop/testing/registration_automation/output.xml
+2025-05-02 11:36:47,886 - robot_tool.log_parser - DEBUG - Parameters: log_file_path=/home/suyodhan/Desktop/testing/registration_automation/output.xml, include_keywords=True, include_messages=True, filter_test_status=None, filter_test_names=None, filter_tags=None
+2025-05-02 11:36:47,888 - robot_tool.log_parser - INFO - Successfully parsed Robot Framework log file: /home/suyodhan/Desktop/testing/registration_automation/output.xml
+2025-05-02 11:49:47,337 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 11:49:47,337 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 11:49:47,337 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-02 11:49:47,901 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-02 11:49:54,578 - robot_tool.form_locator - INFO - Waiting 20 seconds for page to load
+2025-05-02 11:50:14,977 - robot_tool.form_locator - INFO - Browser closed
+2025-05-02 11:50:55,915 - robot_tool.form_automator - INFO - Running form automation test: /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_login_test.robot
+2025-05-02 11:50:55,916 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_115055.xml --log log_20250502_115055.html --report report_20250502_115055.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_login_test.robot
+2025-05-02 11:50:55,916 - robot_tool - DEBUG - Running command: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_115055.xml --log log_20250502_115055.html --report report_20250502_115055.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_login_test.robot
+2025-05-02 11:51:13,503 - robot_tool - ERROR - Command failed with code 1: 
+2025-05-02 11:51:13,503 - robot_tool.form_automator - INFO - Test execution completed with success=False
+2025-05-02 11:51:33,372 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 11:51:33,372 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 11:51:33,372 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-02 11:51:33,835 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-02 11:51:38,654 - robot_tool.form_locator - INFO - Waiting 20 seconds for page to load
+2025-05-02 11:51:59,018 - robot_tool.form_locator - INFO - Browser closed
+2025-05-02 11:52:44,193 - robot_tool.form_automator - INFO - Using enhanced extraction for form at URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 11:52:44,193 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 11:52:44,193 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 11:52:44,193 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-02 11:52:44,642 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-02 11:52:51,100 - robot_tool.form_locator - INFO - Waiting 20 seconds for page to load
+2025-05-02 11:53:11,513 - robot_tool.form_locator - INFO - Browser closed
+2025-05-02 11:53:34,835 - robot_tool.form_automator - INFO - Running form automation test: /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_smart_test.robot
+2025-05-02 11:53:34,835 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_115334.xml --log log_20250502_115334.html --report report_20250502_115334.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_smart_test.robot
+2025-05-02 11:53:34,836 - robot_tool - DEBUG - Running command: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_115334.xml --log log_20250502_115334.html --report report_20250502_115334.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_smart_test.robot
+2025-05-02 11:53:43,028 - robot_tool.form_automator - INFO - Test execution completed with success=True
+2025-05-02 11:57:19,740 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 11:57:19,740 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 11:57:19,740 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-02 11:57:19,995 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-02 11:57:27,176 - robot_tool.form_locator - INFO - Waiting 20 seconds for page to load
+2025-05-02 11:57:47,406 - robot_tool.form_locator - INFO - Browser closed
+2025-05-02 11:58:17,943 - robot_tool.form_automator - INFO - Running form automation test: /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_add_work_experience.robot
+2025-05-02 11:58:17,943 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_115817.xml --log log_20250502_115817.html --report report_20250502_115817.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_add_work_experience.robot
+2025-05-02 11:58:17,943 - robot_tool - DEBUG - Running command: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_115817.xml --log log_20250502_115817.html --report report_20250502_115817.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_add_work_experience.robot
+2025-05-02 11:58:49,790 - robot_tool - ERROR - Command failed with code 1: 
+2025-05-02 11:58:49,790 - robot_tool.form_automator - INFO - Test execution completed with success=False
+2025-05-02 11:59:18,121 - robot_tool.form_automator - INFO - Running form automation test: /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_add_work_experience.robot
+2025-05-02 11:59:18,121 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_115918.xml --log log_20250502_115918.html --report report_20250502_115918.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_add_work_experience.robot
+2025-05-02 11:59:18,121 - robot_tool - DEBUG - Running command: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_115918.xml --log log_20250502_115918.html --report report_20250502_115918.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_add_work_experience.robot
+2025-05-02 12:00:11,862 - robot_tool - ERROR - Command failed with code 1: 
+2025-05-02 12:00:11,862 - robot_tool.form_automator - INFO - Test execution completed with success=False
+2025-05-02 12:00:46,475 - robot_tool.form_automator - INFO - Running form automation test: /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_add_work_experience.robot
+2025-05-02 12:00:46,475 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_120046.xml --log log_20250502_120046.html --report report_20250502_120046.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_add_work_experience.robot
+2025-05-02 12:00:46,475 - robot_tool - DEBUG - Running command: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_120046.xml --log log_20250502_120046.html --report report_20250502_120046.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_add_work_experience.robot
+2025-05-02 12:01:40,571 - robot_tool - ERROR - Command failed with code 1: 
+2025-05-02 12:01:40,571 - robot_tool.form_automator - INFO - Test execution completed with success=False
+2025-05-02 12:02:24,062 - robot_tool.form_automator - INFO - Running form automation test: /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_add_work_experience.robot
+2025-05-02 12:02:24,063 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_120224.xml --log log_20250502_120224.html --report report_20250502_120224.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_add_work_experience.robot
+2025-05-02 12:02:24,063 - robot_tool - DEBUG - Running command: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_120224.xml --log log_20250502_120224.html --report report_20250502_120224.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_add_work_experience.robot
+2025-05-02 12:03:24,119 - robot_tool - ERROR - Command failed with code 1: 
+2025-05-02 12:03:24,120 - robot_tool.form_automator - INFO - Test execution completed with success=False
+2025-05-02 12:04:13,846 - robot_tool.form_automator - INFO - Using enhanced extraction for form at URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 12:04:13,846 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 12:04:13,846 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 12:04:13,846 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-02 12:04:14,103 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-02 12:04:18,653 - robot_tool.form_locator - INFO - Waiting 30 seconds for page to load
+2025-05-02 12:04:48,878 - robot_tool.form_locator - INFO - Browser closed
+2025-05-02 12:05:20,133 - robot_tool.form_automator - INFO - Running form automation test: /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_simplified.robot
+2025-05-02 12:05:20,134 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_120520.xml --log log_20250502_120520.html --report report_20250502_120520.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_simplified.robot
+2025-05-02 12:05:20,134 - robot_tool - DEBUG - Running command: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_120520.xml --log log_20250502_120520.html --report report_20250502_120520.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_simplified.robot
+2025-05-02 12:05:45,203 - robot_tool.form_automator - INFO - Test execution completed with success=True
+2025-05-02 12:06:13,167 - robot_tool.form_automator - INFO - Running form automation test: /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_add_work_experience_updated.robot
+2025-05-02 12:06:13,167 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_120613.xml --log log_20250502_120613.html --report report_20250502_120613.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_add_work_experience_updated.robot
+2025-05-02 12:06:13,167 - robot_tool - DEBUG - Running command: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_120613.xml --log log_20250502_120613.html --report report_20250502_120613.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_add_work_experience_updated.robot
+2025-05-02 12:07:41,776 - robot_tool - ERROR - Command failed with code 1: 
+2025-05-02 12:07:41,776 - robot_tool.form_automator - INFO - Test execution completed with success=False
+2025-05-02 12:08:12,904 - robot_tool.form_automator - INFO - Running form automation test: /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_final.robot
+2025-05-02 12:08:12,904 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_120812.xml --log log_20250502_120812.html --report report_20250502_120812.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_final.robot
+2025-05-02 12:08:12,904 - robot_tool - DEBUG - Running command: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_120812.xml --log log_20250502_120812.html --report report_20250502_120812.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_final.robot
+2025-05-02 12:08:47,626 - robot_tool.form_automator - INFO - Test execution completed with success=True
+2025-05-02 12:15:50,664 - robot_tool.form_automator - INFO - Running form automation test: /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_complete.robot
+2025-05-02 12:15:50,665 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_121550.xml --log log_20250502_121550.html --report report_20250502_121550.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_complete.robot
+2025-05-02 12:15:50,665 - robot_tool - DEBUG - Running command: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_121550.xml --log log_20250502_121550.html --report report_20250502_121550.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_complete.robot
+2025-05-02 12:16:51,641 - robot_tool - ERROR - Command failed with code 1: 
+2025-05-02 12:16:51,642 - robot_tool.form_automator - INFO - Test execution completed with success=False
+2025-05-02 12:17:56,131 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 12:17:56,131 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 12:17:56,131 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-02 12:17:56,372 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-02 12:18:01,431 - robot_tool.form_locator - INFO - Waiting 30 seconds for page to load
+2025-05-02 12:18:31,653 - robot_tool.form_locator - INFO - Browser closed
+2025-05-02 12:19:18,396 - robot_tool.form_automator - INFO - Running form automation test: /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_refined.robot
+2025-05-02 12:19:18,397 - robot_tool.form_automator - INFO - Running form automation test: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_121918.xml --log log_20250502_121918.html --report report_20250502_121918.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_refined.robot
+2025-05-02 12:19:18,397 - robot_tool - DEBUG - Running command: robot --outputdir /home/suyodhan/Desktop/noob-robot-mcp/output --output output_20250502_121918.xml --log log_20250502_121918.html --report report_20250502_121918.html /home/suyodhan/Desktop/testing/registration_automation/tests/orangehrm_refined.robot
+2025-05-02 12:20:20,200 - robot_tool.form_automator - INFO - Test execution completed with success=True
+2025-05-02 16:06:24,337 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-02 16:06:24,345 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-02 16:06:24,362 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-02 16:06:24,366 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-02 16:06:24,379 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-02 16:06:24,387 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-02 16:06:24,398 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-02 16:06:24,435 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-02 16:06:24,440 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-02 16:06:24,444 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-02 16:06:24,449 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-02 16:06:24,453 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-02 16:06:24,454 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-02 16:06:24,454 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-02 16:06:24,458 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-02 16:06:24,462 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-02 16:06:24,464 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-02 16:06:24,533 - robot_mcp_server - INFO - Successfully imported tool: robot_external_api_interaction
+2025-05-02 16:06:24,593 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-02 16:06:24,594 - robot_mcp_server - INFO - Successfully imported tool: robot_form_locator
+2025-05-02 16:06:24,595 - robot_mcp_server - INFO - Successfully imported tool: robot_dropdown_handler
+2025-05-02 16:06:24,596 - robot_mcp_server - INFO - Successfully imported tool: robot_form_success_detector
+2025-05-02 16:06:24,596 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-02 16:06:24,596 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-02 16:06:24,599 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-02 16:06:24,600 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-02 16:06:24,603 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-02 16:06:24,605 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-02 16:06:24,607 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-02 16:06:24,609 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-02 16:06:24,612 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-02 16:06:24,614 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-02 16:06:24,615 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-02 16:06:24,618 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-02 16:06:24,620 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-02 16:06:24,622 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-02 16:06:24,622 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-02 16:06:24,623 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-02 16:06:24,624 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-02 16:06:24,626 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-02 16:06:24,626 - robot_mcp_server - INFO - Registering tool: robot_external_api_interaction
+2025-05-02 16:06:24,628 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-02 16:06:24,635 - robot_mcp_server - INFO - Registering tool: robot_form_locator
+2025-05-02 16:06:24,636 - robot_mcp_server - INFO - Registering tool: robot_dropdown_handler
+2025-05-02 16:06:24,640 - robot_mcp_server - INFO - Registering tool: robot_form_success_detector
+2025-05-02 16:06:24,643 - robot_mcp_server - INFO - Tool registration complete
+2025-05-02 16:06:24,643 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-02 16:06:34,442 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-02 16:06:34,443 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-02 16:06:34,449 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-02 16:06:34,452 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-02 16:06:34,457 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-02 16:06:34,461 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-02 16:06:34,468 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-02 16:06:34,489 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-02 16:06:34,492 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-02 16:06:34,494 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-02 16:06:34,498 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-02 16:06:34,500 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-02 16:06:34,500 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-02 16:06:34,500 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-02 16:06:34,503 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-02 16:06:34,506 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-02 16:06:34,507 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-02 16:06:34,560 - robot_mcp_server - INFO - Successfully imported tool: robot_external_api_interaction
+2025-05-02 16:06:34,591 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-02 16:06:34,591 - robot_mcp_server - INFO - Successfully imported tool: robot_form_locator
+2025-05-02 16:06:34,592 - robot_mcp_server - INFO - Successfully imported tool: robot_dropdown_handler
+2025-05-02 16:06:34,592 - robot_mcp_server - INFO - Successfully imported tool: robot_form_success_detector
+2025-05-02 16:06:34,592 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-02 16:06:34,593 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-02 16:06:34,594 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-02 16:06:34,596 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-02 16:06:34,599 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-02 16:06:34,601 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-02 16:06:34,603 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-02 16:06:34,605 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-02 16:06:34,607 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-02 16:06:34,609 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-02 16:06:34,610 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-02 16:06:34,612 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-02 16:06:34,614 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-02 16:06:34,616 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-02 16:06:34,616 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-02 16:06:34,616 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-02 16:06:34,618 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-02 16:06:34,619 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-02 16:06:34,619 - robot_mcp_server - INFO - Registering tool: robot_external_api_interaction
+2025-05-02 16:06:34,621 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-02 16:06:34,627 - robot_mcp_server - INFO - Registering tool: robot_form_locator
+2025-05-02 16:06:34,629 - robot_mcp_server - INFO - Registering tool: robot_dropdown_handler
+2025-05-02 16:06:34,632 - robot_mcp_server - INFO - Registering tool: robot_form_success_detector
+2025-05-02 16:06:34,635 - robot_mcp_server - INFO - Tool registration complete
+2025-05-02 16:06:34,635 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-02 16:13:02,652 - robot_tool.form_automator - INFO - Using enhanced extraction for form at URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 16:13:02,653 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 16:13:02,653 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 16:13:02,653 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-02 16:13:08,864 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-02 16:13:13,643 - robot_tool.form_locator - INFO - Waiting 10 seconds for page to load
+2025-05-02 16:13:24,010 - robot_tool.form_locator - INFO - Browser closed
+2025-05-02 16:15:01,123 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 16:15:01,123 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 16:15:01,124 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-02 16:15:01,544 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-02 16:15:07,691 - robot_tool.form_locator - INFO - Waiting 10 seconds for page to load
+2025-05-02 16:15:18,079 - robot_tool.form_locator - INFO - Browser closed
+2025-05-02 16:15:48,422 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 16:15:48,422 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 16:15:48,422 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-02 16:15:48,891 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-02 16:15:53,881 - robot_tool.form_locator - INFO - Waiting 10 seconds for page to load
+2025-05-02 16:16:04,224 - robot_tool.form_locator - INFO - Browser closed
+2025-05-02 16:16:08,157 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 16:16:08,158 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 16:16:08,158 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-02 16:16:08,611 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-02 16:16:13,684 - robot_tool.form_locator - INFO - Waiting 10 seconds for page to load
+2025-05-02 16:16:24,054 - robot_tool.form_locator - INFO - Browser closed
+2025-05-02 16:16:27,939 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 16:16:27,940 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 16:16:27,940 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-02 16:16:28,324 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-02 16:16:33,631 - robot_tool.form_locator - INFO - Waiting 10 seconds for page to load
+2025-05-02 16:16:44,019 - robot_tool.form_locator - INFO - Browser closed
+2025-05-02 16:17:16,283 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 16:17:16,284 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 16:17:16,284 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-02 16:17:16,660 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-02 16:17:22,262 - robot_tool.form_locator - INFO - Waiting 15 seconds for page to load
+2025-05-02 16:17:38,092 - robot_tool.form_locator - INFO - Browser closed
+2025-05-02 17:17:36,620 - robot_mcp_server - INFO - Successfully imported tool: robot_test_reader
+2025-05-02 17:17:36,622 - robot_mcp_server - INFO - Successfully imported tool: robot_keyword_inspector
+2025-05-02 17:17:36,628 - robot_mcp_server - INFO - Successfully imported tool: robot_log_parser
+2025-05-02 17:17:36,631 - robot_mcp_server - INFO - Successfully imported tool: robot_variable_resolver
+2025-05-02 17:17:36,635 - robot_mcp_server - INFO - Successfully imported tool: robot_library_explorer
+2025-05-02 17:17:36,638 - robot_mcp_server - INFO - Successfully imported tool: robot_test_linter
+2025-05-02 17:17:36,642 - robot_mcp_server - INFO - Successfully imported tool: robot_test_mapper
+2025-05-02 17:17:36,658 - robot_mcp_server - INFO - Successfully imported tool: robot_test_coverage_analyzer
+2025-05-02 17:17:36,660 - robot_mcp_server - INFO - Successfully imported tool: robot_test_refactorer
+2025-05-02 17:17:36,662 - robot_mcp_server - INFO - Successfully imported tool: robot_test_data_generator
+2025-05-02 17:17:36,664 - robot_mcp_server - INFO - Successfully imported tool: robot_step_debugger
+2025-05-02 17:17:36,666 - robot_mcp_server - INFO - Successfully imported tool: robot_report_generator
+2025-05-02 17:17:36,666 - robot_mcp_server - WARNING - Tool not yet implemented: robot_test_scheduler
+2025-05-02 17:17:36,667 - robot_mcp_server - WARNING - Tool not yet implemented: robot_result_aggregator
+2025-05-02 17:17:36,669 - robot_mcp_server - INFO - Successfully imported tool: robot_test_dependency_checker
+2025-05-02 17:17:36,671 - robot_mcp_server - INFO - Successfully imported tool: robot_automated_feedback
+2025-05-02 17:17:36,671 - robot_mcp_server - WARNING - Tool not yet implemented: robot_visualization
+2025-05-02 17:17:36,709 - robot_mcp_server - INFO - Successfully imported tool: robot_external_api_interaction
+2025-05-02 17:17:36,737 - robot_mcp_server - INFO - Successfully imported tool: robot_form_automator
+2025-05-02 17:17:36,738 - robot_mcp_server - INFO - Successfully imported tool: robot_form_locator
+2025-05-02 17:17:36,738 - robot_mcp_server - INFO - Successfully imported tool: robot_dropdown_handler
+2025-05-02 17:17:36,739 - robot_mcp_server - INFO - Successfully imported tool: robot_form_success_detector
+2025-05-02 17:17:36,739 - robot_mcp_server - INFO - Registering all MCP tools...
+2025-05-02 17:17:36,739 - robot_mcp_server - INFO - Registering tool: robot_test_reader
+2025-05-02 17:17:36,741 - robot_mcp_server - INFO - Registering tool: robot_keyword_inspector
+2025-05-02 17:17:36,741 - robot_mcp_server - INFO - Registering tool: robot_log_parser
+2025-05-02 17:17:36,743 - robot_mcp_server - INFO - Registering tool: robot_variable_resolver
+2025-05-02 17:17:36,744 - robot_mcp_server - INFO - Registering tool: robot_library_explorer
+2025-05-02 17:17:36,745 - robot_mcp_server - INFO - Registering tool: robot_test_linter
+2025-05-02 17:17:36,746 - robot_mcp_server - INFO - Registering tool: robot_test_mapper
+2025-05-02 17:17:36,748 - robot_mcp_server - INFO - Registering tool: robot_test_coverage_analyzer
+2025-05-02 17:17:36,749 - robot_mcp_server - INFO - Registering tool: robot_test_refactorer
+2025-05-02 17:17:36,751 - robot_mcp_server - INFO - Registering tool: robot_test_data_generator
+2025-05-02 17:17:36,752 - robot_mcp_server - INFO - Registering tool: robot_step_debugger
+2025-05-02 17:17:36,753 - robot_mcp_server - INFO - Registering tool: robot_report_generator
+2025-05-02 17:17:36,754 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_test_scheduler
+2025-05-02 17:17:36,754 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_result_aggregator
+2025-05-02 17:17:36,755 - robot_mcp_server - INFO - Registering tool: robot_test_dependency_checker
+2025-05-02 17:17:36,756 - robot_mcp_server - INFO - Registering tool: robot_automated_feedback
+2025-05-02 17:17:36,757 - robot_mcp_server - INFO - Skipping registration of unimplemented tool: robot_visualization
+2025-05-02 17:17:36,757 - robot_mcp_server - INFO - Registering tool: robot_external_api_interaction
+2025-05-02 17:17:36,759 - robot_mcp_server - INFO - Registering tool: robot_form_automator
+2025-05-02 17:17:36,764 - robot_mcp_server - INFO - Registering tool: robot_form_locator
+2025-05-02 17:17:36,765 - robot_mcp_server - INFO - Registering tool: robot_dropdown_handler
+2025-05-02 17:17:36,768 - robot_mcp_server - INFO - Registering tool: robot_form_success_detector
+2025-05-02 17:17:36,770 - robot_mcp_server - INFO - Tool registration complete
+2025-05-02 17:17:36,770 - robot_mcp_server - INFO - Starting Robot Framework MCP server at 127.0.0.1:3007
+2025-05-02 17:17:56,872 - robot_tool.form_locator - INFO - Visiting URL to extract locators: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-05-02 17:17:56,872 - robot_tool.form_locator - INFO - Using Chrome binary at: /usr/bin/google-chrome
+2025-05-02 17:17:56,872 - robot_tool.form_locator - INFO - Trying direct WebDriver initialization
+2025-05-02 17:18:02,204 - robot_tool.form_locator - INFO - WebDriver initialized successfully
+2025-05-02 17:18:06,424 - robot_tool.form_locator - INFO - Waiting 20 seconds for page to load
+2025-05-02 17:18:26,666 - robot_tool.form_locator - INFO - Browser closed

@@ -57,7 +57,8 @@ TOOLS = [
     "robot_form_automator",        # Form automation tool
     "robot_form_locator",          # Form locator tool
     "robot_dropdown_handler",      # Dropdown handler tool
-    "robot_form_success_detector"  # Form success detector tool
+    "robot_form_success_detector", # Form success detector tool
+    "robot_xpath_locator"          # XPath locator tool
 ]
 
 # Import existing tools
