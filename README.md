@@ -87,6 +87,15 @@ const result = await mcp.call('robot_test_reader', {
 console.log(result.files);
 ```
 
+## Docker
+
+### Building and Running with Docker
+
+```bash
+# Rebuild and start the containers
+docker-compose down && docker-compose build --no-cache && docker-compose up
+```
+
 ## Development
 
 ### Project Structure
