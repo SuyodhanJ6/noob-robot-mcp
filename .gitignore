@@ -19,3 +19,9 @@ output/*
 .cursorignore
 .cursor/
 
+logs/*
+output/*
+*.report
+*.robot
+.cursorignore
+.cursor/
