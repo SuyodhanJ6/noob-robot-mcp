@@ -149,31 +149,31 @@ TOOL_SUGGESTIONS = {
         "locator_generation": ["robot_xpath_locator", "robot_smart_locator", "robot_form_locator"],
         "page_screenshot": ["robot_page_snapshot"],
         "script_creation": ["robot_form_automator"],
-        "test_execution": ["robot_runner"]
+        "test_execution": ["robot_runner"]  # Will be implemented in future
     },
     "form_automation": {
         "form_detection": ["robot_form_locator", "robot_smart_locator"],
         "script_creation": ["robot_form_automator"],
         "success_criteria": ["robot_form_success_detector"],
-        "test_execution": ["robot_runner"]
+        "test_execution": ["robot_runner"]  # Will be implemented in future
     },
     "dropdown_handling": {
         "dropdown_detection": ["robot_form_locator", "robot_xpath_locator", "robot_smart_locator"],
         "script_creation": ["robot_dropdown_handler"],
-        "test_execution": ["robot_runner"]
+        "test_execution": ["robot_runner"]  # Will be implemented in future
     },
     "custom": {
         "tool_selection": ["robot_library_explorer"],
         "script_creation": ["robot_test_reader", "robot_test_data_generator"],
-        "test_execution": ["robot_runner", "robot_visualization"]
+        "test_execution": ["robot_visualization"]  # robot_runner will be implemented in future
     }
 }
 
-# Robot test runner configuration details
+# Robot test runner configuration details (commented out as robot_runner will be implemented in future)
 TEST_RUNNER_DETAILS = """
-## Test Runner Usage
+## Test Runner Usage (Coming Soon)
 
-The `robot_runner` tool is essential for executing Robot Framework test scripts. It can be used to:
+The `robot_runner` tool will be implemented in the future for executing Robot Framework test scripts. It will be used to:
 
 1. **Execute a specific test file**:
    - Run a single test file with specific variables and tags
@@ -195,7 +195,7 @@ The `robot_runner` tool is essential for executing Robot Framework test scripts.
    - Configure test timeouts
    - Select specific test suites within a test file
 
-When your locators and test script are ready, use the `robot_runner` tool to validate them against the actual website.
+This functionality will be available in a future update.
 """
 
 # -----------------------------------------------------------------------------
@@ -309,8 +309,7 @@ def generate_agent_prompt(
     prompt_parts.append("1. Follow the workflow steps in order")
     prompt_parts.append("2. Use the suggested tools for each step when available")
     prompt_parts.append("3. Document your reasoning and actions for each step")
-    prompt_parts.append("4. After script creation, validate with the robot_runner tool")
-    prompt_parts.append("5. Provide a summary after completing the workflow")
+    prompt_parts.append("4. Provide a summary after completing the workflow")
     
     # Combine all parts
     prompt = "\n".join(prompt_parts)
@@ -321,11 +320,8 @@ def generate_agent_prompt(
             "id": workflow_id,
             "name": workflow["name"],
             "steps": [step["name"] for step in workflow["steps"]]
-        },
-        "test_runner": {
-            "tool": "robot_runner",
-            "description": "Tool for executing Robot Framework tests"
         }
+        # test_runner will be implemented in future
     }
 
 # -----------------------------------------------------------------------------

@@ -36,42 +36,56 @@ mcp = FastMCP("RobotFrameworkTools")
 # Only including essential tools for advanced Robot script generation with agent workflow
 TOOLS = [
     # Agent orchestration tool
-    "robot_agent_prompt",         # Main orchestration tool for agent workflows
+    # "robot_agent_prompt",         # Main orchestration tool for agent workflows
     
     # Core automation tools
-    "robot_form_automator",        # Form automation tool
-    "robot_form_locator",          # Form locator tool
-    "robot_xpath_locator",         # XPath locator tool
-    "robot_smart_locator",         # Advanced smart locator with fallback strategies
-    "robot_page_snapshot",         # Screenshot tool for element identification
-    "robot_dropdown_handler",      # Dropdown handler tool
+    "robot_form_automator",       # Form automation tool
+    "robot_form_locator",         # Form locator tool
+    
+    # Advanced locator tools - keeping the most powerful ones
+    "robot_smart_locator",        # Advanced smart locator with fallback strategies
+    "robot_auto_locator",         # Comprehensive locator finder for all elements
+    # "robot_xpath_locator" is redundant with smart_locator and auto_locator
+    
+    "robot_page_snapshot",        # Screenshot tool for element identification
+    "robot_dropdown_handler",     # Dropdown handler tool
     "robot_form_success_detector", # Form success detector tool
-    "robot_runner",                # Tool for running Robot Framework tests
+    # "robot_runner",               # Tool for running Robot Framework tests
     
-    # Agent workflow tools
-    "robot_test_reader",           # For reading existing test files
-    "robot_library_explorer",      # For exploring available Robot Framework libraries
-    "robot_visualization",         # For visualizing test execution
+    # Browser automation tools (new)
+    "robot_browser_navigate",      # Navigate to a URL
+    "robot_browser_snapshot",      # Capture accessibility snapshot of the current page
+    "robot_browser_click",         # Perform click on a web page
+    "robot_browser_drag",          # Perform drag and drop between two elements
+    "robot_browser_hover",         # Hover over element on page
+    "robot_browser_type",          # Type text into editable element
+    "robot_browser_select_option", # Select an option in a dropdown
+    "robot_browser_screenshot",    # Take a screenshot of the current page
+    "robot_browser_back",          # Go back to the previous page
+    "robot_browser_forward",       # Go forward to the next page
+    "robot_browser_tab_list",      # List browser tabs
+    "robot_browser_tab_new",       # Open a new tab
+    "robot_browser_tab_select",    # Select a tab by index
+    "robot_browser_tab_close",     # Close a tab
+    "robot_browser_console",       # Returns all console messages
+    "robot_browser_upload",        # Upload one or multiple files
+    # Less commonly used browser tools - commenting out
+    # "robot_browser_pdf",           # Save page as PDF
+    "robot_browser_close",         # Close the page
+    "robot_browser_wait",          # Wait for a specified time in seconds
+    "robot_browser_resize",        # Resize the browser window
+    "robot_browser_press_key",     # Press a key on the keyboard
+    # "robot_browser_network",       # Returns all network requests
+    # "robot_browser_dialog",        # Handle a dialog
     
-    # Optional tools that might be useful
-    "robot_log_parser",            # For parsing execution logs
-    "robot_test_data_generator",   # For generating test data
+    # Agent workflow tools - removing as agent can handle this directly
+    # "robot_test_reader",           # For reading existing test files
+    # "robot_library_explorer",      # For exploring available Robot Framework libraries
+    # "robot_visualization",         # For visualizing test execution
     
-    # Commented out tools that aren't essential for the agent workflow
-    # "robot_keyword_inspector",
-    # "robot_variable_resolver",
-    # "robot_test_linter",
-    # "robot_test_mapper",
-    # "robot_test_coverage_analyzer",
-    # "robot_test_refactorer",
-    # "robot_step_debugger",
-    # "robot_report_generator",
-    # "robot_test_scheduler",
-    # "robot_result_aggregator",
-    # "robot_test_dependency_checker",
-    # "robot_automated_feedback",
-    # "robot_external_api_interaction",
-    # "robot_test_creator",
+    # Optional tools - commenting out as they're not essential
+    # "robot_log_parser",            # For parsing execution logs
+    # "robot_test_data_generator",   # For generating test data
 ]
 
 # Import existing tools

@@ -780,25 +780,21 @@ def register_tool(mcp: FastMCP):
     @mcp.tool()
     async def robot_form_extract_and_create(
         url: str,
-        output_file: str,
         test_name: str = "Automate Form Submission",
         browser: str = "Chrome",
-        wait_time: int = 20,
-        overwrite: bool = False
+        wait_time: int = 20
     ) -> Dict[str, Any]:
         """
         Extract form structure and create a Robot Framework test script.
         
         Args:
             url: URL of the web page to analyze
-            output_file: Path to save the Robot test file
             test_name: Name for the test case
             browser: Browser to use for automation
             wait_time: Time to wait for page to load in seconds
-            overwrite: Whether to overwrite an existing file
             
         Returns:
-            Dictionary with file path, content, and form field details
+            Dictionary with script content, suggested filename, and form field details
         """
         from src.mcp_tools.robot_form_locator.tool import extract_all_locators
         
@@ -812,78 +808,9 @@ def register_tool(mcp: FastMCP):
                 "form_fields": {},
                 "error": form_data["error"]
             }
-            
-        logger.info(f"Creating Robot Framework test at: {output_file}")
         
-        result = create_form_automation_test(
-            url=url,
-            form_fields=form_data["form_fields"],
-            output_file=output_file,
-            test_name=test_name,
-            wait_success_element=form_data.get("success_element", None),
-            success_message=form_data.get("success_message", None),
-            browser=browser,
-            overwrite=overwrite
-        )
-        
-        result["form_fields"] = form_data["form_fields"]
-        return result
-    
-    @mcp.tool()
-    async def robot_smart_form_extract_and_create(
-        url: str,
-        output_file: str,
-        test_name: str = "Register New User",
-        browser: str = "Chrome",
-        wait_time: int = 10,
-        overwrite: bool = True
-    ) -> Dict[str, Any]:
-        """
-        Enhanced extraction of form structure and creation of a more accurate Robot Framework test script.
-        
-        This tool provides improved form field detection with:
-        - Intelligent label association with form fields
-        - Smart default values based on field types and names
-        - Automatic detection of success indicators
-        - Better form metadata extraction
-        - More resilient test structure
-        
-        Args:
-            url: URL of the web page to analyze
-            output_file: Path to save the Robot test file
-            test_name: Name for the test case
-            browser: Browser to use for automation
-            wait_time: Time to wait for page to load in seconds
-            overwrite: Whether to overwrite an existing file
-            
-        Returns:
-            Dictionary with file path, content, and form field details
-        """
-        from src.mcp_tools.robot_form_locator.tool import enhanced_extract_form_structure
-        
-        logger.info(f"Using enhanced extraction for form at URL: {url}")
-        form_data = enhanced_extract_form_structure(url, wait_time)
-        
-        if form_data.get("error"):
-            return {
-                "file_path": None,
-                "content": None,
-                "form_fields": {},
-                "error": form_data["error"]
-            }
-        
-        # Prepare output path
-        output_path = Path(output_file)
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        
-        # Check if file exists and overwrite is not enabled
-        if output_path.exists() and not overwrite:
-            return {
-                "file_path": None,
-                "content": None,
-                "form_fields": form_data.get("form_fields", {}),
-                "error": f"File already exists: {output_file}. Set overwrite=True to overwrite."
-            }
+        # Skip all file handling - we'll just generate the content and return it
+        logger.info(f"Generating Robot Framework test script for URL: {url} (no file will be saved)")
         
         # Build variables section
         variables = [
@@ -1045,12 +972,19 @@ def register_tool(mcp: FastMCP):
                 content.append(f"    {step}")
             content.append("")
         
-        # Write to file
-        with open(output_file, "w") as f:
-            f.write("\n".join(content))
+        # Create the full content as a string
+        full_content = "\n".join(content)
         
+        # Generate a suggested filename
+        from urllib.parse import urlparse
+        parsed_url = urlparse(url)
+        domain = parsed_url.netloc.replace("www.", "").split(":")[0]
+        suggested_filename = f"{domain}_form_test.robot"
+        
+        # Just return the content without saving to file
         return {
-            "file_path": output_file,
-            "content": "\n".join(content),
-            "form_fields": form_data.get("form_fields", {})
+            "content": full_content,
+            "suggested_filename": suggested_filename,
+            "form_fields": form_data.get("form_fields", {}),
+            "message": "Test script generated successfully. Save this content to a .robot file on your local machine."
         } 
