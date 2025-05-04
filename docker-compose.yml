@@ -11,6 +11,16 @@ services:
       - MCP_HOST=0.0.0.0
       - MCP_PORT=3007
       - ALLOWED_ORIGINS=*
+      # Chrome settings
+      - PYTHONUNBUFFERED=1
+      - DISPLAY=:99
+    volumes:
+      # Mount local directories to container directories
+      - ./output:/app/output                # For generated output files
+      - ./tests:/app/tests                  # For test files
+      - ./reports:/app/reports              # For test reports
+      - /home/suyodhan:/app/local           # Access your home directory via /app/local
+    shm_size: 2gb
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3007/sse"]
