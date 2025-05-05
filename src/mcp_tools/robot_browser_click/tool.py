@@ -11,6 +11,9 @@ import json
 from typing import Dict, Any, Optional, List, Tuple
 from pathlib import Path
 
+# Import shared browser manager
+from ..robot_browser_manager import BrowserManager
+
 # Import local modules instead of direct mcp import
 try:
     from mcp.server.fastmcp import FastMCP
@@ -47,51 +50,6 @@ logger = logging.getLogger('robot_tool.browser_click')
 # -----------------------------------------------------------------------------
 # Helper Functions
 # -----------------------------------------------------------------------------
-
-def initialize_webdriver(headless: bool = True) -> Optional[webdriver.Chrome]:
-    """
-    Initialize the Chrome WebDriver with multiple fallback methods.
-    
-    Args:
-        headless: Whether to run in headless mode or not
-    
-    Returns:
-        WebDriver object if successful, None otherwise
-    """
-    # Set up Chrome options
-    chrome_options = Options()
-    if headless:
-        chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--disable-dev-shm-usage")
-    chrome_options.add_argument("--window-size=1920,1080")  # Set a large window size
-    
-    # Try different approaches to initialize the WebDriver
-    driver = None
-    last_error = None
-    
-    try:
-        if WEBDRIVER_MANAGER_AVAILABLE:
-            # Try with webdriver-manager if available
-            logger.info("Trying WebDriver Manager initialization")
-            driver = webdriver.Chrome(
-                service=Service(ChromeDriverManager().install()),
-                options=chrome_options
-            )
-        else:
-            # Direct WebDriver initialization
-            logger.info("Trying direct WebDriver initialization")
-            service = Service()
-            driver = webdriver.Chrome(service=service, options=chrome_options)
-            
-    except Exception as e:
-        last_error = str(e)
-        logger.warning(f"WebDriver initialization failed: {e}")
-            
-    if driver is None:
-        logger.error(f"All WebDriver initialization methods failed. Last error: {last_error}")
-        
-    return driver
 
 def parse_locator(locator: str) -> Tuple[str, str]:
     """
@@ -154,19 +112,19 @@ def click_element(url: str, element_locator: str, wait_time: int = 10) -> Dict[s
         "error": None
     }
     
-    driver = None
     try:
-        # Initialize WebDriver
-        driver = initialize_webdriver()
-        if not driver:
-            result["status"] = "error"
-            result["error"] = "Failed to initialize WebDriver"
-            return result
-            
-        # Navigate to the URL
-        logger.info(f"Navigating to URL: {url}")
-        driver.set_page_load_timeout(wait_time * 2)
-        driver.get(url)
+        # Get WebDriver instance from the manager
+        driver = BrowserManager.get_driver()
+        
+        # Navigate to the URL (if the current URL is different or no URL is loaded)
+        # This assumes the browser is already open from a previous step
+        current_url_before_nav = driver.current_url
+        if url != current_url_before_nav:
+            logger.info(f"Navigating to URL: {url}")
+            driver.set_page_load_timeout(wait_time * 2)
+            driver.get(url)
+        else:
+            logger.info(f"Already at URL: {url}")
         
         # Wait for page to load
         time.sleep(2)
@@ -248,9 +206,6 @@ Click Element On Page
         result["status"] = "error"
         result["error"] = str(e)
         return result
-    finally:
-        if driver:
-            driver.quit()
 
 def generate_click_script(
     url: str,
@@ -332,8 +287,9 @@ Click Element Test
 # -----------------------------------------------------------------------------
 
 def register_tool(mcp: FastMCP):
-    """Register MCP tool."""
-    
+    """Register the browser click tool with MCP."""
+    logger.info("Registering Robot Browser Click tool")
+
     @mcp.tool()
     async def robot_browser_click_element(
         url: str,
@@ -354,7 +310,9 @@ def register_tool(mcp: FastMCP):
         Returns:
             Dictionary with click status, element info, and Robot Framework command
         """
-        return click_element(url, element_locator, wait_time)
+        logger.info(f"Received request to click element: {element_locator} on URL: {url}")
+        # Call the modified click_element function
+        return click_element(url=url, element_locator=element_locator, wait_time=wait_time)
     
     @mcp.tool()
     async def robot_browser_generate_click_script(
@@ -382,11 +340,13 @@ def register_tool(mcp: FastMCP):
         Returns:
             Dictionary with generation status and file path
         """
+        logger.info(f"Received request to generate click script for element: {element_locator} on URL: {url}")
+        # Call the existing script generation function (no changes needed here)
         return generate_click_script(
-            url, 
-            element_locator, 
-            output_file, 
-            wait_time, 
-            browser, 
-            verify_navigation
+            url=url,
+            element_locator=element_locator,
+            output_file=output_file,
+            wait_time=wait_time,
+            browser=browser,
+            verify_navigation=verify_navigation
         ) 

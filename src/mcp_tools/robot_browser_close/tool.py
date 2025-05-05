@@ -33,52 +33,56 @@ try:
 except ImportError:
     WEBDRIVER_MANAGER_AVAILABLE = False
 
+# Import shared browser manager
+from ..robot_browser_manager import BrowserManager
+
 logger = logging.getLogger('robot_tool.browser_close')
 
 # -----------------------------------------------------------------------------
 # Helper Functions
 # -----------------------------------------------------------------------------
 
-def initialize_webdriver() -> Optional[webdriver.Chrome]:
-    """
-    Initialize the Chrome WebDriver with multiple fallback methods.
-    
-    Returns:
-        WebDriver object if successful, None otherwise
-    """
-    # Set up Chrome options for headless browsing
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--disable-dev-shm-usage")
-    chrome_options.add_argument("--window-size=1920,1080")  # Set a large window size
-    
-    # Try different approaches to initialize the WebDriver
-    driver = None
-    last_error = None
-    
-    try:
-        if WEBDRIVER_MANAGER_AVAILABLE:
-            # Try with webdriver-manager if available
-            logger.info("Trying WebDriver Manager initialization")
-            driver = webdriver.Chrome(
-                service=Service(ChromeDriverManager().install()),
-                options=chrome_options
-            )
-        else:
-            # Direct WebDriver initialization
-            logger.info("Trying direct WebDriver initialization")
-            service = Service()
-            driver = webdriver.Chrome(service=service, options=chrome_options)
-            
-    except Exception as e:
-        last_error = str(e)
-        logger.warning(f"WebDriver initialization failed: {e}")
-            
-    if driver is None:
-        logger.error(f"All WebDriver initialization methods failed. Last error: {last_error}")
-        
-    return driver
+# Remove initialize_webdriver as it's handled by BrowserManager
+# def initialize_webdriver() -> Optional[webdriver.Chrome]:
+#     """
+#     Initialize the Chrome WebDriver with multiple fallback methods.
+#     
+#     Returns:
+#         WebDriver object if successful, None otherwise
+#     """
+#     # Set up Chrome options for headless browsing
+#     chrome_options = Options()
+#     chrome_options.add_argument("--headless")
+#     chrome_options.add_argument("--no-sandbox")
+#     chrome_options.add_argument("--disable-dev-shm-usage")
+#     chrome_options.add_argument("--window-size=1920,1080")  # Set a large window size
+#     
+#     # Try different approaches to initialize the WebDriver
+#     driver = None
+#     last_error = None
+#     
+#     try:
+#         if WEBDRIVER_MANAGER_AVAILABLE:
+#             # Try with webdriver-manager if available
+#             logger.info("Trying WebDriver Manager initialization")
+#             driver = webdriver.Chrome(
+#                 service=Service(ChromeDriverManager().install()),
+#                 options=chrome_options
+#             )
+#         else:
+#             # Direct WebDriver initialization
+#             logger.info("Trying direct WebDriver initialization")
+#             service = Service()
+#             driver = webdriver.Chrome(service=service, options=chrome_options)
+#             
+#     except Exception as e:
+#         last_error = str(e)
+#         logger.warning(f"WebDriver initialization failed: {e}")
+#             
+#     if driver is None:
+#         logger.error(f"All WebDriver initialization methods failed. Last error: {last_error}")
+#         
+#     return driver
 
 # -----------------------------------------------------------------------------
 # Main Tool Functions
@@ -101,25 +105,26 @@ def close_browser(url: Optional[str] = None) -> Dict[str, Any]:
         "error": None
     }
     
-    driver = None
+    # driver = None # No longer needed
     try:
-        # Initialize WebDriver
-        driver = initialize_webdriver()
-        if not driver:
-            result["status"] = "error"
-            result["error"] = "Failed to initialize WebDriver"
-            return result
-            
-        # Optionally navigate to a URL to demonstrate the browser is working
+        # Optionally navigate to a URL using the existing browser
         if url:
-            logger.info(f"Navigating to URL: {url}")
-            driver.get(url)
-            result["title"] = driver.title
+            try:
+                driver = BrowserManager.get_driver() # Get potentially existing driver
+                logger.info(f"Navigating to URL before closing: {url}")
+                driver.get(url)
+                result["title"] = driver.title
+            except WebDriverException as e:
+                 logger.warning(f"Could not navigate to {url} before closing (maybe browser was already closed?): {e}")
+                 result["warning"] = f"Could not navigate to {url} before closing: {e}"
+            except Exception as e: # Catch other potential errors like BrowserManager init failure
+                result["status"] = "error"
+                result["error"] = f"Failed to get WebDriver to navigate before close: {e}"
+                return result
             
-        # Close the browser
-        logger.info("Closing browser")
-        driver.quit()
-        driver = None
+        # Close the shared browser instance using the manager
+        logger.info("Requesting BrowserManager to close browser")
+        BrowserManager.close_driver()
         
         # Generate Robot Framework command for closing
         robot_command = """*** Settings ***
@@ -137,9 +142,10 @@ Close Browser Window
         result["status"] = "error"
         result["error"] = str(e)
         return result
-    finally:
-        if driver:
-            driver.quit()
+    # finally:
+        # The manager now handles closing
+        # if driver:
+        #     driver.quit()
 
 def generate_close_script(
     output_file: str,
@@ -224,7 +230,8 @@ Close Browser Test
 # -----------------------------------------------------------------------------
 
 def register_tool(mcp: FastMCP):
-    """Register the browser close tools with the MCP server."""
+    """Register the browser close tool with MCP."""
+    logger.info("Registering Robot Browser Close tool")
     
     @mcp.tool()
     async def robot_browser_close(
@@ -240,8 +247,8 @@ def register_tool(mcp: FastMCP):
             Dictionary with close status
         """
         logger.info(f"Received request to close browser")
-        result = close_browser(url)
-        return result
+        # Call the modified close_browser function
+        return close_browser(url)
     
     @mcp.tool()
     async def robot_browser_generate_close_script(
@@ -261,5 +268,9 @@ def register_tool(mcp: FastMCP):
             Dictionary with generation status and file path
         """
         logger.info(f"Received request to generate browser close script")
-        result = generate_close_script(output_file, url, browser)
-        return result 
+        # Call the existing script generation function (no changes needed here)
+        return generate_close_script(
+            output_file=output_file,
+            url=url,
+            browser=browser
+        ) 

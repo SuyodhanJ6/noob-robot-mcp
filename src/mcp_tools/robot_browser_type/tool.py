@@ -11,6 +11,9 @@ import time
 from typing import Dict, Any, Optional, Tuple
 from pathlib import Path
 
+# Import shared browser manager
+from ..robot_browser_manager import BrowserManager
+
 # Import local modules instead of direct mcp import
 try:
     from mcp.server.fastmcp import FastMCP
@@ -48,47 +51,6 @@ logger = logging.getLogger('robot_tool.browser_type')
 # -----------------------------------------------------------------------------
 # Helper Functions
 # -----------------------------------------------------------------------------
-
-def initialize_webdriver() -> Optional[webdriver.Chrome]:
-    """
-    Initialize the Chrome WebDriver with multiple fallback methods.
-    
-    Returns:
-        WebDriver object if successful, None otherwise
-    """
-    # Set up Chrome options for headless browsing
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--disable-dev-shm-usage")
-    chrome_options.add_argument("--window-size=1920,1080")  # Set a large window size
-    
-    # Try different approaches to initialize the WebDriver
-    driver = None
-    last_error = None
-    
-    try:
-        if WEBDRIVER_MANAGER_AVAILABLE:
-            # Try with webdriver-manager if available
-            logger.info("Trying WebDriver Manager initialization")
-            driver = webdriver.Chrome(
-                service=Service(ChromeDriverManager().install()),
-                options=chrome_options
-            )
-        else:
-            # Direct WebDriver initialization
-            logger.info("Trying direct WebDriver initialization")
-            service = Service()
-            driver = webdriver.Chrome(service=service, options=chrome_options)
-            
-    except Exception as e:
-        last_error = str(e)
-        logger.warning(f"WebDriver initialization failed: {e}")
-            
-    if driver is None:
-        logger.error(f"All WebDriver initialization methods failed. Last error: {last_error}")
-        
-    return driver
 
 def parse_locator(locator: str) -> Tuple[str, str]:
     """
@@ -165,14 +127,9 @@ def type_text(
         "error": None
     }
     
-    driver = None
     try:
-        # Initialize WebDriver
-        driver = initialize_webdriver()
-        if not driver:
-            result["status"] = "error"
-            result["error"] = "Failed to initialize WebDriver"
-            return result
+        # Get WebDriver instance from the manager
+        driver = BrowserManager.get_driver()
         
         # Navigate to URL if provided
         if url:
@@ -277,14 +234,13 @@ Type Text Into Element
         result["robot_command"] = robot_command
         
         return result
-    except Exception as e:
-        logger.error(f"Error during typing operation: {e}")
+    except WebDriverException as e:
         result["status"] = "error"
-        result["error"] = str(e)
-        return result
-    finally:
-        if driver:
-            driver.quit()
+        result["error"] = f"WebDriver error during typing: {e}"
+    except Exception as e:
+        result["status"] = "error"
+        result["error"] = f"An unexpected error occurred: {e}"
+    return result
 
 def generate_typing_script(
     url: str,
@@ -382,17 +338,18 @@ Type Text Into Element
         
         return result
     except Exception as e:
-        logger.error(f"Error generating typing script: {e}")
         result["status"] = "error"
-        result["error"] = str(e)
-        return result
+        result["error"] = f"Failed to generate script: {e}"
+        
+    return result
 
 # -----------------------------------------------------------------------------
 # MCP Tool Registration
 # -----------------------------------------------------------------------------
 
 def register_tool(mcp: FastMCP):
-    """Register MCP tool."""
+    """Register the browser typing tool with MCP."""
+    logger.info("Registering Robot Browser Type tool")
     
     @mcp.tool()
     async def robot_browser_type(

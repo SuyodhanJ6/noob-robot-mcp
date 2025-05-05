@@ -38,52 +38,14 @@ try:
 except ImportError:
     WEBDRIVER_MANAGER_AVAILABLE = False
 
+# Import shared browser manager
+from ..robot_browser_manager import BrowserManager
+
 logger = logging.getLogger('robot_tool.browser_navigate')
 
 # -----------------------------------------------------------------------------
 # Helper Functions
 # -----------------------------------------------------------------------------
-
-def initialize_webdriver() -> Optional[webdriver.Chrome]:
-    """
-    Initialize the Chrome WebDriver with multiple fallback methods.
-    
-    Returns:
-        WebDriver object if successful, None otherwise
-    """
-    # Set up Chrome options for headless browsing
-    chrome_options = Options()
-    chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--disable-dev-shm-usage")
-    chrome_options.add_argument("--window-size=1920,1080")  # Set a large window size
-    
-    # Try different approaches to initialize the WebDriver
-    driver = None
-    last_error = None
-    
-    try:
-        if WEBDRIVER_MANAGER_AVAILABLE:
-            # Try with webdriver-manager if available
-            logger.info("Trying WebDriver Manager initialization")
-            driver = webdriver.Chrome(
-                service=Service(ChromeDriverManager().install()),
-                options=chrome_options
-            )
-        else:
-            # Direct WebDriver initialization
-            logger.info("Trying direct WebDriver initialization")
-            service = Service()
-            driver = webdriver.Chrome(service=service, options=chrome_options)
-            
-    except Exception as e:
-        last_error = str(e)
-        logger.warning(f"WebDriver initialization failed: {e}")
-            
-    if driver is None:
-        logger.error(f"All WebDriver initialization methods failed. Last error: {last_error}")
-        
-    return driver
 
 def is_valid_url(url: str) -> bool:
     """
@@ -191,15 +153,10 @@ def navigate_to_url(
         result["error"] = f"Invalid URL: {url}"
         return result
     
-    driver = None
     try:
-        # Initialize WebDriver
-        driver = initialize_webdriver()
-        if not driver:
-            result["status"] = "error"
-            result["error"] = "Failed to initialize WebDriver"
-            return result
-            
+        # Get WebDriver instance from the manager
+        driver = BrowserManager.get_driver()
+        
         # Set cookies if provided
         if cookies:
             # First navigate to the domain (required to set cookies)
@@ -272,9 +229,6 @@ Navigate To URL
         result["status"] = "error"
         result["error"] = str(e)
         return result
-    finally:
-        if driver:
-            driver.quit()
 
 def generate_navigation_script(
     url: str,
@@ -393,7 +347,8 @@ Navigate To Website
 # -----------------------------------------------------------------------------
 
 def register_tool(mcp: FastMCP):
-    """Register the browser navigation tools with the MCP server."""
+    """Register the browser navigation tool with MCP."""
+    logger.info("Registering Robot Browser Navigate tool")
     
     @mcp.tool()
     async def robot_browser_navigate(
@@ -415,8 +370,14 @@ def register_tool(mcp: FastMCP):
             Dictionary with navigation status and page information
         """
         logger.info(f"Received request to navigate to URL: {url}")
-        result = navigate_to_url(url, wait_time, cookies, wait_for_selector)
-        return result
+        logger.debug(f"Received cookies: {cookies}")
+        
+        return navigate_to_url(
+            url=url,
+            wait_time=wait_time,
+            cookies=cookies,
+            wait_for_selector=wait_for_selector
+        )
     
     @mcp.tool()
     async def robot_browser_generate_navigation_script(
@@ -444,5 +405,12 @@ def register_tool(mcp: FastMCP):
             Dictionary with generation status and file path
         """
         logger.info(f"Received request to generate navigation script for URL: {url}")
-        result = generate_navigation_script(url, output_file, browser, wait_time, wait_for_selector, verify_title, include_links)
-        return result 
+        return generate_navigation_script(
+            url=url,
+            output_file=output_file,
+            browser=browser,
+            wait_time=wait_time,
+            wait_for_selector=wait_for_selector,
+            verify_title=verify_title,
+            include_links=include_links
+        ) 
