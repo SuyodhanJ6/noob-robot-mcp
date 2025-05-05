@@ -8,6 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+venv/
+ENV/
 
 # Project-specific files
 .backup/
@@ -19,9 +21,17 @@ output/*
 .cursorignore
 .cursor/
 
-logs/*
-output/*
-*.report
-*.robot
-.cursorignore
-.cursor/
+# Robot Framework output files
+output/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Local configuration
+.env

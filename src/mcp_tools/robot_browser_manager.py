@@ -40,10 +40,18 @@ class BrowserManager:
     def _initialize_webdriver(cls) -> Optional[webdriver.Chrome]:
         """Initializes the Chrome WebDriver."""
         chrome_options = Options()
-        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--headless=new")  # Use newer headless mode
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--window-size=1920,1080")
+        chrome_options.add_argument("--disable-extensions")
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--ignore-certificate-errors")
+        chrome_options.add_argument("--allow-running-insecure-content")
+        chrome_options.add_argument("--disable-web-security")
+        
+        # Add user agent to make sites treat us like a regular browser
+        chrome_options.add_argument("--user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36")
 
         driver = None
         last_error = None
@@ -51,14 +59,27 @@ class BrowserManager:
         try:
             if WEBDRIVER_MANAGER_AVAILABLE:
                 logger.info("Trying WebDriver Manager initialization")
-                driver = webdriver.Chrome(
-                    service=Service(ChromeDriverManager().install()),
-                    options=chrome_options
-                )
+                try:
+                    driver = webdriver.Chrome(
+                        service=Service(ChromeDriverManager().install()),
+                        options=chrome_options
+                    )
+                except Exception as e:
+                    logger.warning(f"WebDriver Manager initialization failed, trying direct path: {e}")
+                    # Try explicit path if available
+                    import shutil
+                    chromedriver_path = shutil.which("chromedriver")
+                    if chromedriver_path:
+                        logger.info(f"Found chromedriver at {chromedriver_path}")
+                        driver = webdriver.Chrome(
+                            service=Service(executable_path=chromedriver_path),
+                            options=chrome_options
+                        )
             else:
                 logger.info("Trying direct WebDriver initialization (requires chromedriver in PATH)")
                 service = Service()
                 driver = webdriver.Chrome(service=service, options=chrome_options)
+                
         except Exception as e:
             last_error = str(e)
             logger.warning(f"WebDriver initialization failed: {e}")
