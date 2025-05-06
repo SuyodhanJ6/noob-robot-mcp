@@ -43,6 +43,10 @@ try:
 except ImportError:
     WEBDRIVER_MANAGER_AVAILABLE = False
 
+# Add import for AuthManager and BrowserManager
+from src.utils.auth_manager import AuthManager
+from src.mcp_tools.robot_browser_manager import BrowserManager
+
 logger = logging.getLogger('robot_tool.browser_select_option')
 
 # -----------------------------------------------------------------------------
@@ -197,7 +201,15 @@ def select_option(
     url: Optional[str] = None,
     wait_time: int = 5,
     by_visible_text: bool = True,
-    is_custom_dropdown: bool = False
+    is_custom_dropdown: bool = False,
+    need_login: bool = False,
+    login_url: Optional[str] = None,
+    username: Optional[str] = None,
+    password: Optional[str] = None,
+    username_locator: Optional[str] = None,
+    password_locator: Optional[str] = None,
+    submit_locator: Optional[str] = None,
+    success_indicator: Optional[str] = None
 ) -> Dict[str, Any]:
     """
     Select an option or multiple options in a dropdown element.
@@ -209,6 +221,14 @@ def select_option(
         wait_time: Time to wait for element to be available in seconds
         by_visible_text: Whether to select by visible text (True) or by value (False)
         is_custom_dropdown: Whether this is a custom (non-select) dropdown
+        need_login: Whether login is required before selection
+        login_url: URL of the login page if different from target URL
+        username: Username for login
+        password: Password for login
+        username_locator: Locator for username field
+        password_locator: Locator for password field
+        submit_locator: Locator for submit button
+        success_indicator: Optional element to verify successful login
         
     Returns:
         Dictionary with the selection operation result
@@ -218,21 +238,47 @@ def select_option(
         "option_values": option_values,
         "url": url,
         "status": "success",
-        "error": None
+        "error": None,
+        "login_status": None
     }
     
     # Convert single option to list for consistent handling
     if isinstance(option_values, str):
         option_values = [option_values]
     
-    driver = None
     try:
-        # Initialize WebDriver
-        driver = initialize_webdriver()
-        if not driver:
-            result["status"] = "error"
-            result["error"] = "Failed to initialize WebDriver"
-            return result
+        # Handle login if needed and URL is provided
+        if need_login and url:
+            # Check if already authenticated
+            if not AuthManager.is_authenticated(url):
+                if not all([username, password, username_locator, password_locator, submit_locator]):
+                    result["status"] = "error"
+                    result["error"] = "Login requested but missing required login parameters"
+                    return result
+                    
+                # Perform login
+                login_result = AuthManager.login(
+                    login_url or url,
+                    username,
+                    password,
+                    username_locator,
+                    password_locator,
+                    submit_locator,
+                    success_indicator,
+                    wait_time
+                )
+                
+                result["login_status"] = login_result
+                
+                if not login_result["success"]:
+                    result["status"] = "error"
+                    result["error"] = f"Login failed: {login_result.get('message', 'Unknown error')}"
+                    return result
+            else:
+                result["login_status"] = {"success": True, "message": "Already authenticated"}
+        
+        # Get browser instance from the manager
+        driver = BrowserManager.get_driver()
         
         # Navigate to URL if provided
         if url:
@@ -481,7 +527,7 @@ Select Dropdown Options
 # -----------------------------------------------------------------------------
 
 def register_tool(mcp: FastMCP):
-    """Register MCP tool."""
+    """Register browser select option tool with MCP."""
     
     @mcp.tool()
     async def robot_browser_select_option(
@@ -490,32 +536,61 @@ def register_tool(mcp: FastMCP):
         url: Optional[str] = None,
         wait_time: int = 5,
         by_visible_text: bool = True,
-        is_custom_dropdown: bool = False
+        is_custom_dropdown: bool = False,
+        need_login: bool = False,
+        login_url: Optional[str] = None,
+        username: Optional[str] = None,
+        password: Optional[str] = None,
+        username_locator: Optional[str] = None,
+        password_locator: Optional[str] = None,
+        submit_locator: Optional[str] = None,
+        success_indicator: Optional[str] = None
     ) -> Dict[str, Any]:
         """
         Select an option or multiple options in a dropdown element.
         
-        This tool selects options in dropdown elements, including both standard
-        HTML select elements and custom JavaScript-based dropdowns.
+        This tool allows selecting options in standard select elements and custom
+        dropdown controls. It can optionally navigate to a URL first and handle
+        authentication if needed.
         
         Args:
-            select_locator: Locator string for the dropdown element (e.g., "id=country")
+            select_locator: Locator string for the dropdown element
             option_values: Value or list of values to select (text or value attribute)
             url: URL to navigate to (optional, if not provided, will use current page)
             wait_time: Time to wait for element to be available in seconds
             by_visible_text: Whether to select by visible text (True) or by value (False)
             is_custom_dropdown: Whether this is a custom (non-select) dropdown
+            need_login: Whether login is required before selection
+            login_url: URL of the login page if different from target URL
+            username: Username for login
+            password: Password for login
+            username_locator: Locator for username field
+            password_locator: Locator for password field
+            submit_locator: Locator for submit button
+            success_indicator: Optional element to verify successful login
             
         Returns:
             Dictionary with the selection operation result
         """
+        logger.info(f"Selecting option(s) {option_values} in dropdown: {select_locator}")
+        if need_login and url:
+            logger.info("Authentication required for selection")
+            
         return select_option(
             select_locator,
             option_values,
             url,
             wait_time,
             by_visible_text,
-            is_custom_dropdown
+            is_custom_dropdown,
+            need_login,
+            login_url,
+            username,
+            password,
+            username_locator,
+            password_locator,
+            submit_locator,
+            success_indicator
         )
     
     @mcp.tool()
