@@ -2,6 +2,7 @@
 """
 MCP Tool: Robot Form Automator
 Creates and executes Robot Framework tests for web form automation.
+Supports optional authentication through central AuthManager.
 """
 
 import os
@@ -32,6 +33,12 @@ try:
 except ImportError:
     WEBDRIVER_MANAGER_AVAILABLE = False
 
+# Import shared browser manager
+from src.mcp_tools.robot_browser_manager import BrowserManager
+
+# Import auth manager for optional login
+from src.utils.auth_manager import AuthManager
+
 from src.utils.helpers import (
     run_robot_command,
     is_robot_file,
@@ -56,7 +63,15 @@ def create_form_automation_test(
     wait_success_element: Optional[str] = None,
     success_message: Optional[str] = None,
     browser: str = "Chrome",
-    overwrite: bool = False
+    overwrite: bool = False,
+    need_login: bool = False,
+    login_url: Optional[str] = None,
+    username: Optional[str] = None,
+    password: Optional[str] = None,
+    username_locator: Optional[str] = None,
+    password_locator: Optional[str] = None,
+    submit_locator: Optional[str] = None,
+    success_indicator: Optional[str] = None
 ) -> Dict[str, Any]:
     """
     Create a Robot Framework test for automating a web form.
@@ -70,6 +85,14 @@ def create_form_automation_test(
         success_message: Text to verify after submission
         browser: Browser to use for automation
         overwrite: Whether to overwrite an existing file
+        need_login: Whether login is required before form automation
+        login_url: URL of the login page if different from form URL
+        username: Username for login
+        password: Password for login
+        username_locator: Locator for username field
+        password_locator: Locator for password field
+        submit_locator: Locator for submit button
+        success_indicator: Optional element to verify successful login
         
     Returns:
         Dictionary with file path, content, and any error
@@ -77,7 +100,8 @@ def create_form_automation_test(
     result = {
         "file_path": None,
         "content": None,
-        "error": None
+        "error": None,
+        "login_status": None
     }
     
     try:
@@ -108,11 +132,32 @@ def create_form_automation_test(
         if wait_success_element:
             variables.append(f"${{SUCCESS_ELEMENT}}         {wait_success_element}")
             
+        # Add login variables if needed
+        if need_login:
+            if login_url:
+                variables.append(f"${{LOGIN_URL}}             {login_url}")
+            else:
+                variables.append(f"${{LOGIN_URL}}             {url}")
+                
+            if username and password and username_locator and password_locator and submit_locator:
+                variables.append(f"${{USERNAME}}               {username}")
+                variables.append(f"${{PASSWORD}}               {password}")
+                variables.append(f"${{USERNAME_FIELD}}         {username_locator}")
+                variables.append(f"${{PASSWORD_FIELD}}         {password_locator}")
+                variables.append(f"${{LOGIN_BUTTON}}           {submit_locator}")
+                
+                if success_indicator:
+                    variables.append(f"${{LOGIN_SUCCESS}}         {success_indicator}")
+        
         # Generate test case steps
-        test_steps = [
-            "Open Browser And Navigate To Form Page",
-            "Fill Form Fields"
-        ]
+        test_steps = []
+        
+        # Add login step if needed
+        if need_login:
+            test_steps.append("Login To System")
+            
+        test_steps.append("Open Browser And Navigate To Form Page")
+        test_steps.append("Fill Form Fields")
         
         # Add submit step
         submit_locator = next((details.get("locator") for name, details in form_fields.items() 
@@ -127,14 +172,50 @@ def create_form_automation_test(
         # Generate keywords
         keywords = []
         
+        # Add login keyword if needed
+        if need_login:
+            login_steps = [
+                "Open Browser    ${LOGIN_URL}    ${BROWSER}",
+                "Maximize Browser Window"
+            ]
+            
+            if username and password and username_locator and password_locator and submit_locator:
+                login_steps.extend([
+                    "Wait Until Page Contains Element    ${USERNAME_FIELD}    timeout=10s",
+                    "Input Text    ${USERNAME_FIELD}    ${USERNAME}",
+                    "Input Password    ${PASSWORD_FIELD}    ${PASSWORD}",
+                    "Click Button    ${LOGIN_BUTTON}"
+                ])
+                
+                if success_indicator:
+                    login_steps.append(f"Wait Until Page Contains Element    ${{LOGIN_SUCCESS}}    timeout=10s")
+                else:
+                    login_steps.append("Sleep    2s")
+            
+            keywords.append({
+                "name": "Login To System",
+                "steps": login_steps
+            })
+        
         # Open browser keyword
-        keywords.append({
-            "name": "Open Browser And Navigate To Form Page",
-            "steps": [
+        browse_steps = []
+        if need_login:
+            # If we've already logged in, just navigate to the form page
+            browse_steps = [
+                "Go To    ${URL}",
+                "Wait Until Page Contains Element    " + next(iter(form_fields.values())).get("locator") + "    timeout=10s"
+            ]
+        else:
+            # Otherwise open a new browser
+            browse_steps = [
                 "Open Browser    ${URL}    ${BROWSER}",
                 "Maximize Browser Window",
                 "Wait Until Page Contains Element    " + next(iter(form_fields.values())).get("locator") + "    timeout=10s"
             ]
+            
+        keywords.append({
+            "name": "Open Browser And Navigate To Form Page",
+            "steps": browse_steps
         })
         
         # Fill form fields keyword
@@ -238,7 +319,18 @@ def create_form_automation_test(
             "error": error_msg
         }
 
-def detect_form_structure(url: str, wait_time: int = 20) -> Dict[str, Any]:
+def detect_form_structure(
+    url: str, 
+    wait_time: int = 20,
+    need_login: bool = False,
+    login_url: Optional[str] = None,
+    username: Optional[str] = None,
+    password: Optional[str] = None,
+    username_locator: Optional[str] = None,
+    password_locator: Optional[str] = None,
+    submit_locator: Optional[str] = None,
+    success_indicator: Optional[str] = None
+) -> Dict[str, Any]:
     """
     Detect form structure from a URL using Selenium to visit the page
     and extract form field information.
@@ -246,137 +338,71 @@ def detect_form_structure(url: str, wait_time: int = 20) -> Dict[str, Any]:
     Args:
         url: URL containing the form to analyze
         wait_time: Time to wait for page to load in seconds
+        need_login: Whether login is required before form detection
+        login_url: URL of the login page if different from form URL
+        username: Username for login
+        password: Password for login
+        username_locator: Locator for username field
+        password_locator: Locator for password field
+        submit_locator: Locator for submit button
+        success_indicator: Optional element to verify successful login
         
     Returns:
-        Dictionary with detected form fields and structure
+        Dictionary with form structure and any errors
     """
     result = {
-        "form_detected": False,
+        "url": url,
         "form_fields": {},
-        "error": None
+        "error": None,
+        "login_status": None
     }
     
-    driver = None
     try:
-        logger.info(f"Visiting URL to extract form structure: {url}")
-        
-        # Set up Chrome options for headless browsing
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        
-        # Try to detect the Chrome binary location
-        chrome_binary = None
-        possible_paths = [
-            "/usr/bin/google-chrome",
-            "/usr/bin/google-chrome-stable",
-            "/usr/bin/chromium",
-            "/usr/bin/chromium-browser",
-            "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",  # macOS
-            "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",    # Windows
-            "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
-        ]
-        
-        for path in possible_paths:
-            if os.path.exists(path):
-                chrome_binary = path
-                break
+        # Handle login if needed
+        if need_login:
+            # Check if already authenticated
+            if not AuthManager.is_authenticated(url):
+                if not all([username, password, username_locator, password_locator, submit_locator]):
+                    result["error"] = "Login requested but missing required login parameters"
+                    return result
+                    
+                # Perform login
+                login_result = AuthManager.login(
+                    login_url or url,
+                    username,
+                    password,
+                    username_locator,
+                    password_locator,
+                    submit_locator,
+                    success_indicator,
+                    wait_time
+                )
                 
-        if chrome_binary:
-            logger.info(f"Using Chrome binary at: {chrome_binary}")
-            chrome_options.binary_location = chrome_binary
-            
-        # Try different approaches to initialize the WebDriver
-        service = None
-        try_methods = ["direct", "manager", "path_search", "subprocess"]
-        driver = None
-        last_error = None
+                result["login_status"] = login_result
+                
+                if not login_result["success"]:
+                    result["error"] = f"Login failed: {login_result.get('message', 'Unknown error')}"
+                    return result
+            else:
+                result["login_status"] = {"success": True, "message": "Already authenticated"}
         
-        for method in try_methods:
+        # Get browser instance from manager
+        driver = BrowserManager.get_driver()
+        
+        # Navigate to the form URL
+        current_url = driver.current_url
+        if current_url != url:
+            logger.info(f"Navigating to URL: {url}")
+            driver.set_page_load_timeout(wait_time * 2)
+            driver.get(url)
+            
+            # Wait for page to load
             try:
-                if method == "direct":
-                    # Direct WebDriver initialization
-                    logger.info("Trying direct WebDriver initialization")
-                    service = Service()
-                    driver = webdriver.Chrome(service=service, options=chrome_options)
-                    break
-                    
-                elif method == "manager" and WEBDRIVER_MANAGER_AVAILABLE:
-                    # Try with webdriver-manager if available
-                    logger.info("Trying WebDriver Manager initialization")
-                    driver = webdriver.Chrome(
-                        service=Service(ChromeDriverManager().install()),
-                        options=chrome_options
-                    )
-                    break
-                    
-                elif method == "path_search":
-                    # Search for chromedriver in PATH
-                    logger.info("Searching for chromedriver in PATH")
-                    chromedriver_path = shutil.which("chromedriver")
-                    if chromedriver_path:
-                        logger.info(f"Found chromedriver at {chromedriver_path}")
-                        service = Service(executable_path=chromedriver_path)
-                        driver = webdriver.Chrome(service=service, options=chrome_options)
-                        break
-                
-                elif method == "subprocess":
-                    # Try to use subprocess to find Chrome location
-                    logger.info("Trying to locate Chrome using subprocess")
-                    if sys.platform.startswith('win'):
-                        cmd = r'reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\chrome.exe" /ve'
-                        try:
-                            result = subprocess.run(cmd, capture_output=True, shell=True, text=True)
-                            if result.returncode == 0:
-                                chrome_path = result.stdout.split("REG_SZ")[-1].strip()
-                                logger.info(f"Found Chrome at {chrome_path}")
-                                chrome_options.binary_location = chrome_path
-                        except Exception as e:
-                            logger.warning(f"Failed to get Chrome path via registry: {e}")
-                    elif sys.platform == 'darwin':  # macOS
-                        try:
-                            result = subprocess.run(['mdfind', 'kMDItemCFBundleIdentifier = "com.google.Chrome"'], 
-                                                    capture_output=True, text=True)
-                            if result.stdout.strip():
-                                chrome_path = os.path.join(result.stdout.strip().split('\n')[0], 
-                                                          'Contents/MacOS/Google Chrome')
-                                if os.path.exists(chrome_path):
-                                    logger.info(f"Found Chrome at {chrome_path}")
-                                    chrome_options.binary_location = chrome_path
-                        except Exception as e:
-                            logger.warning(f"Failed to get Chrome path via mdfind: {e}")
-                    else:  # Linux
-                        try:
-                            result = subprocess.run(['which', 'google-chrome'], capture_output=True, text=True)
-                            if result.returncode == 0:
-                                chrome_path = result.stdout.strip()
-                                logger.info(f"Found Chrome at {chrome_path}")
-                                chrome_options.binary_location = chrome_path
-                        except Exception as e:
-                            logger.warning(f"Failed to get Chrome path via 'which': {e}")
-                            
-                    # Now try initializing with updated binary location    
-                    service = Service()
-                    driver = webdriver.Chrome(service=service, options=chrome_options)
-                    break
-                    
-            except Exception as e:
-                last_error = str(e)
-                logger.warning(f"Method {method} failed: {e}")
-                continue
-                
-        if driver is None:
-            raise Exception(f"All WebDriver initialization methods failed. Last error: {last_error}")
-            
-        # Configure browser
-        logger.info("WebDriver initialized successfully")
-        driver.set_page_load_timeout(wait_time * 2)  # Double the wait time for page load
-        driver.get(url)
-        
-        # Wait for the page to load
-        logger.info(f"Waiting {wait_time} seconds for page to load")
-        time.sleep(wait_time)
+                WebDriverWait(driver, wait_time).until(
+                    EC.presence_of_element_located((By.TAG_NAME, "body"))
+                )
+            except TimeoutException:
+                logger.warning(f"Timeout waiting for page to load: {url}")
         
         # Find all forms on the page
         forms = driver.find_elements(By.TAG_NAME, "form")
@@ -537,7 +563,6 @@ def detect_form_structure(url: str, wait_time: int = 20) -> Dict[str, Any]:
                 "value": ""
             }
         
-        result["form_detected"] = True
         result["form_fields"] = form_fields
         
         if not form_fields:
@@ -693,24 +718,56 @@ def register_tool(mcp: FastMCP):
     @mcp.tool()
     async def robot_form_detect(
         url: str,
-        wait_time: int = 20
+        wait_time: int = 20,
+        need_login: bool = False,
+        login_url: Optional[str] = None,
+        username: Optional[str] = None,
+        password: Optional[str] = None,
+        username_locator: Optional[str] = None,
+        password_locator: Optional[str] = None,
+        submit_locator: Optional[str] = None,
+        success_indicator: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        Detect form structure from a URL using Selenium to visit the page
-        and extract form field information.
+        Detect form structure from a URL.
+        
+        This tool analyzes a web page to find form elements and extracts
+        their details for automation.
+        
+        If login is required, the tool can handle authentication through the
+        shared AuthManager to maintain session state across tools.
         
         Args:
             url: URL containing the form to analyze
             wait_time: Time to wait for page to load in seconds
+            need_login: Whether login is required before form detection
+            login_url: URL of the login page if different from form URL
+            username: Username for login
+            password: Password for login
+            username_locator: Locator for username field
+            password_locator: Locator for password field
+            submit_locator: Locator for submit button
+            success_indicator: Optional element to verify successful login
             
         Returns:
-            Dictionary with detected form fields and structure
+            Dictionary with form structure and any errors
         """
         logger.info(f"Detecting form structure at URL: {url}")
+        logger.info(f"Need login: {need_login}")
         
-        result = detect_form_structure(url, wait_time)
-        return result
-    
+        return detect_form_structure(
+            url, 
+            wait_time,
+            need_login,
+            login_url,
+            username,
+            password,
+            username_locator,
+            password_locator,
+            submit_locator,
+            success_indicator
+        )
+        
     @mcp.tool()
     async def robot_form_create(
         url: str,
@@ -720,38 +777,67 @@ def register_tool(mcp: FastMCP):
         wait_success_element: Optional[str] = None,
         success_message: Optional[str] = None,
         browser: str = "Chrome",
-        overwrite: bool = False
+        overwrite: bool = False,
+        need_login: bool = False,
+        login_url: Optional[str] = None,
+        username: Optional[str] = None,
+        password: Optional[str] = None,
+        username_locator: Optional[str] = None,
+        password_locator: Optional[str] = None,
+        submit_locator: Optional[str] = None,
+        success_indicator: Optional[str] = None
     ) -> Dict[str, Any]:
         """
         Create a Robot Framework test for automating a web form.
         
+        This tool generates a Robot Framework script that can be executed
+        to automate filling and submitting a web form.
+        
+        If login is required, the tool can handle authentication through the
+        shared AuthManager to maintain session state across tools.
+        
         Args:
             url: URL of the form to automate
-            form_fields: Dictionary of form fields with their details (locator, value, type)
+            form_fields: Dictionary of form fields with details (locator, value, type)
             output_file: Path to save the Robot test file
             test_name: Name for the test case
             wait_success_element: Element locator to wait for after submission
             success_message: Text to verify after submission
             browser: Browser to use for automation
             overwrite: Whether to overwrite an existing file
+            need_login: Whether login is required before form automation
+            login_url: URL of the login page if different from form URL
+            username: Username for login
+            password: Password for login
+            username_locator: Locator for username field
+            password_locator: Locator for password field
+            submit_locator: Locator for submit button
+            success_indicator: Optional element to verify successful login
             
         Returns:
             Dictionary with file path, content, and any error
         """
         logger.info(f"Creating form automation test for URL: {url}")
+        logger.info(f"Need login: {need_login}")
         
-        result = create_form_automation_test(
-            url=url,
-            form_fields=form_fields,
-            output_file=output_file,
-            test_name=test_name,
-            wait_success_element=wait_success_element,
-            success_message=success_message,
-            browser=browser,
-            overwrite=overwrite
+        return create_form_automation_test(
+            url,
+            form_fields,
+            output_file,
+            test_name,
+            wait_success_element,
+            success_message,
+            browser,
+            overwrite,
+            need_login,
+            login_url,
+            username,
+            password,
+            username_locator,
+            password_locator,
+            submit_locator,
+            success_indicator
         )
-        
-        return result
     
     @mcp.tool()
     async def robot_form_run(
