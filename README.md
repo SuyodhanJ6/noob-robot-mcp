@@ -74,21 +74,19 @@ This will start the MCP server at `http://localhost:3007/sse` (by default).
 
 ### Connecting to the Server
 
-You can connect to the MCP server using any MCP client. For example, using the MCP JavaScript client:
+You can connect to the MCP server using any MCP client, including Cursor. To configure Cursor to use this MCP server, add the following configuration to your Cursor settings:
 
-```javascript
-import { MCP } from 'mcp-client';
-
-const mcp = new MCP('http://localhost:3007/sse');
-
-// Use the robot_test_reader tool
-const result = await mcp.call('robot_test_reader', {
-  directory_path: './tests',
-  recursive: true
-});
-
-console.log(result.files);
+```json
+{
+  "mcpServers": {
+    "noob-robot-mcp": {
+      "url": "http://localhost:3007/sse"
+    }
+  }
+}
 ```
+
+Once configured, you can use the NoobRobot tools directly from Cursor.
 
 ## Docker
 
@@ -116,13 +114,12 @@ noob-robot-mcp/
 │   │   └── server.py
 │   │
 │   └── mcp_tools/               # MCP Tools implementations
-│       ├── robot_test_reader/
-│       ├── robot_keyword_inspector/
-│       ├── robot_runner/
+│       ├── robot_browser_navigate/
+│       ├── robot_form_automator/
+│       ├── robot_auto_locator/
 │       └── ...
 │
 ├── tests/                       # Test directory
-├── robot_registration_test/     # Robot framework test registrations
 ├── logs/                        # Log files
 ├── output/                      # Output files
 └── reports/                     # Report files
