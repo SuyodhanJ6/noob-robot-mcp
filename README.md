@@ -1,6 +1,6 @@
 # NoobRobot - Robot Framework MCP Server
 
-[![Version](https://img.shields.io/badge/Version-v0.1.0-brightgreen)](https://github.com/SuyodhanJ6/noob-robot-mcp/releases/tag/v0.1.0)
+[![Version](https://img.shields.io/badge/Version-v0.2.1-brightgreen)](https://github.com/SuyodhanJ6/noob-robot-mcp/releases/tag/v0.2.1)
 ![MCP Server](https://img.shields.io/badge/MCP-Server-blue)
 ![Python](https://img.shields.io/badge/Python-3.11-yellow)
 ![Robot Framework](https://img.shields.io/badge/Robot%20Framework-6.1-red)
@@ -18,28 +18,31 @@ NoobRobot exposes Robot Framework functionality through the MCP protocol, allowi
 
 ## Features
 
-This MCP server implements 20 tools for working with Robot Framework:
+This MCP server implements a comprehensive set of browser automation and form handling tools:
 
-1. **robot_test_reader** - Reads .robot test files and extracts test cases, suites, and steps
-2. **robot_keyword_inspector** - Inspects available keywords from libraries
-3. **robot_runner** - Executes .robot test cases and returns the results
-4. **robot_log_parser** - Parses Robot Framework test logs
-5. **robot_test_creator** - Creates .robot test files from structured input
-6. **robot_variable_resolver** - Resolves variables used in .robot files
-7. **robot_library_explorer** - Explores available libraries and their keywords
-8. **robot_test_linter** - Static analysis tool for .robot files
-9. **robot_test_mapper** - Maps test cases to application components
-10. **robot_test_coverage_analyzer** - Analyzes which parts of the codebase are covered by tests
-11. **robot_test_refactorer** - Refactors .robot test files
-12. **robot_test_data_generator** - Generates test data for different test cases
-13. **robot_step_debugger** - Debugs individual test steps
-14. **robot_report_generator** - Generates test execution reports
-15. **robot_test_scheduler** - Schedules and runs test cases
-16. **robot_result_aggregator** - Aggregates test results
-17. **robot_test_dependency_checker** - Checks for missing dependencies
-18. **robot_automated_feedback** - Provides feedback on test case design
-19. **robot_visualization** - Visualizes test case execution flow
-20. **robot_external_api_interaction** - Integrates with external systems via APIs
+### Core Form Automation
+1. **robot_form_automator** - Creates and runs Robot Framework tests for web form automation
+2. **robot_form_locator** - Extracts form elements and their locators from web pages
+3. **robot_form_success_detector** - Detects successful form submissions and generates tests
+
+### Browser Automation
+4. **robot_browser_navigate** - Navigates to URLs with optional authentication support
+5. **robot_browser_click** - Performs click operations on web elements
+6. **robot_browser_type** - Types text into form fields and input elements
+7. **robot_browser_select_option** - Selects options from dropdown menus
+8. **robot_browser_screenshot** - Takes screenshots of web pages
+9. **robot_browser_wait** - Waits for elements or fixed time periods
+10. **robot_browser_tab_new** - Opens new browser tabs
+11. **robot_browser_tab_select** - Selects and switches between browser tabs
+12. **robot_browser_close** - Closes browser sessions
+
+### Advanced Element Location
+13. **robot_auto_locator** - Comprehensive locator finder for all elements
+14. **robot_page_snapshot** - Takes page snapshots for element identification
+15. **robot_dropdown_handler** - Specialized tool for dropdown element handling
+
+### Authentication Support
+16. **Auth Manager** - Central authentication management for maintaining login sessions across tools
 
 ## Installation
 
