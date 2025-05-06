@@ -41,6 +41,9 @@ except ImportError:
 # Import shared browser manager
 from ..robot_browser_manager import BrowserManager
 
+# Import authentication manager
+from src.utils.auth_manager import AuthManager
+
 logger = logging.getLogger('robot_tool.browser_navigate')
 
 # -----------------------------------------------------------------------------
@@ -125,7 +128,15 @@ def navigate_to_url(
     url: str,
     wait_time: int = 10,
     cookies: Optional[List[Dict[str, Any]]] = None,
-    wait_for_selector: Optional[str] = None
+    wait_for_selector: Optional[str] = None,
+    need_login: bool = False,
+    login_url: Optional[str] = None,
+    username: Optional[str] = None,
+    password: Optional[str] = None,
+    username_locator: Optional[str] = None,
+    password_locator: Optional[str] = None,
+    submit_locator: Optional[str] = None,
+    success_indicator: Optional[str] = None
 ) -> Dict[str, Any]:
     """
     Navigate to a URL in a browser.
@@ -135,6 +146,14 @@ def navigate_to_url(
         wait_time: Time to wait for page to load in seconds
         cookies: List of cookies to set before navigation
         wait_for_selector: Optional CSS selector to wait for
+        need_login: Whether login is required before navigation
+        login_url: URL of the login page if different from navigation URL
+        username: Username for login
+        password: Password for login
+        username_locator: Locator for username field
+        password_locator: Locator for password field
+        submit_locator: Locator for submit button
+        success_indicator: Optional element to verify successful login
         
     Returns:
         Dictionary with navigation status and page information
@@ -144,7 +163,8 @@ def navigate_to_url(
         "status": "success",
         "page_info": None,
         "robot_command": None,
-        "error": None
+        "error": None,
+        "login_status": None
     }
     
     # Check if URL is valid
@@ -154,6 +174,36 @@ def navigate_to_url(
         return result
     
     try:
+        # Handle login if needed
+        if need_login:
+            # Check if already authenticated
+            if not AuthManager.is_authenticated(url):
+                if not all([username, password, username_locator, password_locator, submit_locator]):
+                    result["status"] = "error"
+                    result["error"] = "Login requested but missing required login parameters"
+                    return result
+                    
+                # Perform login
+                login_result = AuthManager.login(
+                    login_url or url,
+                    username,
+                    password,
+                    username_locator,
+                    password_locator,
+                    submit_locator,
+                    success_indicator,
+                    wait_time
+                )
+                
+                result["login_status"] = login_result
+                
+                if not login_result["success"]:
+                    result["status"] = "error"
+                    result["error"] = f"Login failed: {login_result.get('message', 'Unknown error')}"
+                    return result
+            else:
+                result["login_status"] = {"success": True, "message": "Already authenticated"}
+        
         # Get WebDriver instance from the manager
         driver = BrowserManager.get_driver()
         
@@ -355,28 +405,56 @@ def register_tool(mcp: FastMCP):
         url: str,
         wait_time: int = 10,
         cookies: Optional[List[Dict[str, Any]]] = None,
-        wait_for_selector: Optional[str] = None
+        wait_for_selector: Optional[str] = None,
+        need_login: bool = False,
+        login_url: Optional[str] = None,
+        username: Optional[str] = None,
+        password: Optional[str] = None,
+        username_locator: Optional[str] = None,
+        password_locator: Optional[str] = None,
+        submit_locator: Optional[str] = None,
+        success_indicator: Optional[str] = None
     ) -> Dict[str, Any]:
         """
         Navigate to a URL in a browser.
+        
+        This tool allows navigating to a web page and waiting for it to load.
+        It can optionally handle authentication if login is required.
         
         Args:
             url: URL to navigate to
             wait_time: Time to wait for page to load in seconds
             cookies: List of cookies to set before navigation
             wait_for_selector: Optional CSS selector to wait for
+            need_login: Whether login is required before navigation
+            login_url: URL of the login page if different from navigation URL
+            username: Username for login
+            password: Password for login
+            username_locator: Locator for username field
+            password_locator: Locator for password field
+            submit_locator: Locator for submit button
+            success_indicator: Optional element to verify successful login
             
         Returns:
             Dictionary with navigation status and page information
         """
-        logger.info(f"Received request to navigate to URL: {url}")
-        logger.debug(f"Received cookies: {cookies}")
-        
+        logger.info(f"Navigating to URL: {url}")
+        if need_login:
+            logger.info("Authentication required for navigation")
+            
         return navigate_to_url(
-            url=url,
-            wait_time=wait_time,
-            cookies=cookies,
-            wait_for_selector=wait_for_selector
+            url, 
+            wait_time, 
+            cookies, 
+            wait_for_selector,
+            need_login,
+            login_url,
+            username,
+            password,
+            username_locator,
+            password_locator,
+            submit_locator,
+            success_indicator
         )
     
     @mcp.tool()
