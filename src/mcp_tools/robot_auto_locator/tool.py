@@ -3,6 +3,7 @@
 MCP Tool: Robot Auto Locator
 Automatically finds all possible locators for elements on a web page.
 Combines multiple locator strategies for comprehensive element identification.
+Supports optional authentication through central AuthManager.
 """
 
 import os
@@ -46,6 +47,12 @@ try:
     WEBDRIVER_MANAGER_AVAILABLE = True
 except ImportError:
     WEBDRIVER_MANAGER_AVAILABLE = False
+
+# Import shared browser manager
+from src.mcp_tools.robot_browser_manager import BrowserManager
+
+# Import auth manager for optional login
+from src.utils.auth_manager import AuthManager
 
 logger = logging.getLogger('robot_tool.auto_locator')
 
@@ -347,45 +354,107 @@ def evaluate_locator_quality(driver: webdriver.Chrome, locator: str) -> Dict[str
     return result
 
 # -----------------------------------------------------------------------------
-# Main Functions
+# Main Tool Functions
 # -----------------------------------------------------------------------------
 
-def find_all_locators(url: str, element_description: str = None, wait_time: int = 10) -> Dict[str, Any]:
+def find_all_locators(
+    url: str, 
+    element_description: str = None, 
+    wait_time: int = 10,
+    need_login: bool = False,
+    login_url: Optional[str] = None,
+    username: Optional[str] = None,
+    password: Optional[str] = None,
+    username_locator: Optional[str] = None,
+    password_locator: Optional[str] = None,
+    submit_locator: Optional[str] = None,
+    success_indicator: Optional[str] = None
+) -> Dict[str, Any]:
     """
     Find all possible locators for elements on a web page.
     
     Args:
-        url: URL of the web page
-        element_description: Optional description to target a specific element
+        url: URL of the web page to analyze
+        element_description: Optional description of element to find specific locators for
         wait_time: Time to wait for page to load in seconds
+        need_login: Whether login is required before locating elements
+        login_url: URL of the login page if different from main URL
+        username: Username for login
+        password: Password for login
+        username_locator: Locator for username field
+        password_locator: Locator for password field
+        submit_locator: Locator for submit button
+        success_indicator: Optional element to verify successful login
         
     Returns:
-        Dictionary with all found elements and their locators
+        Dictionary with all detected elements and their locators
     """
     result = {
         "url": url,
-        "status": "failed",
+        "status": "success",
         "elements": [],
-        "error": None
+        "locators": {},
+        "element_screenshot": None,
+        "page_screenshot": None,
+        "error": None,
+        "login_status": None
     }
     
-    driver = None
     try:
-        # Initialize WebDriver
-        driver = initialize_webdriver()
-        if not driver:
-            result["error"] = "Failed to initialize WebDriver"
-            return result
+        # Handle login if needed
+        if need_login:
+            # Check if already authenticated
+            if not AuthManager.is_authenticated(url):
+                if not all([username, password, username_locator, password_locator, submit_locator]):
+                    result["status"] = "error"
+                    result["error"] = "Login requested but missing required login parameters"
+                    return result
+                    
+                # Perform login
+                login_result = AuthManager.login(
+                    login_url or url,
+                    username,
+                    password,
+                    username_locator,
+                    password_locator,
+                    submit_locator,
+                    success_indicator,
+                    wait_time
+                )
+                
+                result["login_status"] = login_result
+                
+                if not login_result["success"]:
+                    result["status"] = "error"
+                    result["error"] = f"Login failed: {login_result.get('message', 'Unknown error')}"
+                    return result
+            else:
+                result["login_status"] = {"success": True, "message": "Already authenticated"}
+        
+        # Get the WebDriver instance from the manager
+        driver = BrowserManager.get_driver()
+        
+        # Navigate to URL
+        current_url = driver.current_url
+        if current_url != url:
+            logger.info(f"Navigating to URL: {url}")
+            driver.set_page_load_timeout(wait_time * 2)
+            driver.get(url)
             
-        # Navigate to the URL
-        logger.info(f"Navigating to URL: {url}")
-        driver.set_page_load_timeout(wait_time * 2)
-        driver.get(url)
+            # Wait for body element to ensure page is loaded
+            try:
+                WebDriverWait(driver, wait_time).until(
+                    EC.presence_of_element_located((By.TAG_NAME, "body"))
+                )
+            except TimeoutException:
+                logger.warning(f"Timeout waiting for page body at {url}")
         
-        # Wait for page to load
-        logger.info(f"Waiting {wait_time} seconds for page to load")
-        time.sleep(wait_time)
-        
+        # Take a screenshot of the page
+        try:
+            result["page_screenshot"] = driver.get_screenshot_as_base64()
+        except Exception as e:
+            logger.warning(f"Failed to take page screenshot: {e}")
+            
         # Find specific element(s) if description is provided
         target_elements = []
         
@@ -553,39 +622,70 @@ def find_all_locators(url: str, element_description: str = None, wait_time: int 
         return result
     except Exception as e:
         logger.error(f"Error finding locators: {e}")
+        result["status"] = "error"
         result["error"] = str(e)
         return result
-    finally:
-        if driver:
-            driver.quit()
 
 # -----------------------------------------------------------------------------
 # MCP Tool Registration
 # -----------------------------------------------------------------------------
 
 def register_tool(mcp: FastMCP):
-    """Register MCP tool."""
+    """Register the auto locator tool with the MCP server."""
     
     @mcp.tool()
     async def robot_find_all_locators(
         url: str,
         element_description: str = None,
-        wait_time: int = 10
+        wait_time: int = 10,
+        need_login: bool = False,
+        login_url: Optional[str] = None,
+        username: Optional[str] = None,
+        password: Optional[str] = None,
+        username_locator: Optional[str] = None,
+        password_locator: Optional[str] = None,
+        submit_locator: Optional[str] = None,
+        success_indicator: Optional[str] = None
     ) -> Dict[str, Any]:
         """
         Find all possible locators for elements on a web page.
         
-        This tool scans a web page and identifies all interactive elements,
-        generating multiple locator strategies for each element. It ranks
-        locators by quality and provides recommendations for the best 
-        locator to use for each element.
+        This tool automatically detects elements on a web page and generates
+        multiple locator strategies for each element. It can be used to identify
+        the best ways to locate elements for automation scripts.
+        
+        If login is required, the tool can handle authentication through the
+        shared AuthManager to maintain session state across tools.
         
         Args:
             url: URL of the web page to analyze
-            element_description: Optional description to target a specific element
+            element_description: Optional description to find specific elements
             wait_time: Time to wait for page to load in seconds
+            need_login: Whether login is required before locating elements
+            login_url: URL of the login page if different from main URL
+            username: Username for login
+            password: Password for login
+            username_locator: Locator for username field
+            password_locator: Locator for password field
+            submit_locator: Locator for submit button
+            success_indicator: Optional element to verify successful login
             
         Returns:
-            Dictionary with all found elements and their locators
+            Dictionary with all detected elements and their locators
         """
-        return find_all_locators(url, element_description, wait_time) 
+        logger.info(f"Finding all locators for URL: {url}")
+        logger.info(f"Need login: {need_login}")
+        
+        return find_all_locators(
+            url, 
+            element_description, 
+            wait_time,
+            need_login,
+            login_url,
+            username,
+            password,
+            username_locator,
+            password_locator,
+            submit_locator,
+            success_indicator
+        ) 
