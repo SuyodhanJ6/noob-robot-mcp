@@ -23,6 +23,9 @@ except ImportError:
 from src.mcp_tools.robot_browser_manager import BrowserManager
 from selenium.common.exceptions import WebDriverException, NoSuchWindowException
 
+# Add import for AuthManager
+from src.utils.auth_manager import AuthManager
+
 # Configure logging
 logger = logging.getLogger('robot_tool.browser_tab_select')
 
@@ -33,7 +36,16 @@ logger = logging.getLogger('robot_tool.browser_tab_select')
 async def select_tab(
     tab_index: int,
     take_screenshot: bool = True,
-    wait_time: int = 1
+    wait_time: int = 1,
+    need_login: bool = False,
+    url: Optional[str] = None,
+    login_url: Optional[str] = None,
+    username: Optional[str] = None,
+    password: Optional[str] = None,
+    username_locator: Optional[str] = None,
+    password_locator: Optional[str] = None,
+    submit_locator: Optional[str] = None,
+    success_indicator: Optional[str] = None
 ) -> Dict[str, Any]:
     """
     Switch to a specific browser tab by index.
@@ -42,6 +54,15 @@ async def select_tab(
         tab_index: Zero-based index of the tab to select
         take_screenshot: Whether to take a screenshot after switching
         wait_time: Time to wait after switching tabs in seconds
+        need_login: Whether login is required before tab selection
+        url: URL to navigate to after tab selection (optional)
+        login_url: URL of the login page if different from target URL
+        username: Username for login
+        password: Password for login
+        username_locator: Locator for username field
+        password_locator: Locator for password field
+        submit_locator: Locator for submit button
+        success_indicator: Optional element to verify successful login
         
     Returns:
         Dictionary with operation status and tab information
@@ -53,10 +74,41 @@ async def select_tab(
         "tab_count": 0,
         "current_tab_index": 0,
         "screenshot": None,
-        "tabs": []
+        "tabs": [],
+        "login_status": None
     }
     
     try:
+        # Handle login if needed and URL is provided
+        if need_login and url:
+            # Check if already authenticated
+            if not AuthManager.is_authenticated(url):
+                if not all([username, password, username_locator, password_locator, submit_locator]):
+                    result["status"] = "error"
+                    result["error"] = "Login requested but missing required login parameters"
+                    return result
+                    
+                # Perform login
+                login_result = AuthManager.login(
+                    login_url or url,
+                    username,
+                    password,
+                    username_locator,
+                    password_locator,
+                    submit_locator,
+                    success_indicator,
+                    wait_time
+                )
+                
+                result["login_status"] = login_result
+                
+                if not login_result["success"]:
+                    result["status"] = "error"
+                    result["error"] = f"Login failed: {login_result.get('message', 'Unknown error')}"
+                    return result
+            else:
+                result["login_status"] = {"success": True, "message": "Already authenticated"}
+        
         # Get the browser instance
         browser = BrowserManager.get_driver()
         
@@ -212,24 +264,59 @@ def register_tool(mcp: FastMCP):
     async def robot_browser_tab_select(
         tab_index: int,
         take_screenshot: bool = True,
-        wait_time: int = 1
+        wait_time: int = 1,
+        need_login: bool = False,
+        url: Optional[str] = None,
+        login_url: Optional[str] = None,
+        username: Optional[str] = None,
+        password: Optional[str] = None,
+        username_locator: Optional[str] = None,
+        password_locator: Optional[str] = None,
+        submit_locator: Optional[str] = None,
+        success_indicator: Optional[str] = None
     ) -> Dict[str, Any]:
         """
         Switch to a specific browser tab by index.
         
         This tool allows switching between open browser tabs in the
-        current browser session.
+        current browser session. It can optionally handle authentication 
+        if needed.
         
         Args:
             tab_index: Zero-based index of the tab to select
             take_screenshot: Whether to take a screenshot after switching
             wait_time: Time to wait after switching tabs in seconds
+            need_login: Whether login is required before tab selection
+            url: URL to navigate to after tab selection (optional)
+            login_url: URL of the login page if different from target URL
+            username: Username for login
+            password: Password for login
+            username_locator: Locator for username field
+            password_locator: Locator for password field
+            submit_locator: Locator for submit button
+            success_indicator: Optional element to verify successful login
             
         Returns:
             Dictionary with operation status and tab information
         """
         logger.info(f"Selecting browser tab with index: {tab_index}")
-        return await select_tab(tab_index, take_screenshot, wait_time)
+        if need_login and url:
+            logger.info("Authentication required for tab selection")
+            
+        return await select_tab(
+            tab_index, 
+            take_screenshot, 
+            wait_time,
+            need_login,
+            url,
+            login_url,
+            username,
+            password,
+            username_locator,
+            password_locator,
+            submit_locator,
+            success_indicator
+        )
     
     @mcp.tool()
     async def robot_browser_tab_list() -> Dict[str, Any]:
