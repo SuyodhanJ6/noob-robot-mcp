@@ -25,6 +25,9 @@ from src.config.config import (
     ALLOWED_ORIGINS
 )
 
+# Import the AuthManager
+from src.utils.auth_manager import AuthManager
+
 # Configure logging
 logging.config.dictConfig(LOGGING_CONFIG)
 logger = logging.getLogger('robot_mcp_server')
@@ -45,7 +48,7 @@ TOOLS = [
     "robot_page_snapshot",        # Screenshot tool for element identification
     "robot_dropdown_handler",     # Dropdown handler tool
     "robot_form_success_detector", # Form success detector tool
-    "robot_auth_handler",         # Authentication handler for login portals
+    # "robot_auth_handler",         # Authentication handler for login portals
     # "robot_browser_install",      # Browser and driver installation tool
     
     # Essential browser automation tools
@@ -146,6 +149,12 @@ def create_starlette_app(mcp_server: Server, *, debug: bool = False) -> Starlett
 
 def start_server():
     """Start the MCP server."""
+    # Initialize the AuthManager
+    logger.info("Initializing the AuthManager...")
+    auth_manager = AuthManager.get_instance()
+    logger.info("AuthManager initialized")
+    
+    # Register all tools
     register_all_tools()
     
     # Get the actual MCP server instance from FastMCP
