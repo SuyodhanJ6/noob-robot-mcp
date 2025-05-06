@@ -45,6 +45,9 @@ try:
 except ImportError:
     WEBDRIVER_MANAGER_AVAILABLE = False
 
+# Import AuthManager
+from src.utils.auth_manager import AuthManager
+
 logger = logging.getLogger('robot_tool.browser_click')
 
 # -----------------------------------------------------------------------------
@@ -92,48 +95,99 @@ def parse_locator(locator: str) -> Tuple[str, str]:
 # Main Tool Functions
 # -----------------------------------------------------------------------------
 
-def click_element(url: str, element_locator: str, wait_time: int = 10) -> Dict[str, Any]:
+def click_element(
+    locator: str,
+    wait_time: int = 10,
+    screenshot_before: bool = True,
+    screenshot_after: bool = True,
+    url: Optional[str] = None,
+    need_login: bool = False,
+    login_url: Optional[str] = None,
+    username: Optional[str] = None,
+    password: Optional[str] = None,
+    username_locator: Optional[str] = None,
+    password_locator: Optional[str] = None,
+    submit_locator: Optional[str] = None,
+    success_indicator: Optional[str] = None
+) -> Dict[str, Any]:
     """
-    Click on a web element identified by a locator.
+    Click an element on a web page.
     
     Args:
-        url: URL of the web page
-        element_locator: Locator for the element to click (id=, name=, xpath=, css=)
-        wait_time: Time to wait for element to be clickable in seconds
+        locator: Element locator in format "type=value" (e.g., "id=submit")
+        wait_time: Time to wait for element in seconds
+        screenshot_before: Whether to take a screenshot before clicking
+        screenshot_after: Whether to take a screenshot after clicking
+        url: Optional URL to navigate to before clicking
+        need_login: Whether login is required before clicking
+        login_url: URL of the login page if different from target URL
+        username: Username for login
+        password: Password for login
+        username_locator: Locator for username field
+        password_locator: Locator for password field
+        submit_locator: Locator for submit button
+        success_indicator: Optional element to verify successful login
         
     Returns:
-        Dictionary with click status and result
+        Dictionary with operation status and details
     """
     result = {
-        "url": url,
-        "element_locator": element_locator,
         "status": "success",
-        "robot_command": None,
-        "error": None
+        "element": locator,
+        "screenshots": {},
+        "error": None,
+        "login_status": None
     }
     
     try:
-        # Get WebDriver instance from the manager
+        # Handle login if needed and URL is provided
+        if need_login and url:
+            # Check if already authenticated
+            if not AuthManager.is_authenticated(url):
+                if not all([username, password, username_locator, password_locator, submit_locator]):
+                    result["status"] = "error"
+                    result["error"] = "Login requested but missing required login parameters"
+                    return result
+                    
+                # Perform login
+                login_result = AuthManager.login(
+                    login_url or url,
+                    username,
+                    password,
+                    username_locator,
+                    password_locator,
+                    submit_locator,
+                    success_indicator,
+                    wait_time
+                )
+                
+                result["login_status"] = login_result
+                
+                if not login_result["success"]:
+                    result["status"] = "error"
+                    result["error"] = f"Login failed: {login_result.get('message', 'Unknown error')}"
+                    return result
+            else:
+                result["login_status"] = {"success": True, "message": "Already authenticated"}
+        
+        # Get browser instance from the manager
         driver = BrowserManager.get_driver()
         
-        # Navigate to the URL (if the current URL is different or no URL is loaded)
-        # This assumes the browser is already open from a previous step
-        current_url_before_nav = driver.current_url
-        if url != current_url_before_nav:
+        # Navigate to URL if provided
+        if url:
             logger.info(f"Navigating to URL: {url}")
-            driver.set_page_load_timeout(wait_time * 2)
             driver.get(url)
-        else:
-            logger.info(f"Already at URL: {url}")
-        
-        # Wait for page to load
-        time.sleep(2)
+            
+            # Wait for page to load
+            WebDriverWait(driver, wait_time).until(
+                EC.presence_of_element_located((By.TAG_NAME, "body"))
+            )
         
         # Parse locator
-        by_type, locator_value = parse_locator(element_locator)
+        by_type, locator_value = parse_locator(locator)
         
         # Wait for element to be clickable
-        logger.info(f"Waiting for element to be clickable: {element_locator}")
+        logger.info(f"Waiting for element to be clickable: {locator}")
         wait = WebDriverWait(driver, wait_time)
         element = wait.until(EC.element_to_be_clickable((by_type, locator_value)))
         
@@ -150,7 +204,7 @@ def click_element(url: str, element_locator: str, wait_time: int = 10) -> Dict[s
                 pass
                 
         # Click the element
-        logger.info(f"Clicking element: {element_locator}")
+        logger.info(f"Clicking element: {locator}")
         element.click()
         
         # Wait for potential page load after click
@@ -168,8 +222,8 @@ Library           SeleniumLibrary
 Click Element On Page
     Open Browser    {url}    Chrome
     Maximize Browser Window
-    Wait Until Element Is Visible    {element_locator}    timeout={wait_time}s
-    Click Element    {element_locator}
+    Wait Until Element Is Visible    {locator}    timeout={wait_time}s
+    Click Element    {locator}
 """
 
         result.update({
@@ -187,19 +241,19 @@ Click Element On Page
         
         return result
     except TimeoutException:
-        logger.error(f"Timeout waiting for element: {element_locator}")
+        logger.error(f"Timeout waiting for element: {locator}")
         result["status"] = "error"
         result["error"] = f"Timeout after {wait_time} seconds waiting for element to be clickable"
         return result
     except NoSuchElementException:
-        logger.error(f"Element not found: {element_locator}")
+        logger.error(f"Element not found: {locator}")
         result["status"] = "error"
-        result["error"] = f"Element not found: {element_locator}"
+        result["error"] = f"Element not found: {locator}"
         return result
     except ElementNotInteractableException:
-        logger.error(f"Element not interactable: {element_locator}")
+        logger.error(f"Element not interactable: {locator}")
         result["status"] = "error"
-        result["error"] = f"Element found but not interactable: {element_locator}"
+        result["error"] = f"Element found but not interactable: {locator}"
         return result
     except Exception as e:
         logger.error(f"Error clicking element: {e}")
@@ -287,33 +341,68 @@ Click Element Test
 # -----------------------------------------------------------------------------
 
 def register_tool(mcp: FastMCP):
-    """Register the browser click tool with MCP."""
-    logger.info("Registering Robot Browser Click tool")
+    """Register the browser click tool with the MCP server."""
 
     @mcp.tool()
-    async def robot_browser_click_element(
-        url: str,
-        element_locator: str,
-        wait_time: int = 10
+    async def robot_browser_click(
+        locator: str,
+        wait_time: int = 10,
+        screenshot_before: bool = True,
+        screenshot_after: bool = True,
+        url: Optional[str] = None,
+        need_login: bool = False,
+        login_url: Optional[str] = None,
+        username: Optional[str] = None,
+        password: Optional[str] = None,
+        username_locator: Optional[str] = None,
+        password_locator: Optional[str] = None,
+        submit_locator: Optional[str] = None,
+        success_indicator: Optional[str] = None
     ) -> Dict[str, Any]:
         """
-        Click on a web element identified by a locator using Robot Framework.
+        Click an element on a web page.
         
-        This tool navigates to a URL and clicks on an element identified by the provided
-        locator. It returns information about the element and the result of the click.
+        This tool automates clicking on elements identified by various locator strategies.
+        It can optionally navigate to a URL first and handle authentication if needed.
         
         Args:
-            url: URL of the web page
-            element_locator: Locator for the element to click (id=, name=, xpath=, css=)
-            wait_time: Time to wait for element to be clickable in seconds
+            locator: Element locator in format "type=value" (e.g., "id=submit")
+            wait_time: Time to wait for element in seconds
+            screenshot_before: Whether to take a screenshot before clicking
+            screenshot_after: Whether to take a screenshot after clicking
+            url: Optional URL to navigate to before clicking
+            need_login: Whether login is required before clicking
+            login_url: URL of the login page if different from target URL
+            username: Username for login
+            password: Password for login
+            username_locator: Locator for username field
+            password_locator: Locator for password field
+            submit_locator: Locator for submit button
+            success_indicator: Optional element to verify successful login
             
         Returns:
-            Dictionary with click status, element info, and Robot Framework command
+            Dictionary with operation status and details
         """
-        logger.info(f"Received request to click element: {element_locator} on URL: {url}")
-        # Call the modified click_element function
-        return click_element(url=url, element_locator=element_locator, wait_time=wait_time)
-    
+        logger.info(f"Clicking element with locator: {locator}")
+        if need_login and url:
+            logger.info("Authentication required for clicking")
+            
+        return click_element(
+            locator,
+            wait_time,
+            screenshot_before,
+            screenshot_after,
+            url,
+            need_login,
+            login_url,
+            username,
+            password,
+            username_locator,
+            password_locator,
+            submit_locator,
+            success_indicator
+        )
+
     @mcp.tool()
     async def robot_browser_generate_click_script(
         url: str,
