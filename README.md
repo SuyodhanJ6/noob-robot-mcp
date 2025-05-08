@@ -10,7 +10,7 @@
   <img src="assets/robot-mcp-demo.gif" alt="NoobRobot MCP Server" width="600">
 </p>
 
-A Machine Control Protocol (MCP) server implementation for Robot Framework automation, providing 20 tools to enhance testing with Robot Framework.
+A Model Context Protocol (MCP) server implementation for Robot Framework automation, providing 20 tools to enhance testing with Robot Framework.
 
 ## Overview
 
