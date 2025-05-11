@@ -115,6 +115,32 @@ WORKFLOWS = {
             }
         ]
     },
+    "smart_browser_automation": {
+        "name": "Smart Browser Automation",
+        "description": "Create robust automation scripts with enhanced element detection and interaction",
+        "steps": [
+            {
+                "name": "task_analysis",
+                "description": "Analyze the automation task and identify elements to interact with"
+            },
+            {
+                "name": "smart_locator_finding",
+                "description": "Find reliable locators with context-aware strategies"
+            },
+            {
+                "name": "element_interaction",
+                "description": "Use smart interaction with pre-validation and recovery strategies"
+            },
+            {
+                "name": "script_creation",
+                "description": "Create resilient scripts with smart waiting and validation"
+            },
+            {
+                "name": "test_execution",
+                "description": "Execute the automation with intelligent error handling"
+            }
+        ]
+    },
     "custom": {
         "name": "Custom Workflow",
         "description": "Create a custom workflow for your specific needs",
@@ -146,57 +172,73 @@ WORKFLOWS = {
 # Tool suggestions for each workflow step
 TOOL_SUGGESTIONS = {
     "locator_finder": {
-        "locator_generation": ["robot_xpath_locator", "robot_smart_locator", "robot_form_locator"],
-        "page_screenshot": ["robot_page_snapshot"],
-        "script_creation": ["robot_form_automator"],
-        "test_execution": ["robot_runner"]  # Will be implemented in future
+        "locator_generation": ["robot_auto_locator", "robot_browser_find_smart_locator"],
+        "page_screenshot": ["robot_page_snapshot", "robot_browser_screenshot"],
+        "script_creation": ["robot_form_automator"]
     },
     "form_automation": {
-        "form_detection": ["robot_form_locator", "robot_smart_locator"],
+        "form_detection": ["robot_form_locator", "robot_auto_locator"],
         "script_creation": ["robot_form_automator"],
-        "success_criteria": ["robot_form_success_detector"],
-        "test_execution": ["robot_runner"]  # Will be implemented in future
+        "success_criteria": ["robot_form_success_detector"]
     },
     "dropdown_handling": {
-        "dropdown_detection": ["robot_form_locator", "robot_xpath_locator", "robot_smart_locator"],
-        "script_creation": ["robot_dropdown_handler"],
-        "test_execution": ["robot_runner"]  # Will be implemented in future
+        "dropdown_detection": ["robot_auto_locator", "robot_form_locator"],
+        "script_creation": ["robot_dropdown_handler", "robot_browser_smart_select"]
+    },
+    "smart_browser_automation": {
+        "smart_locator_finding": ["robot_browser_find_smart_locator", "robot_auto_locator"],
+        "element_interaction": ["robot_browser_smart_click", "robot_browser_smart_input", "robot_browser_smart_select", "robot_browser_smart_wait"],
+        "script_creation": ["robot_form_automator"]
     },
     "custom": {
-        "tool_selection": ["robot_library_explorer"],
-        "script_creation": ["robot_test_reader", "robot_test_data_generator"],
-        "test_execution": ["robot_visualization"]  # robot_runner will be implemented in future
+        "tool_selection": ["robot_agent_list_workflows", "robot_agent_get_workflow"],
+        "script_creation": ["robot_form_automator", "robot_dropdown_handler"]
     }
 }
 
-# Robot test runner configuration details (commented out as robot_runner will be implemented in future)
-TEST_RUNNER_DETAILS = """
-## Test Runner Usage (Coming Soon)
+# Smart Browser Tool details
+SMART_BROWSER_DETAILS = """
+## Smart Browser Tools
 
-The `robot_runner` tool will be implemented in the future for executing Robot Framework test scripts. It will be used to:
+Our enhanced smart browser tools provide intelligent element interaction with the following capabilities:
 
-1. **Execute a specific test file**:
-   - Run a single test file with specific variables and tags
-   - Monitor test execution in real-time
-   - Collect execution results for analysis
+1. **Smart Locator Detection**:
+   - Finds stable, reliable locators even for dynamic elements
+   - Understands element relationships and parent-child structures
+   - Generates alternative locators for automatic recovery
+   - Analyzes element context for more accurate identification
 
-2. **Run with custom variables**:
-   - Pass dynamic variables to your tests at runtime
-   - Override default values for greater flexibility
-   - Examples: `browser=chrome`, `url=https://example.com`
+2. **Element Interaction Validation**:
+   - Pre-validates element state before attempting interaction
+   - Checks if elements are truly clickable/typeable
+   - Provides detailed diagnostic information when elements cannot be interacted with
+   - Automatically handles elements that are covered or outside viewport
 
-3. **Filter tests by tags**:
-   - Run only tests with specific tags
-   - Skip tests with certain tags
-   - Example: Include `smoke` tests, exclude `slow` tests
+3. **Automatic Recovery Strategies**:
+   - Tries multiple interaction techniques (standard, action chains, JavaScript)
+   - Automatically retries with exponential backoff for flaky elements
+   - Falls back to alternative locators if primary locator fails
+   - Intelligent handling of stale elements and timing issues
 
-4. **Advanced options**:
-   - Set output directories for reports and logs
-   - Configure test timeouts
-   - Select specific test suites within a test file
+4. **Smart Waiting Strategies**:
+   - Adapts to different page load behaviors (standard, AJAX, SPA)
+   - Detects framework-specific wait conditions (jQuery, Angular)
+   - Provides detailed feedback on wait failures
+   - Uses exponential backoff for more efficient waiting
 
-This functionality will be available in a future update.
+5. **Comprehensive Tools**:
+   - `robot_browser_smart_click`: Enhanced click with validation and recovery
+   - `robot_browser_smart_input`: Intelligent text input with verification
+   - `robot_browser_smart_select`: Robust dropdown selection with validation
+   - `robot_browser_smart_wait`: Adaptive waiting for different page types
+   - `robot_browser_find_smart_locator`: Interactive locator finder with visual selection
+
+These tools address common automation challenges including dynamic elements, timing issues,
+and element relationships, making your automation scripts more reliable and maintainable.
 """
+
+# Remove the test runner details as it's not implemented yet
+TEST_RUNNER_DETAILS = ""
 
 # -----------------------------------------------------------------------------
 # Agent Prompt Functions
@@ -228,6 +270,10 @@ def get_workflow_details(workflow_id: str) -> Dict[str, Any]:
         "test_runner_details": TEST_RUNNER_DETAILS
     }
     
+    # Add smart browser details for smart browser workflow
+    if workflow_id == "smart_browser_automation":
+        result["smart_browser_details"] = SMART_BROWSER_DETAILS
+    
     return result
 
 def list_workflows() -> Dict[str, Any]:
@@ -257,71 +303,78 @@ def generate_agent_prompt(
     additional_instructions: Optional[str] = None
 ) -> Dict[str, Any]:
     """
-    Generate a structured prompt for the agent to follow.
+    Generate a structured agent prompt for a specific workflow.
     
     Args:
-        workflow_id: ID of the workflow to use
-        task_description: Description of the automation task
-        target_url: URL of the page to automate (optional)
-        additional_instructions: Additional instructions for the agent (optional)
+        workflow_id: ID of the workflow
+        task_description: Description of the task to perform
+        target_url: Optional URL for the target website
+        additional_instructions: Optional additional instructions
         
     Returns:
-        Dictionary with structured prompt and workflow details
+        Dictionary with the generated prompt and metadata
     """
-    if workflow_id not in WORKFLOWS:
-        return {
-            "error": f"Workflow '{workflow_id}' not found",
-            "available_workflows": list(WORKFLOWS.keys())
-        }
+    # Get workflow details
+    workflow_details = get_workflow_details(workflow_id)
     
-    workflow = WORKFLOWS[workflow_id]
-    tool_suggestions = TOOL_SUGGESTIONS.get(workflow_id, {})
+    if "error" in workflow_details:
+        return workflow_details
     
-    # Build the agent prompt
+    # Start building the prompt
     prompt_parts = []
     
-    # Add header
-    prompt_parts.append(f"# {workflow['name']} Agent Workflow")
-    prompt_parts.append(f"\n## Task Description")
-    prompt_parts.append(f"{task_description}")
+    # Introduction
+    prompt_parts.append(f"# {workflow_details['name']} Workflow")
+    prompt_parts.append(f"\n## Task Description\n{task_description}")
     
     if target_url:
-        prompt_parts.append(f"\n## Target URL")
-        prompt_parts.append(f"{target_url}")
+        prompt_parts.append(f"\n## Target URL\n{target_url}")
     
-    prompt_parts.append(f"\n## Workflow Steps")
-    for i, step in enumerate(workflow["steps"], 1):
+    # Workflow steps
+    prompt_parts.append("\n## Workflow Steps")
+    for i, step in enumerate(workflow_details["steps"], 1):
         prompt_parts.append(f"{i}. **{step['name']}**: {step['description']}")
-        # Add tool suggestions if available for this step
-        if step["name"] in tool_suggestions:
-            tools = tool_suggestions[step["name"]]
-            prompt_parts.append(f"   - Suggested tools: {', '.join(tools)}")
     
-    # Add test runner information
-    prompt_parts.append(TEST_RUNNER_DETAILS)
+    # Tool suggestions
+    prompt_parts.append("\n## Tool Suggestions")
+    tool_suggestions = workflow_details["tool_suggestions"]
+    for step_name, tools in tool_suggestions.items():
+        prompt_parts.append(f"\n### {step_name.replace('_', ' ').title()}")
+        for tool in tools:
+            prompt_parts.append(f"- `{tool}`")
     
+    # Add smart browser details for relevant workflows
+    if workflow_id == "smart_browser_automation":
+        prompt_parts.append("\n" + SMART_BROWSER_DETAILS)
+    elif workflow_id in ["locator_finder", "form_automation", "dropdown_handling"]:
+        prompt_parts.append("\n## Smart Browser Tools Available")
+        prompt_parts.append("""
+For more reliable element interaction, consider using our smart browser tools:
+
+- `robot_browser_find_smart_locator`: Find stable locators with context-awareness
+- `robot_browser_smart_click`: Click with pre-validation and automatic recovery
+- `robot_browser_smart_input`: Type text with verification and retry strategies
+- `robot_browser_smart_select`: Select dropdown options with robust validation
+- `robot_browser_smart_wait`: Wait for elements with adaptive strategies
+
+These tools handle dynamic elements, covered elements, and timing issues automatically.""")
+    
+    # Add test runner details
+    prompt_parts.append("\n" + TEST_RUNNER_DETAILS)
+    
+    # Additional instructions (if provided)
     if additional_instructions:
-        prompt_parts.append(f"\n## Additional Instructions")
-        prompt_parts.append(f"{additional_instructions}")
+        prompt_parts.append(f"\n## Additional Instructions\n{additional_instructions}")
     
-    # Add footer with guidance
-    prompt_parts.append(f"\n## Agent Guidelines")
-    prompt_parts.append("1. Follow the workflow steps in order")
-    prompt_parts.append("2. Use the suggested tools for each step when available")
-    prompt_parts.append("3. Document your reasoning and actions for each step")
-    prompt_parts.append("4. Provide a summary after completing the workflow")
-    
-    # Combine all parts
-    prompt = "\n".join(prompt_parts)
+    # Format the complete prompt
+    complete_prompt = "\n".join(prompt_parts)
     
     return {
-        "prompt": prompt,
-        "workflow": {
-            "id": workflow_id,
-            "name": workflow["name"],
-            "steps": [step["name"] for step in workflow["steps"]]
-        }
-        # test_runner will be implemented in future
+        "workflow_id": workflow_id,
+        "workflow_name": workflow_details["name"],
+        "prompt": complete_prompt,
+        "target_url": target_url,
+        "tool_suggestions": workflow_details["tool_suggestions"]
     }
 
 # -----------------------------------------------------------------------------

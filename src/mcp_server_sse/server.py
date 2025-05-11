@@ -39,31 +39,50 @@ mcp = FastMCP("RobotFrameworkTools")
 # Only including essential tools for advanced Robot script generation with agent workflow
 TOOLS = [
     # Core automation tools
-    "robot_form_automator",       # Form automation tool
-    "robot_form_locator",         # Form locator tool
+    # "robot_form_automator",       # REMOVED: Form automation tool (replaced by smart_locator)
+    # "robot_form_locator",         # REMOVED: Form locator tool (replaced by smart_locator)
+    # "robot_auto_locator",         # REMOVED: Comprehensive locator finder (replaced by smart_locator)
     
-    # Advanced locator tool - keeping only the most powerful one
-    "robot_auto_locator",         # Comprehensive locator finder for all elements
+    # Enhanced Smart Locator tool - replaces multiple static tools
+    "robot_smart_locator",        # NEW: Enhanced dynamic locator tool with auth and form handling
+    
+    # Browser interaction tools
+    "robot_browser_smart",        # Enhanced smart browser interaction tool
+    "robot_agent_prompt",         # Workflow guidance for automation tasks
     
     "robot_page_snapshot",        # Screenshot tool for element identification
     "robot_dropdown_handler",     # Dropdown handler tool
     "robot_form_success_detector", # Form success detector tool
-    # "robot_auth_handler",         # Authentication handler for login portals
+    # "robot_auth_handler",         # REMOVED: Authentication handler (replaced by smart_locator)
     # "robot_browser_install",      # Browser and driver installation tool
     
     # Essential browser automation tools
-    "robot_browser_navigate",      # Navigate to a URL
-    "robot_browser_click",         # Perform click on a web page
-    "robot_browser_type",          # Type text into editable element
-    "robot_browser_select_option", # Select an option in a dropdown
+    # "robot_browser_navigate",     # Navigate to a URL
+    # "robot_browser_click",        # Perform click on a web page
+    # "robot_browser_type",         # Type text into editable element
+    # "robot_browser_select_option", # Select an option in a dropdown
     "robot_browser_screenshot",    # Take a screenshot of the current page
-    "robot_browser_wait",          # Wait for a specified time in seconds
+    # "robot_browser_wait",         # Wait for a specified time in seconds
     
     # Optional - include if needed
     "robot_browser_tab_new",       # Open a new tab
     "robot_browser_tab_select",    # Select a tab by index
     "robot_browser_close",         # Close the page
 ]
+
+# Special comment for developers
+"""
+NOTE FOR DEVELOPERS:
+The enhanced robot_smart_locator tool replaces and consolidates functionality from:
+- robot_auto_locator
+- robot_form_locator
+- robot_xpath_locator
+- robot_auth_handler
+- robot_form_automator
+
+This simplifies the codebase and provides more robust dynamic locator functionality.
+For usage examples, see the README.md in src/mcp_tools/
+"""
 
 # Import existing tools
 tool_registry = {}
